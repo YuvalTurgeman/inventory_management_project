@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+	<head>
+		{% load static %}
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+		<meta name="description" content="POS - Bootstrap Admin Template">
+		<meta name="keywords" content="admin, estimates, bootstrap, business, corporate, creative, management, minimal, modern,  html5, responsive">
+		<meta name="author" content="Dreamguys - Bootstrap Admin Template">
+		<meta name="robots" content="noindex, nofollow">
+		<title>SCE invory management platform</title>
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.png' %}">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+		<!-- animation CSS -->
+		<link rel="stylesheet" href="{% static 'css/animate.css' %}">
+
+		<!-- Datatable CSS -->
+		<link rel="stylesheet" href="{% static 'css/dataTables.bootstrap4.min.css' %}">
+
+		<!-- Fontawesome CSS -->
+		<link rel="stylesheet" href="{% static 'plugins/fontawesome/css/fontawesome.min.css' %}">
+		<link rel="stylesheet" href="{% static 'plugins/fontawesome/css/all.min.css' %}">
+
+		<!-- Main CSS -->
+		<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+	</head>
+	<body>
+		<div id="global-loader" >
+			<div class="whirly-loader"> </div>
+		</div>
+		<!-- Main Wrapper -->
+		<div class="main-wrapper">
+
+			<!-- Header -->
+			<div class="header">
+
+				<!-- Logo -->
+				 <div class="header-left active">
+					<a href="{% url 'index' %}" class="logo">
+						<img src="{% static 'img/logo.png' %}" alt="">
+					</a>
+					<a href="{% url 'index' %}" class="logo-small">
+						<img src="{% static 'img/logo-small.png' %}"  alt="">
+					</a>
+					<a id="toggle_btn" href="javascript:void(0);">
+					</a>
+				</div>
+				<!-- /Logo -->
+
+				<a id="mobile_btn" class="mobile_btn" href="#sidebar">
+					<span class="bar-icon">
+						<span></span>
+						<span></span>
+						<span></span>
+					</span>
+				</a>
+
+				<!-- Header Menu -->
+				<ul class="nav user-menu">
+					<li class="nav-item dropdown has-arrow main-drop">
+						<a href="javascript:void(0);" class="dropdown-toggle nav-link userset" data-bs-toggle="dropdown">
+							<span class="user-img"><img src="{% static 'img/profiles/avator1.jpg' %}" alt="">
+							<span class="status online"></span></span>
+						</a>
+						<div class="dropdown-menu menu-drop-user">
+							<div class="profilename">
+								<div class="profileset">
+									<span class="user-img"><img src="{% static 'img/profiles/avator1.jpg' %}" alt="">
+									<span class="status online"></span></span>
+									<div class="profilesets">
+									</div>
+								</div>
+								<hr class="m-0">
+								<a class="dropdown-item" href="profile.html"> <i class="me-2"  data-feather="user"></i> My Profile</a>
+								<hr class="m-0">
+								<a class="dropdown-item logout pb-0" href="{% url 'signin'%}"><img src="{% static 'img/icons/log-out.svg' %}" class="me-2" alt="img">Logout</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<!-- /Header Menu -->
+
+				<!-- Mobile Menu -->
+				<div class="dropdown mobile-user-menu">
+					<a href="javascript:void(0);" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+					<div class="dropdown-menu dropdown-menu-right">
+						<a class="dropdown-item" href="profile.html">My Profile</a>
+						<a class="dropdown-item" href="signin.html">Logout</a>
+					</div>
+				</div>
+				<!-- /Mobile Menu -->
+			</div>
+			<!-- Header -->
+
+			<!-- Sidebar -->
+			<div class="sidebar" id="sidebar">
+				<div class="sidebar-inner slimscroll">
+					<div id="sidebar-menu" class="sidebar-menu">
+						<ul>
+							<li class="active">
+								<a href="{% url 'index' %}" ><img src="{% static 'img/icons/dashboard.svg' %}" alt="img"><span> Dashboard</span> </a>
+							</li>
+							<li class="submenu">
+								<a href="javascript:void(0);"><img src="{% static 'img/icons/product.svg' %}" alt="img"><span> Product</span> <span class="menu-arrow"></span></a>
+								<ul>
+									<li><a href="{% url 'productlistt' %}">Product List</a></li>
+								</ul>
+							</li>
+							<li class="submenu">
+								<a href="javascript:void(0);"><img src="{% static 'img/icons/transfer1.svg' %}" alt="img"><span> Transfers</span> <span class="menu-arrow"></span></a>
+								<ul>
+									<li><a href="{% url 'saleslistt' %}">Transfers List</a></li>
+								</ul>
+							</li>
+							<li class="submenu">
+								<a href="javascript:void(0);"><img src="{% static 'img/icons/purchase1.svg' %}" alt="img"><span> Purchase</span> <span class="menu-arrow"></span></a>
+								<ul>
+									<li><a href="{% url 'purchaselistt' %}">Purchase List</a></li>
+								</ul>
+							</li>
+							<li class="submenu">
+								<a href="javascript:void(0);"><img src="{% static 'img/icons/expense1.svg' %}" alt="img"><span> Expense</span> <span class="menu-arrow"></span></a>
+								<ul>
+									<li><a href="{% url 'expenselistt' %}">Expense List</a></li>
+								</ul>
+							</li>
+							<li class="submenu">
+								<a href="javascript:void(0);"><img src="{% static 'img/icons/quotation1.svg' %}" alt="img"><span> Quotation</span> <span class="menu-arrow"></span></a>
+								<ul>
+									<li><a href="{% url 'quotationlistt' %}">Quotation List</a></li>
+									<li><a href="{% url 'addquotationt' %}">Add Quotation</a></li>
+								</ul>
+							</li>
+							<li class="submenu">
+								<a href="javascript:void(0);"><img src="{% static 'img/icons/users1.svg' %}" alt="img"><span> People</span> <span class="menu-arrow"></span></a>
+								<ul>
+									<li><a href="{% url 'supplierlistt' %}">Supplier List</a></li>
+									<li><a href="{% url 'userlistt' %}">User List</a></li>
+									<li><a href="{% url 'adduser' %}">Add User</a></li>
+								</ul>
+							</li>														
+							<li  class="submenu">
+								<a href="javascript:void(0);"><i data-feather="bar-chart-2"></i> <span> Charts  </span> <span class="menu-arrow"></span></a>
+								<ul>
+									<li><a href="{% url 'chart-apext' %}">Apex Charts</a></li>
+								</ul>
+							</li>
+							<li class="submenu">
+								<a href="javascript:void(0);"><img src="{% static 'img/icons/time.svg' %}" alt="img"><span> Report</span> <span class="menu-arrow"></span></a>
+								<ul>
+									<li><a href="{% url 'purchaseorderreportt' %}">Purchase order report</a></li>
+									<li><a href="{% url 'inventoryreport' %}">Inventory Report</a></li>
+									<li><a href="{% url 'salesreportt' %}">Transfer Report</a></li>
+									<li><a href="{% url 'purchasereportt' %}">Purchase Report</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- /Sidebar -->
+
+			<div class="page-wrapper">
+				<div class="content">
+					<div class="row">
+						<div class="col-lg-3 col-sm-6 col-12">
+							<div class="dash-widget">
+								<div class="dash-widgetimg">
+									<span><img src="{% static 'img/icons/dash1.svg' %}" alt="img"></span>
+								</div>
+								<div class="dash-widgetcontent">
+									<h5 >$<span class="counters"data-count={{budget.0.spending}}>${{budget.0.spending}}</span></h5>
+									<h6>Total Purchase</h6>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-sm-6 col-12">
+							<div class="dash-widget dash1">
+								<div class="dash-widgetimg">
+									<span><img src="{% static 'img/icons/dash2.svg' %}" alt="img"></span>
+								</div>
+								<div class="dash-widgetcontent">
+									<h5 >$<span class="counters" data-count={{budget.0.budget}}>${{budget.0.budget}}</span></h5>
+									<h6>Total Budget</h6>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-sm-6 col-12 d-flex">
+							<div class="dash-count">
+								<div class="dash-counts">
+									<h4>{{users_num}}</h4>
+									<h5>Users</h5>
+								</div>
+								<div class="dash-imgs">
+									<i data-feather="user"></i>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-sm-6 col-12 d-flex">
+							<div class="dash-count das1">
+								<div class="dash-counts">
+									<h4>{{returned_items}}</h4>
+									<h5>Returned Items</h5>
+								</div>
+								<div class="dash-imgs">
+									<i data-feather="user-check"></i>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-sm-6 col-12 d-flex">
+							<div class="dash-count das2">
+								<div class="dash-counts">
+									<h4>{{purchase_items}}</h4>
+									<h5>Purchase Items</h5>
+								</div>
+								<div class="dash-imgs">
+									<i data-feather="file-text"></i>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-sm-6 col-12 d-flex">
+							<div class="dash-count das3">
+								<div class="dash-counts">
+									<h4>{{transfers}}</h4>
+									<h5>Transfers</h5>
+								</div>
+								<div class="dash-imgs">
+									<i data-feather="file"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Button trigger modal -->
+						<div class="col-lg-15 col-sm-12 col-12 d-flex">
+							<div class="card flex-fill">
+								<div class="card-header pb-0 d-flex justify-content-between align-items-center">
+									<h4 class="card-title mb-0">Recently Added Products</h4>
+									<div class="dropdown">
+										<a href="javascript:void(0);" data-bs-toggle="dropdown" aria-expanded="false" class="dropset">
+											<i class="fa fa-ellipsis-v"></i>
+										</a>
+										<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton" >
+											<li>
+												<a href="{% url 'productlist' %}" class="dropdown-item">Product List</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="card-body">
+									<div class="table-responsive dataview">
+										<table class="table datatable ">
+											<thead>
+												<tr>
+													<th>Product Name</th>
+													<th>Brand</th>
+													<th>Price</th>
+													<th>Unit</th>
+													<th>Qty</th>
+													<th>User</th>
+												</tr>
+											</thead>
+											<tbody>
+											{% for h in returneditems %}
+												<tr>
+													<td>{{h.product_name}}</td>
+													<td>{{h.brand}}</td>
+													<td>{{h.price}}</td>
+													<td>{{h.unit}}</td>
+													<td>{{h.qty}}</td>
+													<td>{{h.user}}</td>
+												</tr>
+											{% endfor %}
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card mb-0">
+						<div class="card-body">
+							<h4 class="card-title">Recently Added Products</h4>
+							<div class="table-responsive dataview">
+								<table class="table datatable ">
+									<thead>
+										<tr>
+											<th>Product Name</th>
+											<th>Category</th>
+											<th>Brand</th>
+											<th>Price</th>
+											<th>Unit</th>
+											<th>Qty</th>
+											<th>Created By</th>
+										</tr>
+									</thead>
+									{% for i in products %}
+										<tr>
+											<td>{{i.product_name}}</td>
+											<td>{{i.category}}</td>
+											<td>{{i.brand}}</td>
+											<td>{{i.price}}</td>
+											<td>{{i.unit}}</td>
+											<td>{{i.qty}}</td>
+											<td>{{i.created_by}}</td>
+										</tr>
+									{% endfor %}
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /Main Wrapper -->
+
+		<!-- jQuery -->
+		<script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+
+		<!-- Feather Icon JS -->
+		<script src="{% static 'js/feather.min.js' %}"></script>
+
+		<!-- Slimscroll JS -->
+		<script src="{% static 'js/jquery.slimscroll.min.js' %}"></script>
+
+		<!-- Datatable JS -->
+		<script src="{% static 'js/jquery.dataTables.min.js' %}"></script>
+		<script src="{% static 'js/dataTables.bootstrap4.min.js' %}"></script>
+
+		<!-- Bootstrap Core JS -->
+		<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+
+		<!-- Chart JS -->
+		<script src="{% static 'plugins/apexchart/apexcharts.min.js' %}"></script>
+		<script src="{% static 'plugins/apexchart/chart-data.js' %}"></script>
+
+		<!-- Custom JS -->
+		<script src="{% static 'js/script.js' %}"></script>
+		
+	</body>
+</html>
