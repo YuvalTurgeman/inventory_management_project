@@ -1,4 +1,4 @@
-import xlwt as xlwt
+#import xlwt as xlwt
 from django.http import HttpResponse, HttpRequest
 from django.shortcuts import render
 from .forms import RegisterForm, ProductForm, TransferForm, PurchasesForm, ExpenseForm, SupplierForm
