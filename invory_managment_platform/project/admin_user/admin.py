@@ -2,9 +2,13 @@ from django.contrib import admin
 from admin_user import models
 
 
-@admin.register(models.User, models.ValidId)
-class PlatformUsers(admin.ModelAdmin):
+@admin.register(models.ValidId)
+class ValidId(admin.ModelAdmin):
     pass
+
+@admin.register(models.User_Data)
+class UserData(admin.ModelAdmin):
+    list_display = ("full_name", "id_number", "role", "email", "password")
 
 
 @admin.register(models.Product)
@@ -15,6 +19,11 @@ class Products(admin.ModelAdmin):
 @admin.register(models.Purchases)
 class Purchases(admin.ModelAdmin):
     list_display = ("product_name", "brand", "price", "unit", "qty", "supplier")
+
+
+@admin.register(models.Supplier)
+class Supplier(admin.ModelAdmin):
+    list_display = ("supplier_name", "code", "phone", "email", "country")
 
 
 @admin.register(models.Finance)
@@ -28,5 +37,5 @@ class Transfers(admin.ModelAdmin):
 
 
 @admin.register(models.Expense)
-class Transfer(admin.ModelAdmin):
+class Expense(admin.ModelAdmin):
     pass

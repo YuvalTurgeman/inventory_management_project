@@ -2,15 +2,15 @@ from django.db import models
 from django.utils import timezone
 
 
-class User(models.Model):
+class User_Data(models.Model):
     full_name = models.CharField(max_length=30)
     id_number = models.CharField(max_length=9)
     role = models.CharField(max_length=15)
     email = models.EmailField(max_length=40)
     password = models.CharField(max_length=20)
 
-    def __str__(self):
-        return self.full_name + ',' + self.id_number + ',' + self.role + ',' + self.email + ',' + self.password
+    class Meta:
+        ordering = ("full_name", "id_number", "role", "email", "password")
 
 
 class Product(models.Model):
@@ -27,6 +27,17 @@ class Product(models.Model):
         ordering = ("product_name", "category", "brand", "price", "unit", "qty", "created_by", "adding_date")
 
 
+class Supplier(models.Model):
+    supplier_name = models.CharField(max_length=30)
+    code = models.CharField(max_length=30)
+    phone = models.CharField(max_length=30)
+    email = models.CharField(max_length=40)
+    country = models.CharField(max_length=30)
+
+    class Meta:
+        ordering = ("supplier_name", "code", "phone", "email", "country")
+
+
 class Expense(models.Model):
     description = models.CharField(max_length=30)
     reference = models.CharField(max_length=30)
@@ -38,7 +49,7 @@ class Expense(models.Model):
 
 
 class Transfers(models.Model):
-    CHOICES = [('Returned', 'Returned'), ('Loaned', 'Loaned')]
+    CHOICES = [('Returned', 'Returned'), ('Loaned', 'Loaned'), ('Pending', 'Pending')]
     product_name = models.CharField(max_length=30)
     category = models.CharField(max_length=30)
     brand = models.CharField(max_length=30)

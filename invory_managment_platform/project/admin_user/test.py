@@ -1,14 +1,9 @@
 from django.test import TestCase, RequestFactory
-from .models import User
 from django.urls import reverse
-from .views import register, signin, index, user_login
-from django.http import HttpResponse, HttpRequest
+from .views import register, signin, index, user_login, indexs, indext
+
 
 class Test_register(TestCase):
-    def test_register_create_user(self):
-        self.user = User(full_name='shay lavi', id_number='319067613', role='student', email='ahkcht98@gmail.com',
-                         password='s5d66342')
-        self.user.save()
 
     def test_register_page_open(self):
         url = reverse('register')
@@ -22,13 +17,22 @@ class Test_register(TestCase):
         response = register(request)
         self.assertEqual(response.status_code, 200)
 
+    def test_register_empty_person(self):
+        data = {}
+        request = RequestFactory().post('all/signup.html', data)
+        request.method = 'POST'
+        response = register(request)
+        self.assertEqual(response.status_code, 200)
+
+    def test_register_not_valid_person(self):
+        data = {'email': 'admin2345@gmail.com', 'password': 's5d66342', 'role': 'admin'}
+        request = RequestFactory().post('all/signup.html', data)
+        request.method = 'POST'
+        response = register(request)
+        self.assertEqual(response.status_code, 200)
+
 
 class Test_login(TestCase):
-
-    def test_login_create_user(self):
-        self.user = User(full_name='shay lavi', id_number='319067613', role='student', email='ahkcht98@gmail.com',
-                         password='s5d66342')
-        self.user.save()
 
     def test_login_page_open(self):
         url = reverse('signin')
@@ -42,9 +46,15 @@ class Test_login(TestCase):
         response = signin(request)
         self.assertEqual(response.status_code, 200)
 
-    def test_login_view(self):
+    def test_login_not_empty_user(self):
         request = RequestFactory().get('all/signin.html')
-        request.content_params = {'email' : 'ahkcht98@gmail.com','password': 's5d66342'}
+        request.method = 'POST'
+        response = user_login(request)
+        self.assertEqual(response.status_code, 200)
+
+    def test_login_not_valid_user(self):
+        data = {'email': 'admin2345@gmail.com', 'password': 's5d66342'}
+        request = RequestFactory().post('all/signin.html', data)
         request.method = 'POST'
         response = user_login(request)
         self.assertEqual(response.status_code, 200)
@@ -59,6 +69,21 @@ class Test_index(TestCase):
 
     def test_login_view_deployed_to_page(self):
         factory = RequestFactory()
-        request = factory.get('all/index')
+        request = factory.get('admin_u/index')
         response = index(request)
         self.assertEqual(response.status_code, 200)
+
+
+class Test_index_teacher(TestCase):
+    def test_login_page_open(self):
+        url = reverse('indext')
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'teacher/index.html')
+
+    def test_login_view_deployed_to_page(self):
+        factory = RequestFactory()
+        request = factory.get('teacher/index')
+        response = indext(request)
+        self.assertEqual(response.status_code, 200)
+

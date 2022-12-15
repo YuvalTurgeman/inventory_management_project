@@ -4,10 +4,10 @@
 		{% load static %}
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-		<meta name="description" content="POS - Bootstrap Admin Template">
-		<meta name="keywords" content="admin, estimates, bootstrap, business, corporate, creative, management, minimal, modern,  html5, responsive">
-		<meta name="author" content="Dreamguys - Bootstrap Admin Template">
-		<meta name="robots" content="noindex, nofollow">
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="author" content="">
+		<meta name="robots" content="">
 		<title>SCE invory management platform</title>
 
 		<!-- Favicon -->
@@ -76,33 +76,13 @@
 									<div class="profilesets">
 									</div>
 								</div>
-								<hr class="m-0">
-								<a class="dropdown-item" href="profile.html"> <i class="me-2"  data-feather="user"></i> My Profile</a>
-								<hr class="m-0">
-								<a class="dropdown-item logout pb-0" href="{% url 'signin'%}"><img src="{% static 'img/icons/log-out.svg' %}" class="me-2" alt="img">Logout</a>
+								<a class="dropdown-item logout pb-0" href="{% url 'signin'%}"><img src="{% static 'img/icons/log-out.svg' %}" class="me-2" alt="img">Logout
+								<script type="text/javascript">  function preventBack() {window.history.forward();}  setTimeout("preventBack()", 0);  window.onunload = function () {null};</script></a>
 							</div>
 						</div>
 					</li>
 				</ul>
 				<!-- /Header Menu -->
-
-				<!-- Mobile Menu -->
-						<div class="dropdown-menu menu-drop-user">
-							<div class="profilename">
-								<div class="profileset">
-									<span class="user-img"><img src="{% static 'img/profiles/avator1.jpg' %}" alt="">
-									<span class="status online"></span></span>
-									<div class="profilesets">
-									</div>
-								</div>
-								<hr class="m-0">
-								<a class="dropdown-item" href="profile.html"> <i class="me-2"  data-feather="user"></i> My Profile</a>
-								<hr class="m-0">
-								<a class="dropdown-item logout pb-0" href="{% url 'signin'%}"><img src="{% static 'img/icons/log-out.svg' %}" class="me-2" alt="img">Logout
-								<script type="text/javascript">  function preventBack() {window.history.forward();}  setTimeout("preventBack()", 0);  window.onunload = function () {null};</script></a>
-							</div>
-						</div>
-				<!-- /Mobile Menu -->
 			</div>
 			<!-- Header -->
 			<!-- Sidebar -->
@@ -141,20 +121,12 @@
 								</ul>
 							</li>
 							<li class="submenu">
-								<a href="javascript:void(0);"><img src="{% static 'img/icons/quotation1.svg' %}" alt="img"><span> Quotation</span> <span class="menu-arrow"></span></a>
-								<ul>
-									<li><a href="{% url 'quotationlist' %}">Quotation List</a></li>
-									<li><a href="{% url 'addquotation' %}">Add Quotation</a></li>
-								</ul>
-							</li>
-							<li class="submenu">
 								<a href="javascript:void(0);"><img src="{% static 'img/icons/users1.svg' %}" alt="img"><span> People</span> <span class="menu-arrow"></span></a>
 								<ul>
 									<li><a href="{% url 'supplierlist' %}">Supplier List</a></li>
 									<li><a href="{% url 'addsupplier' %}">Add Supplier </a></li>
 									<li><a href="{% url 'userlist' %}">User List</a></li>
 									<li><a href="{% url 'adduser' %}">Add User</a></li>
-									<li><a href="{% url 'grouppermissions' %}">Group Permissions</a></li>
 								</ul>
 							</li>
 							<li  class="submenu">
@@ -166,7 +138,7 @@
 							<li class="submenu">
 								<a href="javascript:void(0);"><img src="{% static 'img/icons/time.svg' %}" alt="img"><span> Report</span> <span class="menu-arrow"></span></a>
 								<ul>
-									<li><a href="{% url 'purchaseorderreport' %}">Purchase order report</a></li>
+									<li><a href="{% url 'purchaseorderreport' %}">Expense report</a></li>
 									<li><a href="{% url 'inventoryreport' %}">Inventory Report</a></li>
 									<li><a href="{% url 'salesreport' %}">Transfer Report</a></li>
 									<li><a href="{% url 'purchasereport' %}">Purchase Report</a></li>

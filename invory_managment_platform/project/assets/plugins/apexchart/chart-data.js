@@ -1,4 +1,4 @@
-'use strict
+'use strict';
 
 $(document).ready(function() {
 
@@ -109,7 +109,7 @@ $(document).ready(function() {
     	var pieChart = new ApexCharts(pieCtx, pieConfig);
     	pieChart.render();
 	}
-
+	
 	// Simple Line
     if($('#s-line').length > 0 ){
     var sline = {
@@ -132,7 +132,7 @@ $(document).ready(function() {
       },
       series: [{
         name: "Desktops",
-        data: [10, 41, 35, 51, 49, 62, 0, 0, 0]
+        data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
       }],
       title: {
         text: 'Product Trends by Month',
@@ -165,7 +165,7 @@ var sLineArea = {
         height: 350,
         type: 'area',
         toolbar: {
-          show: true,
+          show: false,
         }
     },
     // colors: ['#4361ee', '#888ea8'],
@@ -185,7 +185,7 @@ var sLineArea = {
 
     xaxis: {
         type: 'datetime',
-        categories: ["2018-09-19T00:00:00", "2018-09-19T01:30:00", "2018-09-19T02:30:00", "2018-09-19T03:30:00", "2018-09-19T04:30:00", "2018-09-19T05:30:00", "2018-09-19T06:30:00"],
+        categories: ["2018-09-19T00:00:00", "2018-09-19T01:30:00", "2018-09-19T02:30:00", "2018-09-19T03:30:00", "2018-09-19T04:30:00", "2018-09-19T05:30:00", "2018-09-19T06:30:00"],                
     },
     tooltip: {
         x: {
@@ -216,7 +216,7 @@ var sCol = {
         bar: {
             horizontal: false,
             columnWidth: '55%',
-            endingShape: 'rounded'
+            endingShape: 'rounded'  
         },
     },
     // colors: ['#888ea8', '#4361ee'],
@@ -478,7 +478,7 @@ var radialChart = {
         }
     },
     series: [44, 55, 67, 83],
-    labels: ['Apples', 'Oranges', 'Bananas', 'Berries'],
+    labels: ['Apples', 'Oranges', 'Bananas', 'Berries'],    
 }
 
 var chart = new ApexCharts(
@@ -487,8 +487,8 @@ var chart = new ApexCharts(
 );
 
 chart.render();
-}
-
+}	
+	
 if($('#sales_charts').length > 0) {
 	var options = {
 		series: [{
@@ -503,7 +503,7 @@ if($('#sales_charts').length > 0) {
 		type: 'bar',
 		height: 300,
 		stacked: true,
-
+		
 		zoom: {
 		  enabled: true
 		}
@@ -542,5 +542,5 @@ if($('#sales_charts').length > 0) {
 	  chart.render();
 	}
 
-
+  
 });

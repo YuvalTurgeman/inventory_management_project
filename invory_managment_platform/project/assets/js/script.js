@@ -179,7 +179,7 @@ $(document).ready(function(){
 			} else {
 				input.attr("type", "password");
 			}
-		}); 
+		});
 	}
 	if($('.toggle-passworda').length > 0) {
 		$(document).on('click', '.toggle-passworda', function() {
@@ -300,7 +300,7 @@ $(document).ready(function(){
 				$('a', $(this).parents('ul:first')).removeClass('subdrop');
 				$(this).next('ul').slideDown(350);
 				$(this).addClass('subdrop');
-			} else if($(this).hasClass('subdrop')) { 
+			} else if($(this).hasClass('subdrop')) {
 				$(this).removeClass('subdrop');
 				$(this).next('ul').slideUp(350);
 			}
@@ -561,7 +561,7 @@ $(document).ready(function(){
 				'<div class="row align-items-center">' +
 					'<div class="col-xl-6 col-sm-6 col-12">' +
 						'<div class="sidebar-logo">' +
-							'<a href="index.html" class="logo">' +
+							'<a href="index" class="logo">' +
 								'<img src="assets/img/logo.png" alt="Logo" class="img-flex">' +
 							'</a>' +
 						'</div>' +
@@ -682,6 +682,245 @@ $(document).ready(function(){
 		}
 		
 	});
+
+	
+
+	var customize_link = '<div class="customizer-links">' +
+			'<ul class="sticky-sidebar">' +
+				'<li class="sidebar-icons">' +
+					'<a href="#" class="add-setting" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="Tooltip on left">' +
+						'<img src="assets/img/icons/sidebar-icon-01.svg" class="feather-five" alt="">' +
+					'</a>' +
+				'</li>' +
+				'<li class="sidebar-icons">' +
+					'<a href="#" class="navigation-add" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="Tooltip on left">' +
+						'<img src="assets/img/icons/sidebar-icon-02.svg" class="feather-five" alt="">' +
+					'</a>' +
+				'</li>' +
+				'<li class="sidebar-icons">' +
+					'<a href="https://themeforest.net/item/dreamspos-pos-inventory-management-admin-dashboard-template/38834413" target="_blank" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="Tooltip on left">' +
+						'<img src="assets/img/icons/sidebar-icon-03.svg" class="feather-five" alt="">' +
+					'</a>' +
+				'</li>' +
+			'</ul>' +
+		'</div>' +
+
+		'<div class="sidebar-settings preview-toggle">' +
+			'<div class="sidebar-content sticky-sidebar-one">' +
+				'<div class="sidebar-header">' +
+					'<h5>Preview Settings</h5>' +
+					'<a class="sidebar-close" href="#"><img src="assets/img/icons/close-icon.svg" alt=""></a>' +
+				'</div>' +
+				'<div class="sidebar-body">' +
+					'<h6 class="theme-title">Choose Mode</h6>' +
+					'<div class="switch-wrapper">' +
+						'<div id="dark-mode-toggle">' +
+							'<span class="light-mode active"> <img src="assets/img/icons/sun-icon.svg" class="me-2" alt=""> Light</span>' +
+							'<span class="dark-mode"><i class="far fa-moon me-2"></i> Dark</span>' +
+						'</div>' +
+					'</div>' +
+					'<div class="row  ">' +
+						'<div class="col-xl-6 ere">' +
+							'<div class="layout-wrap">' +								
+								'<div class="d-flex align-items-center">' +
+									'<div class="status-toggle d-flex align-items-center me-2">' +
+										'<input type="checkbox" id="1" class="check">' +
+										'<label for="1" class="checktoggle"><a  href="index.html"class="layout-link">checkbox</a> </label>' + 
+									'</div>' +
+									'<span class="status-text">LTR</span>' +
+								'</div>' +
+								'<div class="layout-img">' +
+									'<img class="img-fliud" src="assets/img/layout-ltr.png" alt="layout">' +
+								'</div>' +
+							'</div>' +
+						'</div>' +
+						'<div class="col-xl-6 ere">' +
+							'<div class="layout-wrap">' +								
+								'<div class="d-flex align-items-center">' +
+									'<div class="status-toggle d-flex align-items-center me-2">' +
+										'<input type="checkbox" id="1" class="check">' +
+										'<label for="1" class="checktoggle"><a  href="../template-rtl/index.html"class="layout-link">checkbox</a> </label>' + 
+									'</div>' +
+									'<span class="status-text">RTL</span>' +
+								'</div>' +
+								'<div class="layout-img">' +
+									'<img class="img-fliud" src="assets/img/layout-rtl.png" alt="layout">' +
+								'</div>' +
+							'</div>' +
+						'</div>' +
+					'</div>' +
+					'<div class="row  ">' +
+						'<div class="col-xl-6 ere">' +
+							'<div class="layout-wrap">' +								
+								'<div class="d-flex align-items-center">' +
+									'<div class="status-toggle d-flex align-items-center me-2">' +
+										'<input type="checkbox" id="3" class="check">' +
+										'<label for="3" class="checktoggle"><a  href="index-three.html"class="layout-link">checkbox</a> </label>' + 
+									'</div>' +
+									'<span class="status-text">Boxed</span>' +
+								'</div>' +
+								'<div class="layout-img">' +
+									'<img class="img-fliud" src="assets/img/layout-04.png" alt="layout">' +
+								'</div>' +
+							'</div>' +
+						'</div>' +
+						'<div class="col-xl-6 ere">' +
+						 	'<div class="layout-wrap">' +								
+								'<div class="d-flex align-items-center">' +
+								 	'<div class="status-toggle d-flex align-items-center me-2">' +
+									 	'<input type="checkbox" id="3" class="check">' +
+									 	'<label for="3" class="checktoggle"><a  href="index-four.html"class="layout-link">checkbox</a> </label>' + 
+								 	'</div>' +
+								 	'<span class="status-text">Collapsed</span>' +
+								'</div>' +
+							 	'<div class="layout-img">' +
+									 '<img class="img-fliud" src="assets/img/layout-01.png" alt="layout">' +
+							 	'</div>' +
+						 	'</div>' +
+						'</div>' +
+					'</div>' +
+				'</div>' +
+			'</div>' +
+	 	'</div>' +
+		
+		'<div class="sidebar-settings nav-toggle">' +
+			'<div class="sidebar-content sticky-sidebar-one">' +
+				'<div class="sidebar-header">' +
+					'<h5>Navigation Settings</h5>' +
+				 	'<a class="sidebar-close" href="#"><img src="assets/img/icons/close-icon.svg" alt=""></a>' +
+				'</div>' +
+			 	'<div class="sidebar-body">' +
+				 	'<h6 class="theme-title">Navigation Type</h6>' +
+				 	'<div class="row  ">' +
+						'<div class="col-xl-6 ere">' +
+							'<div class="layout-wrap">' +								
+								'<div class="d-flex align-items-center">' +
+									'<div class="status-toggle d-flex align-items-center me-2">' +
+										'<input type="checkbox" id="1" class="check">' +
+										'<label for="1" class="checktoggle"><a  href="index.html"class="layout-link">checkbox</a> </label>' + 
+									'</div>' +
+									'<span class="status-text">Vertical</span>' +
+								'</div>' +
+								'<div class="layout-img">' +
+									'<img class="img-fliud" src="assets/img/layout-03.png" alt="layout">' +
+								'</div>' +
+							'</div>' +
+						'</div>' +
+						'<div class="col-xl-6 ere">' +
+						 	'<div class="layout-wrap">' +								
+								'<div class="d-flex align-items-center">' +
+								 	'<div class="status-toggle d-flex align-items-center me-2">' +
+									 	'<input type="checkbox" id="2" class="check">' +
+									 	'<label for="2" class="checktoggle"><a  href="index-one.html"class="layout-link">checkbox</a> </label>' + 
+								 	'</div>' +
+								 	'<span class="status-text">Horizontal</span>' +
+								'</div>' +
+							 	'<div class="layout-img">' +
+									 '<img class="img-fliud" src="assets/img/layout-01.png" alt="layout">' +
+							 	'</div>' +
+						 	'</div>' +
+						'</div>' +
+						'<div class="col-xl-6 ere">' +
+						 	'<div class="layout-wrap">' +								
+								'<div class="d-flex align-items-center">' +
+								 	'<div class="status-toggle d-flex align-items-center me-2">' +
+									 	'<input type="checkbox" id="3" class="check">' +
+									 	'<label for="3" class="checktoggle"><a  href="index-four.html"class="layout-link">checkbox</a> </label>' + 
+								 	'</div>' +
+								 	'<span class="status-text">Collapsed</span>' +
+								'</div>' +
+							 	'<div class="layout-img">' +
+									 '<img class="img-fliud" src="assets/img/layout-01.png" alt="layout">' +
+							 	'</div>' +
+						 	'</div>' +
+						'</div>' +
+						'<div class="col-xl-6 ere">' +
+						 	'<div class="layout-wrap">' +								
+								'<div class="d-flex align-items-center">' +
+								 	'<div class="status-toggle d-flex align-items-center me-2">' +
+									 	'<input type="checkbox" id="3" class="check">' +
+									 	'<label for="3" class="checktoggle"><a  href="index-three.html"class="layout-link">checkbox</a> </label>' + 
+								 	'</div>' +
+								 	'<span class="status-text">Modern</span>' +
+								'</div>' +
+							 	'<div class="layout-img">' +
+									 '<img class="img-fliud" src="assets/img/layout-04.png" alt="layout">' +
+							 	'</div>' +
+						 	'</div>' +
+						'</div>' +
+						'<div class="col-xl-6 ere">' +
+						 	'<div class="layout-wrap">' +								
+								'<div class="d-flex align-items-center">' +
+								 	'<div class="status-toggle d-flex align-items-center me-2">' +
+									 	'<input type="checkbox" id="3" class="check">' +
+									 	'<label for="3" class="checktoggle"><a  href="index-two.html"class="layout-link">checkbox</a> </label>' + 
+								 	'</div>' +
+								 	'<span class="status-text">Boxed</span>' +
+								'</div>' +
+							 	'<div class="layout-img">' +
+									 '<img class="img-fliud" src="assets/img/layout-03.png" alt="layout">' +
+							 	'</div>' +
+						 	'</div>' +
+						'</div>' +
+					'</div>' +
+				'</div>' +
+		 	'</div>' +
+	  	'</div>';
+
+$("body").append(customize_link);
+
+$('.add-setting').on("click", function (e) {
+	e.preventDefault();
+	$('.preview-toggle.sidebar-settings').addClass('show-settings');
+});
+$('.sidebar-close').on("click", function (e) {
+	e.preventDefault();
+	$('.preview-toggle.sidebar-settings').removeClass('show-settings');
+});
+$('.navigation-add').on("click", function (e) {
+	e.preventDefault();
+	$('.nav-toggle.sidebar-settings').addClass('show-settings');
+});
+$('.sidebar-close').on("click", function (e) {
+	e.preventDefault();
+	$('.nav-toggle.sidebar-settings').removeClass('show-settings');
+});
+
+// DarkMode with LocalStorage
+if($('#dark-mode-toggle').length > 0) {
+	$("#dark-mode-toggle").children(".light-mode").addClass("active");
+	let darkMode = localStorage.getItem('darkMode'); 
+	
+	const darkModeToggle = document.querySelector('#dark-mode-toggle');
+	
+	const enableDarkMode = () => {
+		document.body.setAttribute('data-theme', 'dark');
+		$("#dark-mode-toggle").children(".dark-mode").addClass("active");
+		$("#dark-mode-toggle").children(".light-mode").removeClass("active");
+		localStorage.setItem('darkMode', 'enabled');
+	}
+
+	const disableDarkMode = () => {
+	  document.body.removeAttribute('data-theme', 'dark');
+		$("#dark-mode-toggle").children(".dark-mode").removeClass("active");
+		$("#dark-mode-toggle").children(".light-mode").addClass("active");
+	  localStorage.setItem('darkMode', null);
+	}
+	 
+	if (darkMode === 'enabled') {
+		enableDarkMode();
+	}
+
+	darkModeToggle.addEventListener('click', () => {
+	  darkMode = localStorage.getItem('darkMode'); 
+	  
+	  if (darkMode !== 'enabled') {
+		enableDarkMode();
+	  } else {  
+		disableDarkMode(); 
+	  }
+	});
+}
 	  
 
 });

@@ -1,63 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-        <meta name="description" content="POS - Bootstrap Admin Template">
-		<meta name="keywords" content="admin, estimates, bootstrap, business, corporate, creative, invoice, html5, responsive, Projects">
-        <meta name="author" content="Dreamguys - Bootstrap Admin Template">
-        <meta name="robots" content="noindex, nofollow">
-        <title>SCE invory management platform</title>
-		
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+	<head>
+		{% load static %}
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="author" content="">
+		<meta name="robots" content="">
+		<title>SCE invory management platform</title>
+
 		<!-- Favicon -->
-        <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
-		
+		<link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.png' %}">
+
 		<!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-		
+		<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
 		<!-- animation CSS -->
-        <link rel="stylesheet" href="assets/css/animate.css">
-
-		<!-- Select2 CSS -->
-		<link rel="stylesheet" href="assets/plugins/select2/css/select2.min.css">
-
-		<!-- Datetimepicker CSS -->
-		<link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css">
+		<link rel="stylesheet" href="{% static 'css/animate.css' %}">
 
 		<!-- Datatable CSS -->
-		<link rel="stylesheet" href="assets/css/dataTables.bootstrap4.min.css">
-		
-        <!-- Fontawesome CSS -->
-		<link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
-		<link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
-		
+		<link rel="stylesheet" href="{% static 'css/dataTables.bootstrap4.min.css' %}">
+
+		<!-- Fontawesome CSS -->
+		<link rel="stylesheet" href="{% static 'plugins/fontawesome/css/fontawesome.min.css' %}">
+		<link rel="stylesheet" href="{% static 'plugins/fontawesome/css/all.min.css' %}">
+
 		<!-- Main CSS -->
-        <link rel="stylesheet" href="assets/css/style.css">
-		
-    </head>
+		<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+	</head>
 	<body>
 		<div id="global-loader" >
 			<div class="whirly-loader"> </div>
 		</div>
 		<!-- Main Wrapper -->
 		<div class="main-wrapper">
-			
+
 			<!-- Header -->
 			<div class="header">
-			
+
 				<!-- Logo -->
 				 <div class="header-left active">
-					<a href="index.html" class="logo">
-						<img src="assets/img/logo.png"  alt="">
+					<a href="{% url 'index' %}" class="logo">
+						<img src="{% static 'img/logo.png' %}" alt="">
 					</a>
-					<a href="index.html" class="logo-small">
-						<img src="assets/img/logo-small.png"  alt="">
+					<a href="{% url 'index' %}" class="logo-small">
+						<img src="{% static 'img/logo-small.png' %}"  alt="">
 					</a>
 					<a id="toggle_btn" href="javascript:void(0);">
 					</a>
 				</div>
 				<!-- /Logo -->
-				
+
 				<a id="mobile_btn" class="mobile_btn" href="#sidebar">
 					<span class="bar-icon">
 						<span></span>
@@ -65,561 +60,146 @@
 						<span></span>
 					</span>
 				</a>
-				
+
 				<!-- Header Menu -->
 				<ul class="nav user-menu">
 					<li class="nav-item dropdown has-arrow main-drop">
 						<a href="javascript:void(0);" class="dropdown-toggle nav-link userset" data-bs-toggle="dropdown">
-							<span class="user-img"><img src="assets/img/profiles/avator1.jpg" alt="">
+							<span class="user-img"><img src="{% static 'img/profiles/avator1.jpg' %}" alt="">
 							<span class="status online"></span></span>
 						</a>
 						<div class="dropdown-menu menu-drop-user">
 							<div class="profilename">
 								<div class="profileset">
-									<span class="user-img"><img src="assets/img/profiles/avator1.jpg" alt="">
+									<span class="user-img"><img src="{% static 'img/profiles/avator1.jpg' %}" alt="">
 									<span class="status online"></span></span>
 									<div class="profilesets">
-										<h6>Shay Lavi</h6>
-										<h5>Admin</h5>
 									</div>
 								</div>
-								<hr class="m-0">
-								<a class="dropdown-item" href="profile.html"> <i class="me-2"  data-feather="user"></i> My Profile</a>
-								<hr class="m-0">
-								<a class="dropdown-item logout pb-0" href="signin.html"><img src="assets/img/icons/log-out.svg" class="me-2" alt="img">Logout</a>
+								<a class="dropdown-item logout pb-0" href="{% url 'signin'%}"><img src="{% static 'img/icons/log-out.svg' %}" class="me-2" alt="img">Logout
+								<script type="text/javascript">  function preventBack() {window.history.forward();}  setTimeout("preventBack()", 0);  window.onunload = function () {null};</script></a>
 							</div>
 						</div>
 					</li>
 				</ul>
 				<!-- /Header Menu -->
-				
-				<!-- Mobile Menu -->
-				<div class="dropdown mobile-user-menu">
-					<a href="javascript:void(0);" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
-					<div class="dropdown-menu dropdown-menu-right">
-						<a class="dropdown-item" href="profile.html">My Profile</a>
-						<a class="dropdown-item" href="signin.html">Logout</a>
-					</div>
-				</div>
-				<!-- /Mobile Menu -->
 			</div>
 			<!-- Header -->
-					 <!-- Sidebar -->
-					 <div class="sidebar" id="sidebar">
-						<div class="sidebar-inner slimscroll">
-							<div id="sidebar-menu" class="sidebar-menu">
+			<!-- Sidebar -->
+			<div class="sidebar" id="sidebar">
+				<div class="sidebar-inner slimscroll">
+					<div id="sidebar-menu" class="sidebar-menu">
+						<ul>
+							<li class="active">
+								<a href="{% url 'index' %}" ><img src="{% static 'img/icons/dashboard.svg' %}" alt="img"><span> Dashboard</span> </a>
+							</li>
+							<li class="submenu">
+								<a href="javascript:void(0);"><img src="{% static 'img/icons/product.svg' %}" alt="img"><span> Product</span> <span class="menu-arrow"></span></a>
 								<ul>
-									<li class="active">
-										<a href="index.html" ><img src="assets/img/icons/dashboard.svg" alt="img"><span> Dashboard</span> </a>
-									</li>
-									<li class="submenu">
-										<a href="javascript:void(0);"><img src="assets/img/icons/product.svg" alt="img"><span> Product</span> <span class="menu-arrow"></span></a>
-										<ul>
-											<li><a href="productlist.html">Product List</a></li>
-											<li><a href="addproduct.html">Add Product</a></li>
-											<li><a href="categorylist.html">Category List</a></li>
-										</ul>
-									</li>
-									<li class="submenu">
-										<a href="javascript:void(0);"><img src="assets/img/icons/transfer1.svg" alt="img"><span> Transfers</span> <span class="menu-arrow"></span></a>
-										<ul>
-											<li><a href="saleslist.html">Transfers List</a></li>
-										</ul>
-									</li>
-									<li class="submenu">
-										<a href="javascript:void(0);"><img src="assets/img/icons/purchase1.svg" alt="img"><span> Purchase</span> <span class="menu-arrow"></span></a>
-										<ul>
-											<li><a href="purchaselist.html">Purchase List</a></li>
-											<li><a href="addpurchase.html">Add Purchase</a></li>
-										</ul>
-									</li>
-									<li class="submenu">
-										<a href="javascript:void(0);"><img src="assets/img/icons/expense1.svg" alt="img"><span> Expense</span> <span class="menu-arrow"></span></a>
-										<ul>
-											<li><a href="expenselist.html">Expense List</a></li>
-											<li><a href="createexpense.html">Add Expense</a></li>
-										</ul>
-									</li>
-									<li class="submenu">
-										<a href="javascript:void(0);"><img src="assets/img/icons/quotation1.svg" alt="img"><span> Quotation</span> <span class="menu-arrow"></span></a>
-										<ul>
-											<li><a href="quotationList.html">Quotation List</a></li>
-											<li><a href="addquotation.html">Add Quotation</a></li>
-										</ul>
-									</li>
-									<li class="submenu">
-										<a href="javascript:void(0);"><img src="assets/img/icons/users1.svg" alt="img"><span> People</span> <span class="menu-arrow"></span></a>
-										<ul>
-											<li><a href="supplierlist.html">Supplier List</a></li>
-											<li><a href="addsupplier.html">Add Supplier </a></li>
-											<li><a href="userlist.html">User List</a></li>
-											<li><a href="adduser.html">Add User</a></li>
-											<li><a href="grouppermissions.html">Group Permissions</a></li>
-										</ul>
-									</li>														
-									<li  class="submenu">
-										<a href="javascript:void(0);"><i data-feather="bar-chart-2"></i> <span> Charts  </span> <span class="menu-arrow"></span></a>
-										<ul>
-											<li><a href="chart-apex.html">Apex Charts</a></li>
-										</ul>
-									</li>
-									<li class="submenu">
-										<a href="javascript:void(0);"><img src="assets/img/icons/time.svg" alt="img"><span> Report</span> <span class="menu-arrow"></span></a>
-										<ul>
-											<li><a href="purchaseorderreport.html">Purchase order report</a></li>
-											<li><a href="inventoryreport.html">Inventory Report</a></li>
-											<li><a href="salesreport.html">Transfer Report</a></li>
-											<li><a href="purchasereport.html">Purchase Report</a></li>
-										</ul>
-									</li>
+									<li><a href="{% url 'productlist' %}">Product List</a></li>
+									<li><a href="{% url 'addproduct' %}">Add Product</a></li>
 								</ul>
-							</div>
-						</div>
+							</li>
+							<li class="submenu">
+								<a href="javascript:void(0);"><img src="{% static 'img/icons/transfer1.svg' %}" alt="img"><span> Transfers</span> <span class="menu-arrow"></span></a>
+								<ul>
+									<li><a href="{% url 'saleslist' %}">Transfers List</a></li>
+								</ul>
+							</li>
+							<li class="submenu">
+								<a href="javascript:void(0);"><img src="{% static 'img/icons/purchase1.svg' %}" alt="img"><span> Purchase</span> <span class="menu-arrow"></span></a>
+								<ul>
+									<li><a href="{% url 'purchaselist' %}">Purchase List</a></li>
+									<li><a href="{% url 'addpurchase' %}">Add Purchase</a></li>
+								</ul>
+							</li>
+							<li class="submenu">
+								<a href="javascript:void(0);"><img src="{% static 'img/icons/expense1.svg' %}" alt="img"><span> Expense</span> <span class="menu-arrow"></span></a>
+								<ul>
+									<li><a href="{% url 'expenselist' %}">Expense List</a></li>
+									<li><a href="{% url 'createexpense' %}">Add Expense</a></li>
+								</ul>
+							</li>
+							<li class="submenu">
+								<a href="javascript:void(0);"><img src="{% static 'img/icons/users1.svg' %}" alt="img"><span> People</span> <span class="menu-arrow"></span></a>
+								<ul>
+									<li><a href="{% url 'supplierlist' %}">Supplier List</a></li>
+									<li><a href="{% url 'addsupplier' %}">Add Supplier </a></li>
+									<li><a href="{% url 'userlist' %}">User List</a></li>
+									<li><a href="{% url 'adduser' %}">Add User</a></li>
+								</ul>
+							</li>
+							<li  class="submenu">
+								<a href="javascript:void(0);"><i data-feather="bar-chart-2"></i> <span> Charts  </span> <span class="menu-arrow"></span></a>
+								<ul>
+									<li><a href="{% url 'chart-apex' %}">Apex Charts</a></li>
+								</ul>
+							</li>
+							<li class="submenu">
+								<a href="javascript:void(0);"><img src="{% static 'img/icons/time.svg' %}" alt="img"><span> Report</span> <span class="menu-arrow"></span></a>
+								<ul>
+									<li><a href="{% url 'purchaseorderreport' %}">Expense report</a></li>
+									<li><a href="{% url 'inventoryreport' %}">Inventory Report</a></li>
+									<li><a href="{% url 'salesreport' %}">Transfer Report</a></li>
+									<li><a href="{% url 'purchasereport' %}">Purchase Report</a></li>
+								</ul>
+							</li>
+						</ul>
 					</div>
-					<!-- /Sidebar -->
-
+				</div>
+			</div>
+			<!-- /Sidebar -->
 			<div class="page-wrapper">
 				<div class="content">
 					<div class="page-header">
 						<div class="page-title">
-							<h4>User List</h4>
-							<h6>Manage your User</h6>
+							<h4>Users List</h4>
+							<h6>Manage your users</h6>
 						</div>
 						<div class="page-btn">
-							<a href="adduser.html" class="btn btn-added"><img src="assets/img/icons/plus.svg" alt="img" class="me-2">Add User</a>
+							<a href="{% url 'adduser' %}" class="btn btn-added"><img src="{% static 'img/icons/plus.svg' %}" alt="img" class="me-1">Add New User</a>
 						</div>
 					</div>
 
-					<!-- /product list -->
+					<!-- /expenses list -->
 					<div class="card">
 						<div class="card-body">
 							<div class="table-top">
 								<div class="search-set">
 									<div class="search-input">
-										<a class="btn btn-searchset">
-											<img src="assets/img/icons/search-white.svg" alt="img">
-										</a>
+										<a class="btn btn-searchset"><img src="{% static 'img/icons/search-white.svg' %}" alt="img"></a>
 									</div>
 								</div>
 							</div>
 							<div class="table-responsive">
-								<table class="table  datanew">
+								<table class="table datatable ">
 									<thead>
 										<tr>
-											<th>
-												<label class="checkboxs">
-													<input type="checkbox">
-													<span class="checkmarks"></span>
-												</label>
-											</th>
-											<th>Profile</th>
-											<th>First name </th>
-											<th>Last name </th>
-											<th>User name </th>
-											<th>Phone</th>
-											<th>email</th>
-											<th>Status</th>
+											<th>Full Name</th>
+											<th>Id Number</th>
+											<th>Role</th>
+											<th>Email</th>
+											<th>Password</th>
 											<th>Action</th>
 										</tr>
 									</thead>
-									<tbody>
+									{% for i in users %}
 										<tr>
+											<td>{{i.full_name}}</td>
+											<td>{{i.id_number}}</td>
+											<td>{{i.role}}</td>
+											<td>{{i.email}}</td>
+											<td>{{i.password}}</td>
 											<td>
-												<label class="checkboxs">
-													<input type="checkbox">
-													<span class="checkmarks"></span>
-												</label>
-											</td>
-											<td class="productimgname">
-												<a href="javascript:void(0);" class="product-img">
-													<img src="assets/img/customer/customer1.jpg" alt="product">
+												<a class="me-3" href="{% url 'editUser' pk=i.pk %}">
+													<img src="{% static 'img/icons/edit.svg' %}" alt="img">
 												</a>
-											</td>
-											<td>Thomas</td>
-											<td>Thomas </td>
-											<td>Thomas21 </td>
-											<td>+12163547758 </td>
-											<td>thomas@example.com</td>
-											<td>
-												<div class="status-toggle d-flex justify-content-between align-items-center">
-													<input type="checkbox" id="user1" class="check" >
-													<label for="user1" class="checktoggle">checkbox</label>
-												</div>
-											</td>
-											<td>
-												  
-												<a class="me-3" href="edituser.html">
-													<img src="assets/img/icons/edit.svg" alt="img">
-												</a>
-												<a class="me-3 confirm-text" href="javascript:void(0);">
-													<img src="assets/img/icons/delete.svg" alt="img">
+												<a class="confirm-text" href="{% url 'deleteUser' pk=i.pk %}">
+													<img src="{% static 'img/icons/delete.svg' %}" alt="img">
 												</a>
 											</td>
 										</tr>
-										<tr>
-											<td>
-												<label class="checkboxs">
-													<input type="checkbox">
-													<span class="checkmarks"></span>
-												</label>
-											</td>
-											<td class="productimgname">
-												<a href="javascript:void(0);" class="product-img">
-													<img src="assets/img/customer/customer2.jpg" alt="product">
-												</a>
-											</td>
-											<td>Benjamin</td>
-											<td>Franklin </td>
-											<td>504Benjamin </td>
-											<td>123-456-888</td>
-											<td>customer@example.com</td>
-											<td>
-												<div class="status-toggle d-flex justify-content-between align-items-center">
-													<input type="checkbox" id="user2" class="check" checked="">
-													<label for="user2" class="checktoggle">checkbox</label>
-												</div>
-											</td>
-											<td>
-												  
-												<a class="me-3" href="edituser.html">
-													<img src="assets/img/icons/edit.svg" alt="img">
-												</a>
-												<a class="me-3 confirm-text" href="javascript:void(0);">
-													<img src="assets/img/icons/delete.svg" alt="img">
-												</a>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<label class="checkboxs">
-													<input type="checkbox">
-													<span class="checkmarks"></span>
-												</label>
-											</td>
-											<td class="productimgname">
-												<a href="javascript:void(0);" class="product-img">
-													<img src="assets/img/customer/customer3.jpg" alt="product">
-												</a>
-											</td>
-											<td>James</td>
-											<td>James </td>
-											<td>James 524 </td>
-											<td>+12163547758 </td>
-											<td>james@example.com</td>
-											<td>
-												<div class="status-toggle d-flex justify-content-between align-items-center">
-													<input type="checkbox" id="user3" class="check" checked="">
-													<label for="user3" class="checktoggle">checkbox</label>
-												</div>
-											</td>
-											<td>
-												  
-												<a class="me-3" href="edituser.html">
-													<img src="assets/img/icons/edit.svg" alt="img">
-												</a>
-												<a class="me-3 confirm-text" href="javascript:void(0);">
-													<img src="assets/img/icons/delete.svg" alt="img">
-												</a>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<label class="checkboxs">
-													<input type="checkbox">
-													<span class="checkmarks"></span>
-												</label>
-											</td>
-											<td class="productimgname">
-												<a href="javascript:void(0);" class="product-img">
-													<img src="assets/img/customer/customer4.jpg" alt="product">
-												</a>
-											</td>
-											<td>Bruklin</td>
-											<td>Bruklin </td>
-											<td>Bruklin2022</td>
-											<td>123-456-888</td>
-											<td>bruklin@example.com</td>
-											<td>
-												<div class="status-toggle d-flex justify-content-between align-items-center">
-													<input type="checkbox" id="user4" class="check" checked="">
-													<label for="user4" class="checktoggle">checkbox</label>
-												</div>
-											</td>
-											<td>
-												  
-												<a class="me-3" href="edituser.html">
-													<img src="assets/img/icons/edit.svg" alt="img">
-												</a>
-												<a class="me-3 confirm-text" href="javascript:void(0);">
-													<img src="assets/img/icons/delete.svg" alt="img">
-												</a>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<label class="checkboxs">
-													<input type="checkbox">
-													<span class="checkmarks"></span>
-												</label>
-											</td>
-											<td class="productimgname">
-												<a href="javascript:void(0);" class="product-img">
-													<img src="assets/img/customer/customer5.jpg" alt="product">
-												</a>
-											</td>
-											<td>Franklin</td>
-											<td>Jacob </td>
-											<td>BeverlyWIN25</td>
-											<td>+12163547758 </td>
-											<td>Beverly@example.com</td>
-											<td>
-												<div class="status-toggle d-flex justify-content-between align-items-center">
-													<input type="checkbox" id="user5" class="check">
-													<label for="user5" class="checktoggle">checkbox</label>
-												</div>
-											</td>
-											<td>
-												  
-												<a class="me-3" href="edituser.html">
-													<img src="assets/img/icons/edit.svg" alt="img">
-												</a>
-												<a class="me-3 confirm-text" href="javascript:void(0);">
-													<img src="assets/img/icons/delete.svg" alt="img">
-												</a>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<label class="checkboxs">
-													<input type="checkbox">
-													<span class="checkmarks"></span>
-												</label>
-											</td>
-											<td class="productimgname">
-												<a href="javascript:void(0);" class="product-img">
-													<img src="assets/img/customer/customer6.jpg" alt="product">
-												</a>
-											</td>
-											<td>B. Huber	</td>
-											<td>Jacob </td>
-											<td>BeverlyWIN25</td>
-											<td>+12163547758 </td>
-											<td>Huber@example.com</td>
-											<td>
-												<div class="status-toggle d-flex justify-content-between align-items-center">
-													<input type="checkbox" id="user6" class="check">
-													<label for="user6" class="checktoggle">checkbox</label>
-												</div>
-											</td>
-											<td>
-												  
-												<a class="me-3" href="edituser.html">
-													<img src="assets/img/icons/edit.svg" alt="img">
-												</a>
-												<a class="me-3 confirm-text" href="javascript:void(0);">
-													<img src="assets/img/icons/delete.svg" alt="img">
-												</a>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<label class="checkboxs">
-													<input type="checkbox">
-													<span class="checkmarks"></span>
-												</label>
-											</td>
-											<td class="productimgname">
-												<a href="javascript:void(0);" class="product-img">
-													<img src="assets/img/customer/customer7.jpg" alt="product">
-												</a>
-											</td>
-											<td>Alwin</td>
-											<td>Alwin </td>
-											<td>Alwin243</td>
-											<td>+12163547758  </td>
-											<td>customer@example.com</td>
-											<td>
-												<div class="status-toggle d-flex justify-content-between align-items-center">
-													<input type="checkbox" id="user7" class="check">
-													<label for="user7" class="checktoggle">checkbox</label>
-												</div>
-											</td>
-											<td>
-												  
-												<a class="me-3" href="edituser.html">
-													<img src="assets/img/icons/edit.svg" alt="img">
-												</a>
-												<a class="me-3 confirm-text" href="javascript:void(0);">
-													<img src="assets/img/icons/delete.svg" alt="img">
-												</a>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<label class="checkboxs">
-													<input type="checkbox">
-													<span class="checkmarks"></span>
-												</label>
-											</td>
-											<td class="productimgname">
-												<a href="javascript:void(0);" class="product-img">
-													<img src="assets/img/customer/customer8.jpg" alt="product">
-												</a>
-											</td>
-											<td>Fred john</td>
-											<td>john </td>
-											<td>FredJ25</td>
-											<td>+12163547758  </td>
-											<td>john@example.com</td>
-											<td>
-												<div class="status-toggle d-flex justify-content-between align-items-center">
-													<input type="checkbox" id="user15" class="check">
-													<label for="user15" class="checktoggle">checkbox</label>
-												</div>
-											</td>
-											<td>
-												  
-												<a class="me-3" href="edituser.html">
-													<img src="assets/img/icons/edit.svg" alt="img">
-												</a>
-												<a class="me-3 confirm-text" href="javascript:void(0);">
-													<img src="assets/img/icons/delete.svg" alt="img">
-												</a>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<label class="checkboxs">
-													<input type="checkbox">
-													<span class="checkmarks"></span>
-												</label>
-											</td>
-											<td class="productimgname">
-												<a href="javascript:void(0);" class="product-img">
-													<img src="assets/img/customer/customer1.jpg" alt="product">
-												</a>
-											</td>
-											<td>Rasmussen	</td>
-											<td>Gothic </td>
-											<td>Cras56</td>
-											<td>+12163547758   </td>
-											<td>Rasmussen@example.com</td>
-											<td>
-												<div class="status-toggle d-flex justify-content-between align-items-center">
-													<input type="checkbox" id="user9" class="check" checked>
-													<label for="user9" class="checktoggle">checkbox</label>
-												</div>
-											</td>
-											<td>
-												  
-												<a class="me-3" href="edituser.html">
-													<img src="assets/img/icons/edit.svg" alt="img">
-												</a>
-												<a class="me-3 confirm-text" href="javascript:void(0);">
-													<img src="assets/img/icons/delete.svg" alt="img">
-												</a>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<label class="checkboxs">
-													<input type="checkbox">
-													<span class="checkmarks"></span>
-												</label>
-											</td>
-											<td class="productimgname">
-												<a href="javascript:void(0);" class="product-img">
-													<img src="assets/img/customer/customer2.jpg" alt="product">
-												</a>
-											</td>
-											<td>Grace	</td>
-											<td>Halena </td>
-											<td>Grace2022</td>
-											<td>+12163547758   </td>
-											<td>customer@example.com</td>
-											<td>
-												<div class="status-toggle d-flex justify-content-between align-items-center">
-													<input type="checkbox" id="user10" class="check" checked>
-													<label for="user10" class="checktoggle">checkbox</label>
-												</div>
-											</td>
-											<td>
-												  
-												<a class="me-3" href="edituser.html">
-													<img src="assets/img/icons/edit.svg" alt="img">
-												</a>
-												<a class="me-3 confirm-text" href="javascript:void(0);">
-													<img src="assets/img/icons/delete.svg" alt="img">
-												</a>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<label class="checkboxs">
-													<input type="checkbox">
-													<span class="checkmarks"></span>
-												</label>
-											</td>
-											<td class="productimgname">
-												<a href="javascript:void(0);" class="product-img">
-													<img src="assets/img/customer/customer3.jpg" alt="product">
-												</a>
-											</td>
-											<td>Rasmussen	</td>
-											<td>Gothic </td>
-											<td>Cras56</td>
-											<td>+12163547758   </td>
-											<td>Rasmussen@example.com</td>
-											<td>
-												<div class="status-toggle d-flex justify-content-between align-items-center">
-													<input type="checkbox" id="user19" class="check" checked>
-													<label for="user19" class="checktoggle">checkbox</label>
-												</div>
-											</td>
-											<td>
-												  
-												<a class="me-3" href="edituser.html">
-													<img src="assets/img/icons/edit.svg" alt="img">
-												</a>
-												<a class="me-3 confirm-text" href="javascript:void(0);">
-													<img src="assets/img/icons/delete.svg" alt="img">
-												</a>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<label class="checkboxs">
-													<input type="checkbox">
-													<span class="checkmarks"></span>
-												</label>
-											</td>
-											<td class="productimgname">
-												<a href="javascript:void(0);" class="product-img">
-													<img src="assets/img/customer/customer4.jpg" alt="product">
-												</a>
-											</td>
-											<td>Grace	</td>
-											<td>Halena </td>
-											<td>Grace2022</td>
-											<td>+12163547758   </td>
-											<td>customer@example.com</td>
-											<td>
-												<div class="status-toggle d-flex justify-content-between align-items-center">
-													<input type="checkbox" id="user18" class="check" checked>
-													<label for="user18" class="checktoggle">checkbox</label>
-												</div>
-											</td>
-											<td>
-												  
-												<a class="me-3" href="edituser.html">
-													<img src="assets/img/icons/edit.svg" alt="img">
-												</a>
-												<a class="me-3 confirm-text" href="javascript:void(0);">
-													<img src="assets/img/icons/delete.svg" alt="img">
-												</a>
-											</td>
-										</tr>
-									</tbody>
+									{% endfor %}
 								</table>
 							</div>
 						</div>
@@ -630,215 +210,28 @@
         </div>
 		<!-- /Main Wrapper -->
 
-		<!-- show payment Modal -->
-		<div class="modal fade" id="showpayment" tabindex="-1" aria-labelledby="showpayment" aria-hidden="true">
-			<div class="modal-dialog modal-lg">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5 class="modal-title">Show Payments</h5>
-						<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-					</div>
-					<div class="modal-body">
-						<div class="table-responsive">
-							<table class="table">
-								<thead>
-									<tr>
-										<th>Date</th>
-										<th>Reference</th>
-										<th>Amount	</th>
-										<th>Paid By	</th>
-										<th>Paid By	</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr class="bor-b1">
-										<td>2022-03-07	</td>
-										<td>INV/SL0101</td>
-										<td>$ 1500.00	</td>
-										<td>Cash</td>
-										<td>
-											<a class="me-2" href="javascript:void(0);">
-												<img src="assets/img/icons/printer.svg" alt="img">
-											</a>
-											<a class="me-2" href="javascript:void(0);" data-bs-target="#editpayment" data-bs-toggle="modal" data-bs-dismiss="modal" >
-												<img src="assets/img/icons/edit.svg" alt="img">
-											</a>
-											<a class="me-2 confirm-text" href="javascript:void(0);">
-												<img src="assets/img/icons/delete.svg" alt="img">
-											</a>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- show payment Modal -->
-
-		<!-- show payment Modal -->
-		<div class="modal fade" id="createpayment" tabindex="-1" aria-labelledby="createpayment" aria-hidden="true">
-			<div class="modal-dialog modal-lg">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5 class="modal-title">Create Payment</h5>
-						<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-					</div>
-					<div class="modal-body">
-						<div class="row">
-							<div class="col-lg-6 col-sm-12 col-12">
-								<div class="form-group">
-									<label>Customer</label>
-									<div class="input-group">
-										<input type="text" value="2022-03-07" class="datetimepicker">
-										<a class="scanner-set input-group-text">
-											<img src="assets/img/icons/datepicker.svg" alt="img">
-										</a>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-6 col-sm-12 col-12">
-								<div class="form-group">
-									<label>Reference</label>
-									<input type="text" value="INV/SL0101">
-								</div>
-							</div>
-							<div class="col-lg-6 col-sm-12 col-12">
-								<div class="form-group">
-									<label>Received Amount</label>
-									<input type="text" value="1500.00">
-								</div>
-							</div>
-							<div class="col-lg-6 col-sm-12 col-12">
-								<div class="form-group">
-									<label>Paying Amount</label>
-									<input type="text" value="1500.00">
-								</div>
-							</div>
-							<div class="col-lg-6 col-sm-12 col-12">
-								<div class="form-group">
-									<label>Payment type</label>
-									<select class="select">
-										<option>Cash</option>
-										<option>Online</option>
-										<option>Inprogress</option>
-									</select>
-								</div>
-							</div>
-							<div class="col-lg-12">
-								<div class="form-group">
-									<label>Note</label>
-									<textarea class="form-control"></textarea>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-submit">Submit</button>
-						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- show payment Modal -->
-
-		<!-- edit payment Modal -->
-		<div class="modal fade" id="editpayment" tabindex="-1" aria-labelledby="editpayment" aria-hidden="true">
-			<div class="modal-dialog modal-lg">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5 class="modal-title">Edit Payment</h5>
-						<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-					</div>
-					<div class="modal-body">
-						<div class="row">
-							<div class="col-lg-6 col-sm-12 col-12">
-								<div class="form-group">
-									<label>Customer</label>
-									<div class="input-group">
-										<input type="text" value="2022-03-07" class="datetimepicker">
-										<a class="scanner-set input-group-text">
-											<img src="assets/img/icons/datepicker.svg" alt="img">
-										</a>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-6 col-sm-12 col-12">
-								<div class="form-group">
-									<label>Reference</label>
-									<input type="text" value="INV/SL0101">
-								</div>
-							</div>
-							<div class="col-lg-6 col-sm-12 col-12">
-								<div class="form-group">
-									<label>Received Amount</label>
-									<input type="text" value="1500.00">
-								</div>
-							</div>
-							<div class="col-lg-6 col-sm-12 col-12">
-								<div class="form-group">
-									<label>Paying Amount</label>
-									<input type="text" value="1500.00">
-								</div>
-							</div>
-							<div class="col-lg-6 col-sm-12 col-12">
-								<div class="form-group">
-									<label>Payment type</label>
-									<select class="select">
-										<option>Cash</option>
-										<option>Online</option>
-										<option>Inprogress</option>
-									</select>
-								</div>
-							</div>
-							<div class="col-lg-12">
-								<div class="form-group">
-									<label>Note</label>
-									<textarea class="form-control"></textarea>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-submit">Submit</button>
-						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- edit payment Modal -->
-
-		 
 		<!-- jQuery -->
-        <script src="assets/js/jquery-3.6.0.min.js"></script>
+		<script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
 
-        <!-- Feather Icon JS -->
-		<script src="assets/js/feather.min.js"></script>
+		<!-- Feather Icon JS -->
+		<script src="{% static 'js/feather.min.js' %}"></script>
 
 		<!-- Slimscroll JS -->
-		<script src="assets/js/jquery.slimscroll.min.js"></script>
+		<script src="{% static 'js/jquery.slimscroll.min.js' %}"></script>
 
 		<!-- Datatable JS -->
-		<script src="assets/js/jquery.dataTables.min.js"></script>
-		<script src="assets/js/dataTables.bootstrap4.min.js"></script>
-		
+		<script src="{% static 'js/jquery.dataTables.min.js' %}"></script>
+		<script src="{% static 'js/dataTables.bootstrap4.min.js' %}"></script>
+
 		<!-- Bootstrap Core JS -->
-        <script src="assets/js/bootstrap.bundle.min.js"></script>
+		<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
 
-		<!-- Select2 JS -->
-		<script src="assets/plugins/select2/js/select2.min.js"></script>
-
-		<!-- Datetimepicker JS -->
-		<script src="assets/js/moment.min.js"></script>
-		<script src="assets/js/bootstrap-datetimepicker.min.js"></script>
-
-		<!-- Sweetalert 2 -->
-		<script src="assets/plugins/sweetalert/sweetalert2.all.min.js"></script>
-		<script src="assets/plugins/sweetalert/sweetalerts.min.js"></script>
+		<!-- Chart JS -->
+		<script src="{% static 'plugins/apexchart/apexcharts.min.js' %}"></script>
+		<script src="{% static 'plugins/apexchart/chart-data.js' %}"></script>
 
 		<!-- Custom JS -->
-		<script src="assets/js/script.js"></script>
+		<script src="{% static 'js/script.js' %}"></script>
 		
     </body>
 </html>
