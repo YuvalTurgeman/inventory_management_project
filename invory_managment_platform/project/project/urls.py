@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from admin_user import views
-
+#aaaaaa
 urlpatterns = [
     path('admin/', admin.site.urls, name=admin),
     path('', views.signin, name='signin'),
@@ -38,19 +38,21 @@ urlpatterns = [
     path("editexpense/(?P<pk>\d+)/", views.editexpense, name="editexpense"),
     path("createexpense/", views.createexpense, name="createexpense"),
     path("deleteExpense/(?P<pk>\d+)/", views.deleteExpense, name="deleteExpense"),
-    path("quotationlist/", views.quotationlist, name="quotationlist"),
-    path("addquotation/", views.addquotation, name="addquotation"),
     path("supplierlist/", views.supplierlist, name="supplierlist"),
     path("addsupplier/", views.addsupplier, name="addsupplier"),
+    path("deleteSupplier/(?P<pk>\d+)/", views.deleteSupplier, name="deleteSupplier"),
+    path("editSupplier/(?P<pk>\d+)/", views.editSupplier, name="editSupplier"),
     path("userlist/", views.userlist, name="userlist"),
     path("adduser/", views.adduser, name="adduser"),
-    path("grouppermissions/", views.grouppermissions, name="grouppermissions"),
+    path("deleteUser/(?P<pk>\d+)/", views.deleteUser, name="deleteUser"),
+    path("editUser/(?P<pk>\d+)/", views.editUser, name="editUser"),
     path("inventoryreport/", views.inventoryreport, name="inventoryreport"),
     path("salesreport/", views.salesreport, name="salesreport"),
     path("purchasereport/", views.purchasereport, name="purchasereport"),
     path("chart-apex/", views.chart_apex, name="chart-apex"),
     path("purchaseorderreport/", views.purchaseorderreport, name="purchaseorderreport"),
 
+    path("indexs/", views.indexs, name="indexs"),
     path("productlists/", views.productlists, name="productlists"),
     path("addproducts/", views.addproducts, name="addproducts"),
     path("saleslists/", views.saleslists, name="saleslists"),

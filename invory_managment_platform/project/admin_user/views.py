@@ -1,8 +1,9 @@
+import xlwt as xlwt
 from django.http import HttpResponse, HttpRequest
 from django.shortcuts import render
-from .forms import RegisterForm, ProductForm, TransferForm, PurchasesForm, ExpenseForm
+from .forms import RegisterForm, ProductForm, TransferForm, PurchasesForm, ExpenseForm, SupplierForm
 from django.db.models import Q
-from .models import User, ValidId, Product, Purchases, Finance, Transfers, Expense
+from .models import User_Data, ValidId, Product, Purchases, Finance, Transfers, Expense, Supplier
 from datetime import datetime
 
 
@@ -14,14 +15,16 @@ def register(request):
         role = request.POST.get('role')
         form = RegisterForm(request.POST)
         mydata = ValidId.objects.filter(Q(role=role) & Q(id_number=id)).values()
-        mydataUnique = User.objects.filter(Q(email=email) | Q(id_number=id)).values()
+        mydataUnique = User_Data.objects.filter(Q(email=email) | Q(id_number=id)).values()
         if len(mydataUnique) == 0 and mydata:
             if form.is_valid():
                 form.save()
                 return render(request, 'all/signin.html')
             else:
+                print("Invalid login details supplied.")
                 return HttpResponse("Invalid login details supplied.")
         else:
+            print("Invalid login details supplied.")
             return HttpResponse("Invalid login details supplied.")
 
     context = {'form': form}
@@ -35,7 +38,7 @@ def signin(request):
 def index(request):
     date = datetime.now()
     data = {
-        'users_num': len(User.objects.all()),
+        'users_num': len(User_Data.objects.all()),
         'returned_items': len(Transfers.objects.filter(Q(status='Returned')).values()),
         'budget': Finance.objects.all(),
         'total_purchase': Finance.objects.all(),
@@ -52,8 +55,7 @@ def user_login(request):
         # First get the username and password supplied
         email = request.POST.get('email')
         password = request.POST.get('password')
-        mydata = User.objects.filter(Q(email=email) & Q(password=password)).values()
-
+        mydata = User_Data.objects.filter(Q(email=email) & Q(password=password)).values()
         if mydata.filter(role='student'):
             return indexs(request)
 
@@ -150,7 +152,7 @@ def deletePurchase(request, pk):
     purchase = Purchases.objects.get(pk=pk)
     purchase.delete()
     data = {
-        "purchase": Purchases.objects.all(),
+        "purchases": Purchases.objects.all(),
     }
     return render(request, 'admin_u/purchaselist.html', data)
 
@@ -160,7 +162,7 @@ def addpurchase(request):
     if form.is_valid():
         form.save()
         data = {
-            "purchase": Purchases.objects.all(),
+            "purchases": Purchases.objects.all(),
         }
         return render(request, 'admin_u/purchaselist.html', data)
     context = {'form': form}
@@ -169,7 +171,7 @@ def addpurchase(request):
 
 def expenselist(request):
     data = {
-        "expense": Expense.objects.all(),
+        "expenses": Expense.objects.all(),
     }
     return render(request, 'admin_u/expenselist.html', data)
 
@@ -180,7 +182,7 @@ def editexpense(request, pk):
     if form.is_valid():
         form.save()
         data = {
-            "expense": Expense.objects.all(),
+            "expenses": Expense.objects.all(),
         }
         return render(request, 'admin_u/expenselist.html', data)
     context = {'form': form, 'expense': expense}
@@ -191,7 +193,7 @@ def deleteExpense(request, pk):
     expense = Expense.objects.get(pk=pk)
     expense.delete()
     data = {
-        "expense": Expense.objects.all(),
+        "expenses": Expense.objects.all(),
     }
     return render(request, 'admin_u/expenselist.html', data)
 
@@ -201,48 +203,98 @@ def createexpense(request):
     if form.is_valid():
         form.save()
         data = {
-            "expense": Expense.objects.all()
+            "expenses": Expense.objects.all()
         }
         return render(request, 'admin_u/expenselist.html', data)
     context = {'form': form}
     return render(request, 'admin_u/createexpense.html', context)
 
 
-def quotationlist(request):
-    return render(request, 'admin_u/quotationlist.html')
-
-
-def addquotation(request):
-    return render(request, 'admin_u/addquotation.html')
-
-
 def supplierlist(request):
-    return render(request, 'admin_u/supplierlist.html')
+    data = {
+        "suppliers": Supplier.objects.all(),
+    }
+    return render(request, 'admin_u/supplierlist.html', data)
+
+
+def editSupplier(request, pk):
+    supplier = Supplier.objects.get(pk=pk)
+    form = SupplierForm(request.POST or None, instance=supplier)
+    if form.is_valid():
+        form.save()
+        data = {
+            "suppliers": Supplier.objects.all(),
+        }
+        return render(request, 'admin_u/supplierlist.html', data)
+    context = {'form': form, 'supplier': supplier}
+    return render(request, 'admin_u/editsupplier.html', context)
+
+
+def deleteSupplier(request, pk):
+    supplier = Supplier.objects.get(pk=pk)
+    supplier.delete()
+    data = {
+        "suppliers": Supplier.objects.all(),
+    }
+    return render(request, 'admin_u/supplierlist.html', data)
 
 
 def addsupplier(request):
-    return render(request, 'admin_u/addsupplier.html')
-
-
-def createexpense(request):
-    return render(request, 'admin_u/createexpense.html')
+    form = SupplierForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+        data = {
+            "suppliers": Supplier.objects.all(),
+        }
+        return render(request, 'admin_u/supplierlist.html', data)
+    context = {'form': form}
+    return render(request, 'admin_u/addsupplier.html', context)
 
 
 def userlist(request):
-    return render(request, 'admin_u/userlist.html')
+    data = {
+        "users": User_Data.objects.all(),
+    }
+    return render(request, 'admin_u/userlist.html', data)
 
 
 def adduser(request):
-    return render(request, 'admin_u/adduser.html')
+    form = RegisterForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+        data = {
+            "users": User_Data.objects.all(),
+        }
+        return render(request, 'admin_u/userlist.html', data)
+    context = {'form': form}
+    return render(request, 'admin_u/adduser.html', context)
 
 
-def grouppermissions(request):
-    return render(request, 'admin_u/grouppermissions.html')
+def editUser(request, pk):
+    user = User_Data.objects.get(pk=pk)
+    form = RegisterForm(request.POST or None, instance=user)
+    if form.is_valid():
+        form.save()
+        data = {
+            "users": User_Data.objects.all(),
+        }
+        return render(request, 'admin_u/userlist.html', data)
+    context = {'form': form, 'user': user}
+    return render(request, 'admin_u/edituser.html', context)
+
+
+def deleteUser(request, pk):
+    user = User_Data.objects.get(pk=pk)
+    user.delete()
+    data = {
+        "users": User_Data.objects.all(),
+    }
+    return render(request, 'admin_u/userlist.html', data)
 
 
 def purchasereport(request):
     data = {
-        "purchase": Purchases.objects.all(),
+        "purchases": Purchases.objects.all(),
     }
     return render(request, 'admin_u/purchasereport.html', data)
 
@@ -292,31 +344,18 @@ def chart_apex(request):
 # student views
 
 def indexs(request):
+    date = datetime.now()
     data = {
-        'users_num': len(User.objects.all()),
-        'returned_items': len(ReturnedProducts.objects.all()),
+        'users_num': len(User_Data.objects.all()),
+        'returned_items': len(Transfers.objects.filter(Q(status='Returned')).values()),
         'budget': Finance.objects.all(),
         'total_purchase': Finance.objects.all(),
-        'purchase_items': len(Product.objects.all()),
-        'transfers': 0,
-        "products": Product.objects.all(),
-        "returneditems": ReturnedProducts.objects.all(),
+        'purchase_items': len(Purchases.objects.all()),
+        'transfers': len(Transfers.objects.all()),
+        "products": Product.objects.filter(Q(adding_date=date)).values(),
+        'transfersp': Transfers.objects.filter(Q(start_of_loan=date) | Q(end_of_loan=date)).values(),
     }
     return render(request, 'student/index.html', data)
-
-
-def indext(request):
-    data = {
-        'users_num': len(User.objects.all()),
-        'returned_items': len(ReturnedProducts.objects.all()),
-        'budget': Finance.objects.all(),
-        'total_purchase': Finance.objects.all(),
-        'purchase_items': len(Product.objects.all()),
-        'transfers': 0,
-        "products": Product.objects.all(),
-        "returneditems": ReturnedProducts.objects.all(),
-    }
-    return render(request, 'teacher/index.html', data)
 
 
 def productlists(request):
@@ -355,19 +394,32 @@ def userlists(request):
 
 
 def purchasereports(request):
-    return render(request, 'student/purchasereport.html')
+    data = {
+        "purchases": Purchases.objects.all(),
+    }
+    return render(request, 'student/purchasereport.html', data)
 
 
 def salesreports(request):
-    return render(request, 'student/salesreport.html')
+    data = {
+        "transfers": Transfers.objects.all(),
+    }
+    return render(request, 'student/salesreport.html', data)
 
 
 def inventoryreports(request):
-    return render(request, 'student/inventoryreport.html')
+    data = {
+        "products": Product.objects.all(),
+    }
+    return render(request, 'admin_u/inventoryreport.html', data)
 
 
 def purchaseorderreports(request):
-    return render(request, 'student/purchaseorderreport.html')
+    data = {
+        "expenses": Expense.objects.all(),
+    }
+    return render(request, 'admin_u/purchaseorderreport.html', data)
+
 
 
 def chart_apexs(request):
@@ -375,6 +427,20 @@ def chart_apexs(request):
 
 
 # teacher views
+
+def indext(request):
+    date = datetime.now()
+    data = {
+        'users_num': len(User_Data.objects.all()),
+        'returned_items': len(Transfers.objects.filter(Q(status='Returned')).values()),
+        'budget': Finance.objects.all(),
+        'total_purchase': Finance.objects.all(),
+        'purchase_items': len(Purchases.objects.all()),
+        'transfers': len(Transfers.objects.all()),
+        "products": Product.objects.filter(Q(adding_date=date)).values(),
+        'transfersp': Transfers.objects.filter(Q(start_of_loan=date) | Q(end_of_loan=date)).values(),
+    }
+    return render(request, 'teacher/index.html', data)
 
 
 def productlistt(request):

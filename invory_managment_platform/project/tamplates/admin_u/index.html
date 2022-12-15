@@ -4,31 +4,31 @@
 		{% load static %}
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-		<meta name="description" content="POS - Bootstrap Admin Template">
-		<meta name="keywords" content="admin, estimates, bootstrap, business, corporate, creative, management, minimal, modern,  html5, responsive">
-		<meta name="author" content="Dreamguys - Bootstrap Admin Template">
-		<meta name="robots" content="noindex, nofollow">
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="author" content="">
+		<meta name="robots" content="">
 		<title>SCE invory management platform</title>
-		
+
 		<!-- Favicon -->
 		<link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.png' %}">
-		
+
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-		
+
 		<!-- animation CSS -->
 		<link rel="stylesheet" href="{% static 'css/animate.css' %}">
 
 		<!-- Datatable CSS -->
 		<link rel="stylesheet" href="{% static 'css/dataTables.bootstrap4.min.css' %}">
-		
+
 		<!-- Fontawesome CSS -->
 		<link rel="stylesheet" href="{% static 'plugins/fontawesome/css/fontawesome.min.css' %}">
 		<link rel="stylesheet" href="{% static 'plugins/fontawesome/css/all.min.css' %}">
-		
+
 		<!-- Main CSS -->
 		<link rel="stylesheet" href="{% static 'css/style.css' %}">
-		
+
 	</head>
 	<body>
 		<div id="global-loader" >
@@ -39,7 +39,7 @@
 
 			<!-- Header -->
 			<div class="header">
-			
+
 				<!-- Logo -->
 				 <div class="header-left active">
 					<a href="{% url 'index' %}" class="logo">
@@ -52,15 +52,15 @@
 					</a>
 				</div>
 				<!-- /Logo -->
-				
-				<a id="mobile_btn" class="mobile_btn" href="#sidebar">
+
+
 					<span class="bar-icon">
 						<span></span>
 						<span></span>
 						<span></span>
 					</span>
 				</a>
-				
+
 				<!-- Header Menu -->
 				<ul class="nav user-menu">
 					<li class="nav-item dropdown has-arrow main-drop">
@@ -76,9 +76,6 @@
 									<div class="profilesets">
 									</div>
 								</div>
-								<hr class="m-0">
-								<a class="dropdown-item" href="profile.html"> <i class="me-2"  data-feather="user"></i> My Profile</a>
-								<hr class="m-0">
 								<a class="dropdown-item logout pb-0" href="{% url 'signin'%}"><img src="{% static 'img/icons/log-out.svg' %}" class="me-2" alt="img">Logout
 								<script type="text/javascript">  function preventBack() {window.history.forward();}  setTimeout("preventBack()", 0);  window.onunload = function () {null};</script></a>
 							</div>
@@ -86,19 +83,8 @@
 					</li>
 				</ul>
 				<!-- /Header Menu -->
-				
-				<!-- Mobile Menu -->
-				<div class="dropdown mobile-user-menu">
-					<a href="javascript:void(0);" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
-					<div class="dropdown-menu dropdown-menu-right">
-						<a class="dropdown-item" href="profile.html">My Profile</a>
-						<a class="dropdown-item" href="signin.html">Logout</a>
-					</div>
-				</div>
-				<!-- /Mobile Menu -->
 			</div>
 			<!-- Header -->
-			
 			<!-- Sidebar -->
 			<div class="sidebar" id="sidebar">
 				<div class="sidebar-inner slimscroll">
@@ -135,22 +121,14 @@
 								</ul>
 							</li>
 							<li class="submenu">
-								<a href="javascript:void(0);"><img src="{% static 'img/icons/quotation1.svg' %}" alt="img"><span> Quotation</span> <span class="menu-arrow"></span></a>
-								<ul>
-									<li><a href="{% url 'quotationlist' %}">Quotation List</a></li>
-									<li><a href="{% url 'addquotation' %}">Add Quotation</a></li>
-								</ul>
-							</li>
-							<li class="submenu">
 								<a href="javascript:void(0);"><img src="{% static 'img/icons/users1.svg' %}" alt="img"><span> People</span> <span class="menu-arrow"></span></a>
 								<ul>
 									<li><a href="{% url 'supplierlist' %}">Supplier List</a></li>
 									<li><a href="{% url 'addsupplier' %}">Add Supplier </a></li>
 									<li><a href="{% url 'userlist' %}">User List</a></li>
 									<li><a href="{% url 'adduser' %}">Add User</a></li>
-									<li><a href="{% url 'grouppermissions' %}">Group Permissions</a></li>
 								</ul>
-							</li>														
+							</li>
 							<li  class="submenu">
 								<a href="javascript:void(0);"><i data-feather="bar-chart-2"></i> <span> Charts  </span> <span class="menu-arrow"></span></a>
 								<ul>
@@ -160,7 +138,7 @@
 							<li class="submenu">
 								<a href="javascript:void(0);"><img src="{% static 'img/icons/time.svg' %}" alt="img"><span> Report</span> <span class="menu-arrow"></span></a>
 								<ul>
-									<li><a href="{% url 'purchaseorderreport' %}">Purchase order report</a></li>
+									<li><a href="{% url 'purchaseorderreport' %}">Expense report</a></li>
 									<li><a href="{% url 'inventoryreport' %}">Inventory Report</a></li>
 									<li><a href="{% url 'salesreport' %}">Transfer Report</a></li>
 									<li><a href="{% url 'purchasereport' %}">Purchase Report</a></li>
@@ -247,19 +225,6 @@
 							<div class="card flex-fill">
 								<div class="card-header pb-0 d-flex justify-content-between align-items-center">
 									<h4 class="card-title mb-0">Recently Transfers</h4>
-									<div class="dropdown">
-										<a href="javascript:void(0);" data-bs-toggle="dropdown" aria-expanded="false" class="dropset">
-											<i class="fa fa-ellipsis-v"></i>
-										</a>
-										<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton" >
-											<li>
-												<a href="productlist.html" class="dropdown-item">Product List</a>
-											</li>
-											<li>
-												<a href="addproduct.html" class="dropdown-item">Product Add</a>
-											</li>
-										</ul>
-									</div>
 								</div>
 								<div class="card-body">
 									<div class="table-responsive dataview">
