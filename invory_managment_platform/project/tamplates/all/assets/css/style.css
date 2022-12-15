@@ -23,7 +23,7 @@
 }
 
 .pass-group .toggle-password,
-.pass-group .toggle-passworda, .profile-set .profile-top .profileupload a, .productset .productsetimg, .productset.active .check-product, .order-list .actionproducts > ul > li .deletebg, .product-details, .header-menuset ul li a, .owl-product .owl-nav button, .productimg .productcontet h4, .increment-decrement .input-groups input[type=button], .setvaluecash ul li a, .select-split .btn-filters, .product-view .product-viewimg, .productviewset .productviewscontent a, .image-upload-new .productviewscontent a, .add-icon span, .add-icon a, .slider-product-details .owl-carousel .owl-nav button, .product-list ul li .productviews .productviewscontent a, .login-wrapper .login-content .form-sociallink ul li a, .login-wrapper .login-content .toggle-passwords, .login-wrapper .login-content .toggle-password, .dash-widget .dash-widgetimg span, .image-upload.image-upload-new .image-uploads, .search-set .btn-filter, .page-header .btn-filter, .modal .modal-footer .btn-print, .modal .close,
+.pass-group .toggle-passworda, .profile-set .profile-top .profileupload a, .productset .productsetimg, .productset.active .check-product, .order-list .actionproducts > ul > li .deletebg, .product-details, .header-menuset ul li a, .owl-product .owl-nav button, .productimg .productcontet h4, .increment-decrement .input-groups input[type=button], .setvaluecash ul li a, .select-split .btn-filters, .product-view .product-viewimg, .productviewset .productviewscontent a, .image-upload-new .productviewscontent a, .add-icon span, .add-icon a, .slider-product-details .owl-carousel .owl-nav button, .product-list ul li .productviews .productviewscontent a, .login-wrapper .login-content .form-sociallink ul li a, .login-wrapper .login-content .toggle-passwords, .login-wrapper .login-content .toggle-password, .dash-widget .dash-widgetimg span, .image-upload.image-upload-new .image-uploads, .search-set .btn-filter, .page-header .btn-filter, .customizer-links, .modal .modal-footer .btn-print, .modal .close,
 .modal .btn-close, .sidebar .nav-link, div#global-loader, .searchinputs .search-addon span, .user-menu.nav > li > a .badge, .error-page .main-wrapper, .error-page, .icons-items .icons-list li, .icons-list li, .form-group .btn-filters, .input-group .scanner-set, .avatar .avatar-title {
   justify-content: center;
   -webkit-justify-content: center;
@@ -31,20 +31,20 @@
 }
 
 .pass-group .toggle-password,
-.pass-group .toggle-passworda, .profile-set .profile-top .profileupload a, .profile-set .profile-top .profile-contentimg, .profile-set .profile-top .profile-content, .profile-set .profile-top, .productset .productsetimg, .productset.active .check-product, .order-list .actionproducts > ul > li .deletebg, .order-list .actionproducts > ul, .order-list, .totalitem, .btn-scanner-set, .product-details, .invoice-load-btn .btn, .header-menuset ul li a, .header-menuset ul li, .header-menuset ul, .calculator-set ul, .btn-pos ul, .actionproduct ul, .owl-product .owl-nav button, .tab-set ul, .productimg .productlinkset, .productimg .productcontet h4, .productimg, .increment-decrement .input-groups input[type=button], .increment-decrement .input-groups, .product-lists, .setvalue ul li, .setvaluecash ul li a, .setvaluecash ul, .btn-totallabel, .select-split .btn-filters, .select-split, .product-view .product-viewimg, .productviewset .productviewscontent a, .image-upload-new .productviewscontent a, .image-upload-new .productviewscontent, .card-sales-split, .total-order ul li, .add-icon span, .add-icon a, .slider-product-details .owl-carousel .owl-nav button, .input-checkset ul, .bar-code-view, .product-list ul li .productviews .productviewscontent a, .product-list ul li .productviews .productviewscontent, .product-list ul li .productviews, .product-list ul, .login-wrapper .login-content .form-sociallink ul li a, .login-wrapper .login-content .form-sociallink ul, .login-wrapper .login-content .toggle-passwords, .login-wrapper .login-content .toggle-password, .graph-sets > ul, .graph-sets, .dash-count, .dash-widget .dash-widgetimg span, .dash-widget, .image-upload.image-upload-new .image-uploads, .wordset ul, .search-set .btn-filter, .search-set, .table-top, .page-header .btn-added, .page-header .btn-filter, .page-header, .chat-cont-right ul.list-unstyled .media.received .chat-msg-info, .chat-cont-right ul.list-unstyled .media.sent .media-body .chat-msg-info, .chat-search .input-group .input-group-prepend, .modal .modal-footer .btn-print, .modal .close,
-.modal .btn-close, .modal-barcode ul, .productimgname, .sidebar .sub-menu a, .sidebar .nav-link, .sidebar .sidebar-menu > ul > li > a, div#global-loader, .searchinputs .search-addon span, .user-menu.nav > li.flag-nav a, .user-menu.nav > li > a .badge, .header-split .header-menu ul li a, .header-split .header-menu ul, .header-split, .header-pos.header .user-menu.nav li, .header-pos.header .topnav-dropdown-footer, .header-pos.header .topnav-dropdown-header, .searchpart .searchhead, .header .menu-drop-user .dropdown-item, .header .userset, .header .header-left, .error-page, .icons-items .icons-list li, .icons-list li, .form-group .btn-filters, .input-group .scanner-set, .btn-white, .avatar .avatar-title {
+.pass-group .toggle-passworda, .profile-set .profile-top .profileupload a, .profile-set .profile-top .profile-contentimg, .profile-set .profile-top .profile-content, .profile-set .profile-top, .productset .productsetimg, .productset.active .check-product, .order-list .actionproducts > ul > li .deletebg, .order-list .actionproducts > ul, .order-list, .totalitem, .btn-scanner-set, .product-details, .invoice-load-btn .btn, .header-menuset ul li a, .header-menuset ul li, .header-menuset ul, .calculator-set ul, .btn-pos ul, .actionproduct ul, .owl-product .owl-nav button, .tab-set ul, .productimg .productlinkset, .productimg .productcontet h4, .productimg, .increment-decrement .input-groups input[type=button], .increment-decrement .input-groups, .product-lists, .setvalue ul li, .setvaluecash ul li a, .setvaluecash ul, .btn-totallabel, .select-split .btn-filters, .select-split, .product-view .product-viewimg, .productviewset .productviewscontent a, .image-upload-new .productviewscontent a, .image-upload-new .productviewscontent, .card-sales-split, .total-order ul li, .add-icon span, .add-icon a, .slider-product-details .owl-carousel .owl-nav button, .input-checkset ul, .bar-code-view, .product-list ul li .productviews .productviewscontent a, .product-list ul li .productviews .productviewscontent, .product-list ul li .productviews, .product-list ul, .login-wrapper .login-content .form-sociallink ul li a, .login-wrapper .login-content .form-sociallink ul, .login-wrapper .login-content .toggle-passwords, .login-wrapper .login-content .toggle-password, .graph-sets > ul, .graph-sets, .dash-count, .dash-widget .dash-widgetimg span, .dash-widget, .image-upload.image-upload-new .image-uploads, .wordset ul, .search-set .btn-filter, .search-set, .table-top, .page-header .btn-added, .page-header .btn-filter, .page-header, .chat-cont-right ul.list-unstyled .media.received .chat-msg-info, .chat-cont-right ul.list-unstyled .media.sent .media-body .chat-msg-info, .chat-search .input-group .input-group-prepend, .switch-wrapper #dark-mode-toggle .light-mode, .switch-wrapper #dark-mode-toggle .dark-mode, .switch-wrapper #dark-mode-toggle, .sidebar-content .sidebar-header, .modal .modal-footer .btn-print, .modal .close,
+.modal .btn-close, .modal-barcode ul, .productimgname, .sidebar .sub-menu a, .sidebar .nav-link, .sidebar .sidebar-menu > ul > li > a, div#global-loader, .sidebar.sidebar-four .sidebar-menu ul li a, .sidebar.sidebar-two .sidebar-menu > ul > li.submenu ul li a, .searchinputs .search-addon span, .user-menu.nav > li.flag-nav a, .user-menu.nav > li > a .badge, .header-split .header-menu ul li a, .header-split .header-menu ul, .header-split, .header-pos.header .user-menu.nav li, .header-pos.header .topnav-dropdown-footer, .header-pos.header .topnav-dropdown-header, .searchpart .searchhead, .header .menu-drop-user .dropdown-item, .header .userset, .header .header-left, .error-page, .icons-items .icons-list li, .icons-list li, .form-group .btn-filters, .input-group .scanner-set, .btn-white, .avatar .avatar-title {
   align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
 }
 
-.profile-set .profile-top .profile-contentimg, .profile-set .profile-top, .order-list, .totalitem, .invoice-load-btn .btn, .header-menuset ul li, .btn-pos ul, .product-lists, .setvalue ul li, .btn-totallabel, .image-upload-new .productviewscontent, .card-sales-split, .bar-code-view, .product-list ul li .productviews .productviewscontent, .dash-count, .table-top, .page-header, .chat-cont-left .chat-scroll .media .media-body, .sidebar .sub-menu a, .header-split, .header-pos.header .topnav-dropdown-footer, .header-pos.header .topnav-dropdown-header, .searchpart .searchhead, .header .header-left, .btn-white {
+.profile-set .profile-top .profile-contentimg, .profile-set .profile-top, .order-list, .totalitem, .invoice-load-btn .btn, .header-menuset ul li, .btn-pos ul, .product-lists, .setvalue ul li, .btn-totallabel, .image-upload-new .productviewscontent, .card-sales-split, .bar-code-view, .product-list ul li .productviews .productviewscontent, .dash-count, .table-top, .page-header, .chat-cont-left .chat-scroll .media .media-body, .sidebar-content .sidebar-header, .sidebar .sub-menu a, .header-split, .header-pos.header .topnav-dropdown-footer, .header-pos.header .topnav-dropdown-header, .searchpart .searchhead, .header .header-left, .btn-white {
   justify-content: space-between;
   -webkit-justify-content: space-between;
   -ms-flex-pack: space-between;
 }
 
-.align-center {
+.customizer-links ul li a, .align-center {
   display: flex;
   display: -webkit-flex;
   align-items: center;
@@ -59,27 +59,27 @@
   margin: 0;
 }
 
-.avatar-group {
+.switch-wrapper #dark-mode-toggle .light-mode, .switch-wrapper #dark-mode-toggle .dark-mode, .switch-wrapper #dark-mode-toggle, .avatar-group {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
 }
 
 .pass-group .toggle-password,
-.pass-group .toggle-passworda, .profile-set .profile-top .profileupload a, .profile-set .profile-top .profile-contentimg, .profile-set .profile-top .profile-content, .profile-set .profile-top, .productset .productsetimg, .productset.active .check-product, .order-list .actionproducts > ul > li .deletebg, .order-list .actionproducts > ul, .order-list, .totalitem, .btn-scanner-set, .product-details, .header-menuset ul li a, .header-menuset ul li, .header-menuset ul, .calculator-set ul, .btn-pos ul li a.btn, .btn-pos ul, .actionproduct ul, .owl-product .owl-nav button, .tab-set ul, .productimg .productlinkset, .productimg .productcontet h4, .productimg, .increment-decrement .input-groups input[type=button], .increment-decrement .input-groups, .product-lists, .setvalue ul li, .setvaluecash ul li a, .setvaluecash ul, .btn-totallabel, .select-split .btn-filters, .select-split, .product-view .product-viewimg, .productviewset .productviewscontent a, .image-upload-new .productviewscontent a, .image-upload-new .productviewscontent, .card-sales-split ul, .card-sales-split, .total-order ul li, .add-icon span, .add-icon a, .slider-product-details .owl-carousel .owl-nav button, .productdetails > ul > li, .input-checkset ul, .bar-code-view, .product-list ul li .productviews .productviewscontent a, .product-list ul li .productviews .productviewscontent, .product-list ul li .productviews, .product-list ul, .login-wrapper .login-content .form-sociallink ul li a, .login-wrapper .login-content .form-sociallink ul, .login-wrapper .login-content .toggle-passwords, .login-wrapper .login-content .toggle-password, .login-wrapper, .graph-sets > ul, .graph-sets, .dash-count, .dash-widget .dash-widgetimg span, .dash-widget, .image-upload.image-upload-new .image-uploads, .wordset ul, .search-set .btn-filter, .search-set, .table-top, .page-header .btn-added, .page-header .btn-filter, .page-header, .chat-cont-right ul.list-unstyled .media.received .chat-msg-attachments, .chat-cont-right ul.list-unstyled .media.received .chat-msg-info, .chat-cont-right ul.list-unstyled .media.sent .media-body .chat-msg-info, .chat-cont-right ul.list-unstyled .media.sent .media-body .chat-msg-attachments, .chat-cont-right ul.list-unstyled .media.sent .media-body, .chat-cont-left .chat-scroll .media .media-body, .chat-search .input-group .input-group-prepend, .modal .modal-footer .btn-print, .modal .close,
-.modal .btn-close, .modal-barcode ul, .productimgname, .sidebar .nav-items .nav-link, .sidebar .sub-menu a, .sidebar .nav-link, .sidebar .sidebar-menu > ul > li > a, .sidebar, div#global-loader, .searchinputs .search-addon span, .user-menu.nav > li.flag-nav a, .user-menu.nav > li > a .badge, .profilename .profileset, .header-split .header-menu ul li a, .header-split .header-menu ul, .header-split, .header-pos.header .user-menu.nav li, .header-pos.header .topnav-dropdown-footer, .header-pos.header .topnav-dropdown-header, .searchpart .searchhead, .header .menu-drop-user .dropdown-item, .header .userset, .header .header-left, .error-page .main-wrapper, .error-page, .icons-items .icons-list li, .icons-items .icons-list, .icons-list li, .icons-list, .form-group .btn-filters, .input-group, .input-group .scanner-set, .dropdown-menu .dropdown-item, .btn-white, .avatar .avatar-title {
+.pass-group .toggle-passworda, .profile-set .profile-top .profileupload a, .profile-set .profile-top .profile-contentimg, .profile-set .profile-top .profile-content, .profile-set .profile-top, .productset .productsetimg, .productset.active .check-product, .order-list .actionproducts > ul > li .deletebg, .order-list .actionproducts > ul, .order-list, .totalitem, .btn-scanner-set, .product-details, .header-menuset ul li a, .header-menuset ul li, .header-menuset ul, .calculator-set ul, .btn-pos ul li a.btn, .btn-pos ul, .actionproduct ul, .owl-product .owl-nav button, .tab-set ul, .productimg .productlinkset, .productimg .productcontet h4, .productimg, .increment-decrement .input-groups input[type=button], .increment-decrement .input-groups, .product-lists, .setvalue ul li, .setvaluecash ul li a, .setvaluecash ul, .btn-totallabel, .select-split .btn-filters, .select-split, .product-view .product-viewimg, .productviewset .productviewscontent a, .image-upload-new .productviewscontent a, .image-upload-new .productviewscontent, .card-sales-split ul, .card-sales-split, .total-order ul li, .add-icon span, .add-icon a, .slider-product-details .owl-carousel .owl-nav button, .productdetails > ul > li, .input-checkset ul, .bar-code-view, .product-list ul li .productviews .productviewscontent a, .product-list ul li .productviews .productviewscontent, .product-list ul li .productviews, .product-list ul, .login-wrapper .login-content .form-sociallink ul li a, .login-wrapper .login-content .form-sociallink ul, .login-wrapper .login-content .toggle-passwords, .login-wrapper .login-content .toggle-password, .login-wrapper, .graph-sets > ul, .graph-sets, .dash-count, .dash-widget .dash-widgetimg span, .dash-widget, .image-upload.image-upload-new .image-uploads, .wordset ul, .search-set .btn-filter, .search-set, .table-top, .page-header .btn-added, .page-header .btn-filter, .page-header, .chat-cont-right ul.list-unstyled .media.received .chat-msg-attachments, .chat-cont-right ul.list-unstyled .media.received .chat-msg-info, .chat-cont-right ul.list-unstyled .media.sent .media-body .chat-msg-info, .chat-cont-right ul.list-unstyled .media.sent .media-body .chat-msg-attachments, .chat-cont-right ul.list-unstyled .media.sent .media-body, .chat-cont-left .chat-scroll .media .media-body, .chat-search .input-group .input-group-prepend, .sidebar-content .sidebar-header, .customizer-links, .modal .modal-footer .btn-print, .modal .close,
+.modal .btn-close, .modal-barcode ul, .productimgname, .sidebar .nav-items .nav-link, .sidebar .sub-menu a, .sidebar .nav-link, .sidebar .sidebar-menu > ul > li > a, .sidebar, div#global-loader, .sidebar.sidebar-four .sidebar-menu ul li a, .sidebar.sidebar-four .sidebar-menu, .searchinputs .search-addon span, .user-menu.nav > li.flag-nav a, .user-menu.nav > li > a .badge, .profilename .profileset, .header-split .header-menu ul li a, .header-split .header-menu ul, .header-split, .header-pos.header .user-menu.nav li, .header-pos.header .topnav-dropdown-footer, .header-pos.header .topnav-dropdown-header, .searchpart .searchhead, .header .menu-drop-user .dropdown-item, .header .userset, .header .header-left, .error-page .main-wrapper, .error-page, .icons-items .icons-list li, .icons-items .icons-list, .icons-list li, .icons-list, .form-group .btn-filters, .input-group, .input-group .scanner-set, .dropdown-menu .dropdown-item, .btn-white, .avatar .avatar-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.profile-set .profile-top .profile-contentimg, .profile-set .profile-top, .order-list, .totalitem, .invoice-load-btn .btn, .header-menuset ul li, .btn-pos ul, .product-lists, .setvalue ul li, .btn-totallabel, .image-upload-new .productviewscontent, .card-sales-split, .bar-code-view, .product-list ul li .productviews .productviewscontent, .dash-count, .table-top, .page-header, .chat-cont-left .chat-scroll .media .media-body, .sidebar .sub-menu a, .header-split, .header-pos.header .topnav-dropdown-footer, .header-pos.header .topnav-dropdown-header, .searchpart .searchhead, .header .header-left, .btn-white {
+.profile-set .profile-top .profile-contentimg, .profile-set .profile-top, .order-list, .totalitem, .invoice-load-btn .btn, .header-menuset ul li, .btn-pos ul, .product-lists, .setvalue ul li, .btn-totallabel, .image-upload-new .productviewscontent, .card-sales-split, .bar-code-view, .product-list ul li .productviews .productviewscontent, .dash-count, .table-top, .page-header, .chat-cont-left .chat-scroll .media .media-body, .sidebar-content .sidebar-header, .sidebar .sub-menu a, .header-split, .header-pos.header .topnav-dropdown-footer, .header-pos.header .topnav-dropdown-header, .searchpart .searchhead, .header .header-left, .btn-white {
   justify-content: space-between;
   -webkit-justify-content: space-between;
   -ms-flex-pack: space-between;
 }
 
-.header-menuset ul, .calculator-set ul, .btn-pos ul, .tab-set ul, .productdetails > ul > li, .input-checkset ul, .product-list ul, .login-wrapper .login-content .form-sociallink ul, .login-wrapper, .chat-cont-right ul.list-unstyled .media.received .chat-msg-info, .chat-cont-right ul.list-unstyled .media.sent .media-body .chat-msg-info, .modal-barcode ul, .error-page .main-wrapper, .icons-items .icons-list, .icons-list {
+.header-menuset ul, .calculator-set ul, .btn-pos ul, .tab-set ul, .productdetails > ul > li, .input-checkset ul, .product-list ul, .login-wrapper .login-content .form-sociallink ul, .login-wrapper, .chat-cont-right ul.list-unstyled .media.received .chat-msg-info, .chat-cont-right ul.list-unstyled .media.sent .media-body .chat-msg-info, .customizer-links, .modal-barcode ul, .error-page .main-wrapper, .icons-items .icons-list, .icons-list {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
@@ -218,7 +218,7 @@ h6 {
 body {
   font-family: "Nunito", sans-serif;
   font-size: 14px;
-  color: #212B36;
+  color: #000;
   line-height: 1.5;
   background-color: #FAFBFE;
 }
@@ -296,7 +296,7 @@ strong {
 }
 
 .pass-group .toggle-password,
-.pass-group .toggle-passworda, .profile-set .profile-top .profileupload a, .productset .productsetimg, .productset.active .check-product, .order-list .actionproducts > ul > li .deletebg, .product-details, .header-menuset ul li a, .owl-product .owl-nav button, .productimg .productcontet h4, .increment-decrement .input-groups input[type=button], .setvaluecash ul li a, .select-split .btn-filters, .product-view .product-viewimg, .productviewset .productviewscontent a, .image-upload-new .productviewscontent a, .add-icon span, .add-icon a, .slider-product-details .owl-carousel .owl-nav button, .product-list ul li .productviews .productviewscontent a, .login-wrapper .login-content .form-sociallink ul li a, .login-wrapper .login-content .toggle-passwords, .login-wrapper .login-content .toggle-password, .dash-widget .dash-widgetimg span, .image-upload.image-upload-new .image-uploads, .search-set .btn-filter, .page-header .btn-filter, .modal .modal-footer .btn-print, .modal .close,
+.pass-group .toggle-passworda, .profile-set .profile-top .profileupload a, .productset .productsetimg, .productset.active .check-product, .order-list .actionproducts > ul > li .deletebg, .product-details, .header-menuset ul li a, .owl-product .owl-nav button, .productimg .productcontet h4, .increment-decrement .input-groups input[type=button], .setvaluecash ul li a, .select-split .btn-filters, .product-view .product-viewimg, .productviewset .productviewscontent a, .image-upload-new .productviewscontent a, .add-icon span, .add-icon a, .slider-product-details .owl-carousel .owl-nav button, .product-list ul li .productviews .productviewscontent a, .login-wrapper .login-content .form-sociallink ul li a, .login-wrapper .login-content .toggle-passwords, .login-wrapper .login-content .toggle-password, .dash-widget .dash-widgetimg span, .image-upload.image-upload-new .image-uploads, .search-set .btn-filter, .page-header .btn-filter, .customizer-links, .modal .modal-footer .btn-print, .modal .close,
 .modal .btn-close, .sidebar .nav-link, div#global-loader, .searchinputs .search-addon span, .user-menu.nav > li > a .badge, .error-page .main-wrapper, .error-page, .icons-items .icons-list li, .icons-list li, .form-group .btn-filters, .input-group .scanner-set, .avatar .avatar-title {
   justify-content: center;
   -webkit-justify-content: center;
@@ -304,20 +304,20 @@ strong {
 }
 
 .pass-group .toggle-password,
-.pass-group .toggle-passworda, .profile-set .profile-top .profileupload a, .profile-set .profile-top .profile-contentimg, .profile-set .profile-top .profile-content, .profile-set .profile-top, .productset .productsetimg, .productset.active .check-product, .order-list .actionproducts > ul > li .deletebg, .order-list .actionproducts > ul, .order-list, .totalitem, .btn-scanner-set, .product-details, .invoice-load-btn .btn, .header-menuset ul li a, .header-menuset ul li, .header-menuset ul, .calculator-set ul, .btn-pos ul, .actionproduct ul, .owl-product .owl-nav button, .tab-set ul, .productimg .productlinkset, .productimg .productcontet h4, .productimg, .increment-decrement .input-groups input[type=button], .increment-decrement .input-groups, .product-lists, .setvalue ul li, .setvaluecash ul li a, .setvaluecash ul, .btn-totallabel, .select-split .btn-filters, .select-split, .product-view .product-viewimg, .productviewset .productviewscontent a, .image-upload-new .productviewscontent a, .image-upload-new .productviewscontent, .card-sales-split, .total-order ul li, .add-icon span, .add-icon a, .slider-product-details .owl-carousel .owl-nav button, .input-checkset ul, .bar-code-view, .product-list ul li .productviews .productviewscontent a, .product-list ul li .productviews .productviewscontent, .product-list ul li .productviews, .product-list ul, .login-wrapper .login-content .form-sociallink ul li a, .login-wrapper .login-content .form-sociallink ul, .login-wrapper .login-content .toggle-passwords, .login-wrapper .login-content .toggle-password, .graph-sets > ul, .graph-sets, .dash-count, .dash-widget .dash-widgetimg span, .dash-widget, .image-upload.image-upload-new .image-uploads, .wordset ul, .search-set .btn-filter, .search-set, .table-top, .page-header .btn-added, .page-header .btn-filter, .page-header, .chat-cont-right ul.list-unstyled .media.received .chat-msg-info, .chat-cont-right ul.list-unstyled .media.sent .media-body .chat-msg-info, .chat-search .input-group .input-group-prepend, .modal .modal-footer .btn-print, .modal .close,
-.modal .btn-close, .modal-barcode ul, .productimgname, .sidebar .sub-menu a, .sidebar .nav-link, .sidebar .sidebar-menu > ul > li > a, div#global-loader, .searchinputs .search-addon span, .user-menu.nav > li.flag-nav a, .user-menu.nav > li > a .badge, .header-split .header-menu ul li a, .header-split .header-menu ul, .header-split, .header-pos.header .user-menu.nav li, .header-pos.header .topnav-dropdown-footer, .header-pos.header .topnav-dropdown-header, .searchpart .searchhead, .header .menu-drop-user .dropdown-item, .header .userset, .header .header-left, .error-page, .icons-items .icons-list li, .icons-list li, .form-group .btn-filters, .input-group .scanner-set, .btn-white, .avatar .avatar-title {
+.pass-group .toggle-passworda, .profile-set .profile-top .profileupload a, .profile-set .profile-top .profile-contentimg, .profile-set .profile-top .profile-content, .profile-set .profile-top, .productset .productsetimg, .productset.active .check-product, .order-list .actionproducts > ul > li .deletebg, .order-list .actionproducts > ul, .order-list, .totalitem, .btn-scanner-set, .product-details, .invoice-load-btn .btn, .header-menuset ul li a, .header-menuset ul li, .header-menuset ul, .calculator-set ul, .btn-pos ul, .actionproduct ul, .owl-product .owl-nav button, .tab-set ul, .productimg .productlinkset, .productimg .productcontet h4, .productimg, .increment-decrement .input-groups input[type=button], .increment-decrement .input-groups, .product-lists, .setvalue ul li, .setvaluecash ul li a, .setvaluecash ul, .btn-totallabel, .select-split .btn-filters, .select-split, .product-view .product-viewimg, .productviewset .productviewscontent a, .image-upload-new .productviewscontent a, .image-upload-new .productviewscontent, .card-sales-split, .total-order ul li, .add-icon span, .add-icon a, .slider-product-details .owl-carousel .owl-nav button, .input-checkset ul, .bar-code-view, .product-list ul li .productviews .productviewscontent a, .product-list ul li .productviews .productviewscontent, .product-list ul li .productviews, .product-list ul, .login-wrapper .login-content .form-sociallink ul li a, .login-wrapper .login-content .form-sociallink ul, .login-wrapper .login-content .toggle-passwords, .login-wrapper .login-content .toggle-password, .graph-sets > ul, .graph-sets, .dash-count, .dash-widget .dash-widgetimg span, .dash-widget, .image-upload.image-upload-new .image-uploads, .wordset ul, .search-set .btn-filter, .search-set, .table-top, .page-header .btn-added, .page-header .btn-filter, .page-header, .chat-cont-right ul.list-unstyled .media.received .chat-msg-info, .chat-cont-right ul.list-unstyled .media.sent .media-body .chat-msg-info, .chat-search .input-group .input-group-prepend, .switch-wrapper #dark-mode-toggle .light-mode, .switch-wrapper #dark-mode-toggle .dark-mode, .switch-wrapper #dark-mode-toggle, .sidebar-content .sidebar-header, .modal .modal-footer .btn-print, .modal .close,
+.modal .btn-close, .modal-barcode ul, .productimgname, .sidebar .sub-menu a, .sidebar .nav-link, .sidebar .sidebar-menu > ul > li > a, div#global-loader, .sidebar.sidebar-four .sidebar-menu ul li a, .sidebar.sidebar-two .sidebar-menu > ul > li.submenu ul li a, .searchinputs .search-addon span, .user-menu.nav > li.flag-nav a, .user-menu.nav > li > a .badge, .header-split .header-menu ul li a, .header-split .header-menu ul, .header-split, .header-pos.header .user-menu.nav li, .header-pos.header .topnav-dropdown-footer, .header-pos.header .topnav-dropdown-header, .searchpart .searchhead, .header .menu-drop-user .dropdown-item, .header .userset, .header .header-left, .error-page, .icons-items .icons-list li, .icons-list li, .form-group .btn-filters, .input-group .scanner-set, .btn-white, .avatar .avatar-title {
   align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
 }
 
-.profile-set .profile-top .profile-contentimg, .profile-set .profile-top, .order-list, .totalitem, .invoice-load-btn .btn, .header-menuset ul li, .btn-pos ul, .product-lists, .setvalue ul li, .btn-totallabel, .image-upload-new .productviewscontent, .card-sales-split, .bar-code-view, .product-list ul li .productviews .productviewscontent, .dash-count, .table-top, .page-header, .chat-cont-left .chat-scroll .media .media-body, .sidebar .sub-menu a, .header-split, .header-pos.header .topnav-dropdown-footer, .header-pos.header .topnav-dropdown-header, .searchpart .searchhead, .header .header-left, .btn-white {
+.profile-set .profile-top .profile-contentimg, .profile-set .profile-top, .order-list, .totalitem, .invoice-load-btn .btn, .header-menuset ul li, .btn-pos ul, .product-lists, .setvalue ul li, .btn-totallabel, .image-upload-new .productviewscontent, .card-sales-split, .bar-code-view, .product-list ul li .productviews .productviewscontent, .dash-count, .table-top, .page-header, .chat-cont-left .chat-scroll .media .media-body, .sidebar-content .sidebar-header, .sidebar .sub-menu a, .header-split, .header-pos.header .topnav-dropdown-footer, .header-pos.header .topnav-dropdown-header, .searchpart .searchhead, .header .header-left, .btn-white {
   justify-content: space-between;
   -webkit-justify-content: space-between;
   -ms-flex-pack: space-between;
 }
 
-.align-center {
+.customizer-links ul li a, .align-center {
   display: flex;
   display: -webkit-flex;
   align-items: center;
@@ -332,27 +332,27 @@ strong {
   margin: 0;
 }
 
-.avatar-group {
+.switch-wrapper #dark-mode-toggle .light-mode, .switch-wrapper #dark-mode-toggle .dark-mode, .switch-wrapper #dark-mode-toggle, .avatar-group {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
 }
 
 .pass-group .toggle-password,
-.pass-group .toggle-passworda, .profile-set .profile-top .profileupload a, .profile-set .profile-top .profile-contentimg, .profile-set .profile-top .profile-content, .profile-set .profile-top, .productset .productsetimg, .productset.active .check-product, .order-list .actionproducts > ul > li .deletebg, .order-list .actionproducts > ul, .order-list, .totalitem, .btn-scanner-set, .product-details, .header-menuset ul li a, .header-menuset ul li, .header-menuset ul, .calculator-set ul, .btn-pos ul li a.btn, .btn-pos ul, .actionproduct ul, .owl-product .owl-nav button, .tab-set ul, .productimg .productlinkset, .productimg .productcontet h4, .productimg, .increment-decrement .input-groups input[type=button], .increment-decrement .input-groups, .product-lists, .setvalue ul li, .setvaluecash ul li a, .setvaluecash ul, .btn-totallabel, .select-split .btn-filters, .select-split, .product-view .product-viewimg, .productviewset .productviewscontent a, .image-upload-new .productviewscontent a, .image-upload-new .productviewscontent, .card-sales-split ul, .card-sales-split, .total-order ul li, .add-icon span, .add-icon a, .slider-product-details .owl-carousel .owl-nav button, .productdetails > ul > li, .input-checkset ul, .bar-code-view, .product-list ul li .productviews .productviewscontent a, .product-list ul li .productviews .productviewscontent, .product-list ul li .productviews, .product-list ul, .login-wrapper .login-content .form-sociallink ul li a, .login-wrapper .login-content .form-sociallink ul, .login-wrapper .login-content .toggle-passwords, .login-wrapper .login-content .toggle-password, .login-wrapper, .graph-sets > ul, .graph-sets, .dash-count, .dash-widget .dash-widgetimg span, .dash-widget, .image-upload.image-upload-new .image-uploads, .wordset ul, .search-set .btn-filter, .search-set, .table-top, .page-header .btn-added, .page-header .btn-filter, .page-header, .chat-cont-right ul.list-unstyled .media.received .chat-msg-attachments, .chat-cont-right ul.list-unstyled .media.received .chat-msg-info, .chat-cont-right ul.list-unstyled .media.sent .media-body .chat-msg-info, .chat-cont-right ul.list-unstyled .media.sent .media-body .chat-msg-attachments, .chat-cont-right ul.list-unstyled .media.sent .media-body, .chat-cont-left .chat-scroll .media .media-body, .chat-search .input-group .input-group-prepend, .modal .modal-footer .btn-print, .modal .close,
-.modal .btn-close, .modal-barcode ul, .productimgname, .sidebar .nav-items .nav-link, .sidebar .sub-menu a, .sidebar .nav-link, .sidebar .sidebar-menu > ul > li > a, .sidebar, div#global-loader, .searchinputs .search-addon span, .user-menu.nav > li.flag-nav a, .user-menu.nav > li > a .badge, .profilename .profileset, .header-split .header-menu ul li a, .header-split .header-menu ul, .header-split, .header-pos.header .user-menu.nav li, .header-pos.header .topnav-dropdown-footer, .header-pos.header .topnav-dropdown-header, .searchpart .searchhead, .header .menu-drop-user .dropdown-item, .header .userset, .header .header-left, .error-page .main-wrapper, .error-page, .icons-items .icons-list li, .icons-items .icons-list, .icons-list li, .icons-list, .form-group .btn-filters, .input-group, .input-group .scanner-set, .dropdown-menu .dropdown-item, .btn-white, .avatar .avatar-title {
+.pass-group .toggle-passworda, .profile-set .profile-top .profileupload a, .profile-set .profile-top .profile-contentimg, .profile-set .profile-top .profile-content, .profile-set .profile-top, .productset .productsetimg, .productset.active .check-product, .order-list .actionproducts > ul > li .deletebg, .order-list .actionproducts > ul, .order-list, .totalitem, .btn-scanner-set, .product-details, .header-menuset ul li a, .header-menuset ul li, .header-menuset ul, .calculator-set ul, .btn-pos ul li a.btn, .btn-pos ul, .actionproduct ul, .owl-product .owl-nav button, .tab-set ul, .productimg .productlinkset, .productimg .productcontet h4, .productimg, .increment-decrement .input-groups input[type=button], .increment-decrement .input-groups, .product-lists, .setvalue ul li, .setvaluecash ul li a, .setvaluecash ul, .btn-totallabel, .select-split .btn-filters, .select-split, .product-view .product-viewimg, .productviewset .productviewscontent a, .image-upload-new .productviewscontent a, .image-upload-new .productviewscontent, .card-sales-split ul, .card-sales-split, .total-order ul li, .add-icon span, .add-icon a, .slider-product-details .owl-carousel .owl-nav button, .productdetails > ul > li, .input-checkset ul, .bar-code-view, .product-list ul li .productviews .productviewscontent a, .product-list ul li .productviews .productviewscontent, .product-list ul li .productviews, .product-list ul, .login-wrapper .login-content .form-sociallink ul li a, .login-wrapper .login-content .form-sociallink ul, .login-wrapper .login-content .toggle-passwords, .login-wrapper .login-content .toggle-password, .login-wrapper, .graph-sets > ul, .graph-sets, .dash-count, .dash-widget .dash-widgetimg span, .dash-widget, .image-upload.image-upload-new .image-uploads, .wordset ul, .search-set .btn-filter, .search-set, .table-top, .page-header .btn-added, .page-header .btn-filter, .page-header, .chat-cont-right ul.list-unstyled .media.received .chat-msg-attachments, .chat-cont-right ul.list-unstyled .media.received .chat-msg-info, .chat-cont-right ul.list-unstyled .media.sent .media-body .chat-msg-info, .chat-cont-right ul.list-unstyled .media.sent .media-body .chat-msg-attachments, .chat-cont-right ul.list-unstyled .media.sent .media-body, .chat-cont-left .chat-scroll .media .media-body, .chat-search .input-group .input-group-prepend, .sidebar-content .sidebar-header, .customizer-links, .modal .modal-footer .btn-print, .modal .close,
+.modal .btn-close, .modal-barcode ul, .productimgname, .sidebar .nav-items .nav-link, .sidebar .sub-menu a, .sidebar .nav-link, .sidebar .sidebar-menu > ul > li > a, .sidebar, div#global-loader, .sidebar.sidebar-four .sidebar-menu ul li a, .sidebar.sidebar-four .sidebar-menu, .searchinputs .search-addon span, .user-menu.nav > li.flag-nav a, .user-menu.nav > li > a .badge, .profilename .profileset, .header-split .header-menu ul li a, .header-split .header-menu ul, .header-split, .header-pos.header .user-menu.nav li, .header-pos.header .topnav-dropdown-footer, .header-pos.header .topnav-dropdown-header, .searchpart .searchhead, .header .menu-drop-user .dropdown-item, .header .userset, .header .header-left, .error-page .main-wrapper, .error-page, .icons-items .icons-list li, .icons-items .icons-list, .icons-list li, .icons-list, .form-group .btn-filters, .input-group, .input-group .scanner-set, .dropdown-menu .dropdown-item, .btn-white, .avatar .avatar-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.profile-set .profile-top .profile-contentimg, .profile-set .profile-top, .order-list, .totalitem, .invoice-load-btn .btn, .header-menuset ul li, .btn-pos ul, .product-lists, .setvalue ul li, .btn-totallabel, .image-upload-new .productviewscontent, .card-sales-split, .bar-code-view, .product-list ul li .productviews .productviewscontent, .dash-count, .table-top, .page-header, .chat-cont-left .chat-scroll .media .media-body, .sidebar .sub-menu a, .header-split, .header-pos.header .topnav-dropdown-footer, .header-pos.header .topnav-dropdown-header, .searchpart .searchhead, .header .header-left, .btn-white {
+.profile-set .profile-top .profile-contentimg, .profile-set .profile-top, .order-list, .totalitem, .invoice-load-btn .btn, .header-menuset ul li, .btn-pos ul, .product-lists, .setvalue ul li, .btn-totallabel, .image-upload-new .productviewscontent, .card-sales-split, .bar-code-view, .product-list ul li .productviews .productviewscontent, .dash-count, .table-top, .page-header, .chat-cont-left .chat-scroll .media .media-body, .sidebar-content .sidebar-header, .sidebar .sub-menu a, .header-split, .header-pos.header .topnav-dropdown-footer, .header-pos.header .topnav-dropdown-header, .searchpart .searchhead, .header .header-left, .btn-white {
   justify-content: space-between;
   -webkit-justify-content: space-between;
   -ms-flex-pack: space-between;
 }
 
-.header-menuset ul, .calculator-set ul, .btn-pos ul, .tab-set ul, .productdetails > ul > li, .input-checkset ul, .product-list ul, .login-wrapper .login-content .form-sociallink ul, .login-wrapper, .chat-cont-right ul.list-unstyled .media.received .chat-msg-info, .chat-cont-right ul.list-unstyled .media.sent .media-body .chat-msg-info, .modal-barcode ul, .error-page .main-wrapper, .icons-items .icons-list, .icons-list {
+.header-menuset ul, .calculator-set ul, .btn-pos ul, .tab-set ul, .productdetails > ul > li, .input-checkset ul, .product-list ul, .login-wrapper .login-content .form-sociallink ul, .login-wrapper, .chat-cont-right ul.list-unstyled .media.received .chat-msg-info, .chat-cont-right ul.list-unstyled .media.sent .media-body .chat-msg-info, .customizer-links, .modal-barcode ul, .error-page .main-wrapper, .icons-items .icons-list, .icons-list {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
@@ -545,7 +545,7 @@ strong {
   background: #fe820e;
   color: #fff;
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .btn-submit {
     min-width: auto;
     padding: 5px 7px;
@@ -567,7 +567,7 @@ strong {
   background: #424b52;
   color: #fff;
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .btn-cancel {
     min-width: auto;
     padding: 5px 7px;
@@ -992,7 +992,7 @@ strong {
   -ms-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .page-wrapper {
     margin: 0;
     padding: 60px 0 0;
@@ -1001,7 +1001,7 @@ strong {
 .page-wrapper .content {
   padding: 25px;
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .page-wrapper .content {
     padding: 15px;
   }
@@ -1010,7 +1010,7 @@ strong {
 .sidebarrightmenu .page-wrapper {
   margin: 0 0 0 350px;
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .sidebarrightmenu .page-wrapper {
     margin: 0;
   }
@@ -1036,7 +1036,7 @@ strong {
   color: #212B36;
   margin: 0 0 20px;
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .card .card-header .card-title {
     font-size: 14px;
   }
@@ -1044,7 +1044,7 @@ strong {
 .card .card-body {
   padding: 20px;
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .card .card-body {
     padding: 15px;
   }
@@ -1055,7 +1055,7 @@ strong {
   color: #212B36;
   margin: 0 0 10px;
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .card .card-body .card-title {
     font-size: 14px;
   }
@@ -1234,7 +1234,7 @@ a:hover {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .form-group .input-groupicon .addonset {
     display: none;
   }
@@ -1398,14 +1398,33 @@ a:hover {
 
 body[data-theme=dark] {
   background: #141432;
+  color: #fff;
 }
 body[data-theme=dark] .header {
   background: #141432;
 }
+body[data-theme=dark] .header .header-left {
+  border-right: 1px solid #637381;
+}
+body[data-theme=dark] .header .header-left .logo-normal {
+  display: none;
+}
+body[data-theme=dark] .header .header-left .logo-white {
+  display: block !important;
+}
+body[data-theme=dark] .sidebar {
+  border-right: 1px solid #637381;
+}
 body[data-theme=dark] .sidebar .slimScrollDiv {
   background: #141432;
 }
+body[data-theme=dark] .sidebar.sidebar-four {
+  border: 0;
+}
 body[data-theme=dark] .page-wrapper {
+  background: #141432;
+}
+body[data-theme=dark] .page-wrapper.page-wrapper-three .content {
   background: #141432;
 }
 body[data-theme=dark] #toggle_btn:before {
@@ -1415,9 +1434,15 @@ body[data-theme=dark] .header-left.active #toggle_btn:after {
   border: 2px solid #fff;
 }
 body[data-theme=dark] .sidebar .sidebar-menu > ul > li.submenu ul {
-  background: #FAFBFE;
+  background: #141432;
   border-radius: 5px;
   padding: 10px 0;
+}
+body[data-theme=dark] .sidebar .sidebar-menu > ul > li.submenu ul li a {
+  color: #8ea0af;
+}
+body[data-theme=dark] .sidebar .sidebar-menu > ul > li a span {
+  color: #8ea0af;
 }
 body[data-theme=dark] .dash-widget {
   background: #1d1d42;
@@ -1429,8 +1454,26 @@ body[data-theme=dark] .dash-widget .dash-widgetcontent h5 {
 body[data-theme=dark] .dash-widget .dash-widgetcontent h6 {
   color: #fff;
 }
+body[data-theme=dark] .page-header h4, body[data-theme=dark] .page-header h6 {
+  color: #fff;
+}
+body[data-theme=dark] .form-control {
+  color: #fff;
+}
+body[data-theme=dark] select.form-control:focus {
+  color: #141432;
+}
+body[data-theme=dark] .form-group label {
+  color: #fff;
+}
+body[data-theme=dark] .dataTables_info {
+  color: #fff;
+}
+body[data-theme=dark] .setvaluecash ul li a {
+  color: #fff;
+}
 body[data-theme=dark] .card {
-  background: #1d1d42;
+  background-color: #1d1d42;
   border: 1px solid #353570;
 }
 body[data-theme=dark] .card .card-header .card-title {
@@ -1438,6 +1481,64 @@ body[data-theme=dark] .card .card-header .card-title {
 }
 body[data-theme=dark] .card .card-body .card-title {
   color: #fff;
+}
+body[data-theme=dark] .modal-content {
+  background-color: #1d1d42;
+}
+body[data-theme=dark] .modal-content .modal-header {
+  border-bottom: 1px solid #353570;
+}
+body[data-theme=dark] .inputcheck {
+  color: #fff;
+}
+body[data-theme=dark] .fc th.fc-widget-header {
+  background-color: #1d1d42;
+}
+body[data-theme=dark] .fc-day {
+  background-color: #1d1d42;
+}
+body[data-theme=dark] .chat-cont-left .chat-scroll .media .media-body .user-name, body[data-theme=dark] .chat-cont-left .chat-scroll .media .media-body .user-last-chat {
+  color: #fff;
+}
+body[data-theme=dark] .chat-cont-left .chat-scroll .media.active, body[data-theme=dark] .chat-cont-left .chat-scroll .media:hover {
+  background: #1B2850;
+}
+body[data-theme=dark] .chat-cont-right ul.list-unstyled .media.sent .media-body .msg-box p {
+  color: #212B36;
+}
+body[data-theme=dark] .inbox-menu li a {
+  color: #fff;
+}
+body[data-theme=dark] .increment-decrement .quantity-field {
+  color: #fff;
+}
+body[data-theme=dark] .select2-results__options {
+  color: #333;
+}
+body[data-theme=dark] .image-upload .image-uploads h4 {
+  color: #fff;
+}
+body[data-theme=dark] .new-header {
+  background: #141432;
+  border-top: 1px solid #353570;
+}
+body[data-theme=dark] .new-header.side-three {
+  border-color: #353570;
+}
+body[data-theme=dark] .new-header .sidebar-menu > ul > li > a span {
+  color: #fff;
+}
+body[data-theme=dark] .new-header .sidebar-menu > ul > li > a img, body[data-theme=dark] .new-header .sidebar-menu > ul > li > a svg {
+  filter: brightness(0) invert(1);
+}
+body[data-theme=dark] .new-header .sidebar-menu > ul > li.submenu ul {
+  background: #141432;
+}
+body[data-theme=dark] .new-header .sidebar-menu > ul > li.submenu ul li a {
+  color: #8ea0af;
+}
+body[data-theme=dark] .new-header .sidebar-menu > ul > li.submenu ul li img, body[data-theme=dark] .new-header .sidebar-menu > ul > li.submenu ul li svg {
+  filter: brightness(0) invert(1);
 }
 body[data-theme=dark] .table thead {
   background: #141432;
@@ -1454,9 +1555,185 @@ body[data-theme=dark] .table tbody tr:hover {
 }
 body[data-theme=dark] .table tbody tr td {
   color: #fff;
+  border-bottom: 1px solid #353570;
 }
 body[data-theme=dark] .table tbody tr td a {
   color: #fff !important;
+}
+body[data-theme=dark] .sidebar.sidebar-four .ui-aside .nav-item .nav-link {
+  border-bottom: #353570;
+}
+body[data-theme=dark] .sidebar.sidebar-four .sidebar-menu ul li a img {
+  filter: brightness(0) invert(1);
+}
+body[data-theme=dark] .searchinputs input {
+  color: #fff;
+  background: #1d1d42;
+}
+body[data-theme=dark] .searchinputs input::placeholder {
+  color: #8ea0af;
+}
+body[data-theme=dark] .graph-sets .btn-white {
+  background-color: #141432;
+  color: #8ea0af;
+}
+body[data-theme=dark] .graph-sets .btn-white:hover {
+  color: #8ea0af;
+}
+body[data-theme=dark] .graph-sets .dropdown-menu {
+  background-color: #141432;
+}
+body[data-theme=dark] .graph-sets .dropdown-menu .dropdown-item {
+  color: #8ea0af;
+}
+body[data-theme=dark] .graph-sets .dropdown-menu .dropdown-item:hover {
+  color: #8ea0af;
+  background: #1d1d42;
+}
+body[data-theme=dark] .header .dropdown-menu {
+  background: #141432;
+  color: #fff;
+}
+body[data-theme=dark] .topnav-dropdown-header .notification-title {
+  color: #fff;
+}
+body[data-theme=dark] .topnav-dropdown-footer a {
+  color: #fff;
+}
+body[data-theme=dark] .notifications .notification-list li {
+  border-bottom: 1px solid #8ea0af;
+}
+body[data-theme=dark] .notifications .notification-list li .noti-title {
+  color: #fff;
+}
+body[data-theme=dark] .notifications .notification-list li .noti-details {
+  color: #8ea0af;
+}
+body[data-theme=dark] .notifications .notification-list li .notification-time {
+  color: #8ea0af;
+}
+body[data-theme=dark] .user-menu.nav li.flag-nav .dropdown-menu .dropdown-item {
+  color: #8ea0af;
+}
+body[data-theme=dark] .user-menu.nav li.flag-nav .dropdown-menu .dropdown-item:hover {
+  color: #8ea0af;
+  background: #1d1d42;
+}
+body[data-theme=dark] .user-menu.nav.nav > li > a.dropdown-toggle.nav-link.show {
+  background: #1d1d42;
+}
+body[data-theme=dark] .profilename .profileset h5, body[data-theme=dark] .profilename .profileset h6 {
+  color: #8ea0af;
+}
+body[data-theme=dark] .header .menu-drop-user .dropdown-item {
+  color: #8ea0af;
+}
+body[data-theme=dark] .header .menu-drop-user .dropdown-item:hover {
+  color: #8ea0af;
+  background: #1d1d42;
+}
+body[data-theme=dark] .card.bg-white {
+  background-color: #1d1d42 !important;
+}
+body[data-theme=dark] .card .card-header {
+  background-color: #1d1d42;
+}
+body[data-theme=dark] .card .card-header .dropset {
+  color: #8ea0af;
+}
+body[data-theme=dark] .card .card-footer {
+  background-color: #1d1d42;
+}
+body[data-theme=dark] .dropdown-menu {
+  background: #141432;
+  color: #fff;
+}
+body[data-theme=dark] .dropdown-menu .dropdown-item {
+  color: #8ea0af;
+}
+body[data-theme=dark] .dropdown-menu .dropdown-item:hover {
+  color: #8ea0af;
+  background: #1d1d42;
+}
+body[data-theme=dark] .page-header h3 {
+  color: #fff;
+}
+body[data-theme=dark] .search-set .search-input input[type=search] {
+  border: 1px solid #8ea0af;
+}
+body[data-theme=dark] .search-set .search-input input[type=search]::placeholder {
+  color: #8ea0af;
+}
+body[data-theme=dark] .form-group input[type=text], body[data-theme=dark] .form-group input[type=password],
+body[data-theme=dark] .select2-container--default .select2-selection--single,
+body[data-theme=dark] .select2-container--focus .select2-selection--single, body[data-theme=dark] .form-control, body[data-theme=dark] .form-select,
+body[data-theme=dark] .select2-container--default .select2-selection--multiple {
+  background: #1d1d42 !important;
+  color: #fff;
+}
+body[data-theme=dark] .select2-container--default .select2-results__option[aria-selected=true] {
+  background: #1d1d42 !important;
+}
+body[data-theme=dark] .select2-container--default .select2-selection--single .select2-selection__rendered {
+  color: #fff;
+}
+body[data-theme=dark] .custom-file-container .custom-file-container__custom-file__custom-file-control {
+  background: #1d1d42;
+  color: #fff;
+}
+body[data-theme=dark] .input-group-text {
+  background: #1d1d42;
+  color: #fff;
+  border: 1px solid rgba(145, 158, 171, 0.32);
+}
+body[data-theme=dark] .image-upload:hover {
+  background: #1d1d42;
+}
+body[data-theme=dark] .productdetails > ul > li h4 {
+  color: #8ea0af;
+}
+body[data-theme=dark] .total-order ul li h4 {
+  background: #1d1d42;
+}
+body[data-theme=dark] .total-order ul li h5 {
+  color: #fff;
+}
+body[data-theme=dark] .product-details {
+  background: #1d1d42;
+}
+body[data-theme=dark] .product-details h6 {
+  color: #fff;
+}
+body[data-theme=dark] .comp-section .card-header {
+  border: 1px solid #353570;
+}
+body[data-theme=dark] .comp-section .nav-tabs.nav-tabs-solid {
+  background-color: #1d1d42;
+}
+body[data-theme=dark] .list-group-item {
+  background: #1d1d42;
+  color: #fff;
+}
+body[data-theme=dark] .bg-white {
+  background-color: #1d1d42 !important;
+}
+body[data-theme=dark] .section-header .section-title {
+  color: #fff;
+}
+body[data-theme=dark] .breadcrumb .breadcrumb-item a {
+  color: #fff;
+}
+body[data-theme=dark] .alertify .ajs-header {
+  background: #1d1d42;
+}
+body[data-theme=dark] .alertify .ajs-dialog {
+  background: #1d1d42;
+}
+body[data-theme=dark] .alertify .ajs-footer {
+  background: #1d1d42;
+}
+body[data-theme=dark] .alertify .ajs-footer .ajs-buttons .ajs-button {
+  color: #fff;
 }
 
 .btn-outline-primary {
@@ -1712,7 +1989,7 @@ body[data-layout-mode=dark] .alertify .ajs-content .ajs-input {
   bottom: 0;
   left: 50%;
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .timeline:before {
     left: 40px;
   }
@@ -1742,7 +2019,7 @@ body[data-layout-mode=dark] .alertify .ajs-content .ajs-input {
   top: 16px;
   left: 50%;
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .timeline li .timeline-badge {
     top: 16px;
     left: 15px;
@@ -1770,7 +2047,7 @@ body[data-layout-mode=dark] .alertify .ajs-content .ajs-input {
   border-radius: 0.25rem;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .timeline li .timeline-panel {
     float: right;
     width: calc(100% - 90px);
@@ -2543,7 +2820,7 @@ div.dataTables_wrapper div.dataTables_info {
   box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.05);
   border: 0;
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .header .dropdown-menu {
     transition: none;
   }
@@ -2568,7 +2845,7 @@ div.dataTables_wrapper div.dataTables_info {
 .header .header-left .logo img {
   width: 140px;
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .header .header-left .logo {
     text-align: center;
     width: 100%;
@@ -2580,18 +2857,18 @@ div.dataTables_wrapper div.dataTables_info {
 .header .header-left .logo-small {
   display: none;
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .header .header-left {
     position: absolute;
     width: 100%;
   }
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .header #toggle_btn {
     display: none;
   }
 }
-@media (min-width: 991px) {
+@media (min-width: 991.98px) {
   .header #toggle_btn {
     float: left;
     font-size: 26px;
@@ -2621,7 +2898,7 @@ div.dataTables_wrapper div.dataTables_info {
   padding: 17px 20px;
   border-radius: 0;
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .header .page-title-box {
     display: none;
   }
@@ -2643,7 +2920,7 @@ div.dataTables_wrapper div.dataTables_info {
   display: none;
   float: left;
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .header .mobile_btn {
     color: #FF9F43;
     font-size: 24px;
@@ -2666,7 +2943,7 @@ div.dataTables_wrapper div.dataTables_info {
   line-height: 60px;
   padding: 0 15px;
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .header .responsive-search {
     display: block;
   }
@@ -2676,7 +2953,7 @@ div.dataTables_wrapper div.dataTables_info {
   position: relative;
   width: 230px;
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .header .top-nav-search form {
     display: none;
   }
@@ -2700,7 +2977,7 @@ div.dataTables_wrapper div.dataTables_info {
   top: 0;
   right: 0;
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .header .top-nav-search.active form {
     display: block;
     position: absolute;
@@ -2740,7 +3017,7 @@ div.dataTables_wrapper div.dataTables_info {
 .header .menu-drop-user .logout {
   color: #f62d51;
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .header .has-arrow .dropdown-toggle > span:nth-child(2) {
     display: none;
   }
@@ -2953,7 +3230,7 @@ div.dataTables_wrapper div.dataTables_info {
   border-bottom: 1px solid #E8EBED;
   height: 80px;
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .header-pos {
     padding: 10px;
     height: auto;
@@ -2963,7 +3240,7 @@ div.dataTables_wrapper div.dataTables_info {
   display: none;
   float: left;
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .header-pos #mobile_btn {
     color: #FF9F43;
     font-size: 24px;
@@ -3034,7 +3311,7 @@ div.dataTables_wrapper div.dataTables_info {
   left: 0;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .header-pos.header .user-menu {
     display: none;
   }
@@ -3045,12 +3322,12 @@ div.dataTables_wrapper div.dataTables_info {
   padding: 8px;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .header-split {
     justify-content: center;
   }
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .header-split .header-menu {
     display: none;
   }
@@ -3077,7 +3354,7 @@ div.dataTables_wrapper div.dataTables_info {
 .header-split .header-menu ul li.mobile-show {
   display: block;
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .header-split .header-menu ul li.mobile-show {
     display: block;
   }
@@ -3086,7 +3363,7 @@ div.dataTables_wrapper div.dataTables_info {
 .mobile-show {
   display: none;
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .mobile-show {
     display: block;
   }
@@ -3097,7 +3374,7 @@ div.dataTables_wrapper div.dataTables_info {
   right: 30px;
   display: none;
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .header-menus {
     display: block;
   }
@@ -3263,6 +3540,538 @@ hr {
   right: 43px;
 }
 
+.page-wrapper-one {
+  margin-left: 0px;
+  padding-top: 130px;
+}
+
+.header-one .header-left {
+  border-right: 0 !important;
+  padding: 25px;
+}
+
+.logo-white {
+  display: none !important;
+}
+
+.sidebar.new-header {
+  position: fixed;
+  width: 100%;
+  height: 68px;
+  background: #fff;
+  border-top: 1px solid #D9D9D9;
+  box-shadow: 0px 4px 14px rgba(198, 198, 198, 0.25);
+  z-index: 9;
+}
+.sidebar.new-header .sidebar-menu {
+  padding: 0 15px;
+}
+.sidebar.new-header .sidebar-menu > ul > li {
+  margin-bottom: 0;
+  margin-right: 20px;
+}
+.sidebar.new-header .sidebar-menu > ul > li > a {
+  padding: 22px 15px;
+}
+.sidebar.new-header .sidebar-menu > ul > li > a:hover {
+  background: transparent;
+}
+.sidebar.new-header .sidebar-menu > ul > li > a:hover span {
+  color: #FF9F43;
+}
+.sidebar.new-header .sidebar-menu > ul > li > a:hover img, .sidebar.new-header .sidebar-menu > ul > li > a:hover svg {
+  filter: brightness(0) saturate(100%) invert(75%) sepia(10%) saturate(5676%) hue-rotate(326deg) brightness(105%) contrast(112%);
+}
+.sidebar.new-header .sidebar-menu > ul > li > a img {
+  top: 0 !important;
+  width: auto;
+}
+.sidebar.new-header .sidebar-menu > ul > li a {
+  font-weight: 500;
+  font-size: 15px;
+  color: #637381;
+}
+.sidebar.new-header .sidebar-menu > ul > li a img {
+  position: relative;
+  top: 3px;
+  width: 18px;
+  margin-right: 7px;
+}
+.sidebar.new-header .sidebar-menu > ul > li a svg {
+  width: 18px;
+  margin-right: 7px;
+}
+.sidebar.new-header .sidebar-menu > ul > li .menu-arrow {
+  position: initial;
+  transform: rotate(90deg);
+  margin-left: 15px;
+}
+.sidebar.new-header .sidebar-menu > ul > li .menu-arrow::before {
+  content: "\f105";
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+}
+.sidebar.new-header .sidebar-menu > ul > li ul {
+  position: absolute;
+  width: 250px;
+  height: auto;
+}
+.sidebar.new-header .sidebar-menu > ul > li ul li.submenu a {
+  padding: 8px 15px !important;
+}
+.sidebar.new-header .sidebar-menu > ul > li ul li.submenu a .menu-arrow {
+  float: right;
+  margin-right: 15px;
+}
+.sidebar.new-header .sidebar-menu > ul > li ul li.submenu a i {
+  margin-right: 7px;
+}
+.sidebar.new-header .sidebar-menu > ul > li ul li.submenu a img {
+  position: relative;
+  top: 3px;
+  width: 18px;
+  margin-right: 7px;
+}
+.sidebar.new-header .sidebar-menu > ul > li ul li.submenu a svg {
+  width: 18px;
+  margin-right: 7px;
+}
+.sidebar.new-header .sidebar-menu > ul > li ul li.submenu ul {
+  box-shadow: 0px 4px 14px rgba(198, 198, 198, 0.25);
+}
+.sidebar.new-header .sidebar-menu > ul > li ul li.submenu ul {
+  position: relative;
+  padding: 0;
+}
+.sidebar.new-header .sidebar-menu > ul > li ul li.submenu ul li a {
+  padding: 8px 10px 8px 40px !important;
+}
+.sidebar.new-header .sidebar-menu > ul > li ul li a {
+  padding: 8px 15px !important;
+}
+.sidebar.new-header .sidebar-menu > ul > li ul li a::after {
+  content: none !important;
+}
+@media (max-width: 1199.98px) {
+  .sidebar.new-header .sidebar-menu > ul > li {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .hide-sidebar {
+    display: none;
+  }
+}
+@media (max-width: 991.98px) {
+  .new-header {
+    display: none;
+  }
+
+  .page-wrapper-one {
+    padding-top: 60px;
+  }
+}
+.header-two .header-left {
+  border: 0 !important;
+  padding: 0 10px;
+}
+.header-two .top-nav-search {
+  float: left;
+  margin-left: 10px;
+}
+.header-two .top-nav-search .btn {
+  left: 0;
+  right: auto !important;
+}
+.header-two .top-nav-search .searchinputs input {
+  z-index: 1;
+}
+
+.sidebar.sidebar-two {
+  left: auto;
+  top: 90px;
+  border: 0 !important;
+}
+.sidebar.sidebar-two .sidebar-menu > ul > li.submenu ul li a {
+  display: flex !important;
+}
+.sidebar.sidebar-two .sidebar-menu > ul > li.submenu ul li a img {
+  width: 18px;
+}
+.sidebar.sidebar-two .sidebar-menu > ul > li.submenu ul li a span {
+  margin-left: 10px;
+}
+.sidebar.sidebar-two .sidebar-menu > ul > li.submenu ul li a::after {
+  content: none;
+}
+.sidebar.sidebar-two .sidebar-menu > ul > li.submenu ul li a .menu-arrow {
+  top: 10px;
+}
+.sidebar.sidebar-two .sidebar-menu > ul > li.submenu ul li ul li a {
+  padding: 8px 8px 8px 64px;
+}
+.sidebar.sidebar-two .sidebar-menu > ul li a .menu-arrow::before {
+  content: "\f105";
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+}
+.sidebar.sidebar-two .sidebar-menu .menu-arrow {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+}
+
+.page-wrapper-two .dash-widget .dash-widgetcontent {
+  margin-left: 10px;
+}
+
+@media (max-width: 991.98px) {
+  .sidebar.sidebar-two {
+    left: 0;
+    top: 60px;
+  }
+}
+.page-wrapper-three {
+  margin-left: 0;
+  padding-top: 0;
+}
+.page-wrapper-three .content {
+  background: #FAFBFE;
+  border-radius: 20px;
+  margin-top: -82px;
+}
+
+.header-three {
+  position: relative;
+}
+.header-three .header-left {
+  border-right: 0 !important;
+  padding: 25px;
+}
+
+.logo-white {
+  display: none !important;
+}
+
+.sidebar.side-three.new-header {
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 150px;
+  background: #1B2950;
+  border-top: 1px solid #D9D9D9;
+  box-shadow: 0px 4px 14px rgba(198, 198, 198, 0.25);
+  z-index: unset;
+}
+.sidebar.side-three.new-header .sidebar-menu {
+  padding: 0 15px;
+}
+.sidebar.side-three.new-header .sidebar-menu > ul > li {
+  margin-bottom: 0;
+  margin-right: 20px;
+}
+.sidebar.side-three.new-header .sidebar-menu > ul > li > a {
+  padding: 22px 15px;
+}
+.sidebar.side-three.new-header .sidebar-menu > ul > li > a img, .sidebar.side-three.new-header .sidebar-menu > ul > li > a svg {
+  filter: brightness(0) invert(1);
+  margin-right: 0;
+}
+.sidebar.side-three.new-header .sidebar-menu > ul > li > a:hover {
+  background: transparent;
+}
+.sidebar.side-three.new-header .sidebar-menu > ul > li > a:hover span {
+  color: #FF9F43 !important;
+}
+.sidebar.side-three.new-header .sidebar-menu > ul > li > a:hover img, .sidebar.side-three.new-header .sidebar-menu > ul > li > a:hover svg {
+  filter: brightness(0) saturate(100%) invert(75%) sepia(10%) saturate(5676%) hue-rotate(326deg) brightness(105%) contrast(112%);
+}
+.sidebar.side-three.new-header .sidebar-menu > ul > li > a img {
+  top: 0 !important;
+  width: auto;
+}
+.sidebar.side-three.new-header .sidebar-menu > ul > li > a::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -10px;
+  width: 1px;
+  height: 15px;
+  background: #6B7A99;
+  transform: translateY(-50%);
+}
+.sidebar.side-three.new-header .sidebar-menu > ul > li > a span {
+  color: #fff !important;
+}
+.sidebar.side-three.new-header .sidebar-menu > ul > li a {
+  font-weight: 500;
+  font-size: 15px;
+  color: #fff;
+}
+.sidebar.side-three.new-header .sidebar-menu > ul > li a img {
+  position: relative;
+  top: 3px;
+  width: 18px;
+  margin-right: 7px;
+  filter: brightness(0) invert(1);
+}
+.sidebar.side-three.new-header .sidebar-menu > ul > li a svg {
+  width: 18px;
+  margin-right: 7px;
+}
+.sidebar.side-three.new-header .sidebar-menu > ul > li a:hover img, .sidebar.side-three.new-header .sidebar-menu > ul > li a:hover svg {
+  filter: brightness(0) saturate(100%) invert(75%) sepia(10%) saturate(5676%) hue-rotate(326deg) brightness(105%) contrast(112%);
+}
+.sidebar.side-three.new-header .sidebar-menu > ul > li .menu-arrow {
+  position: initial;
+  transform: rotate(90deg);
+  margin-left: 15px;
+}
+.sidebar.side-three.new-header .sidebar-menu > ul > li .menu-arrow::before {
+  content: "\f105";
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+}
+.sidebar.side-three.new-header .sidebar-menu > ul > li ul {
+  position: absolute;
+  width: 250px;
+  height: auto;
+  z-index: 1;
+  background: #1B2950;
+}
+.sidebar.side-three.new-header .sidebar-menu > ul > li ul li.submenu a {
+  padding: 8px 15px !important;
+  color: #fff;
+}
+.sidebar.side-three.new-header .sidebar-menu > ul > li ul li.submenu a .menu-arrow {
+  float: right;
+  margin-right: 15px;
+}
+.sidebar.side-three.new-header .sidebar-menu > ul > li ul li.submenu a i {
+  margin-right: 7px;
+}
+.sidebar.side-three.new-header .sidebar-menu > ul > li ul li.submenu a img {
+  position: relative;
+  top: 3px;
+  width: 18px;
+  margin-right: 7px;
+}
+.sidebar.side-three.new-header .sidebar-menu > ul > li ul li.submenu a svg {
+  width: 18px;
+  margin-right: 7px;
+}
+.sidebar.side-three.new-header .sidebar-menu > ul > li ul li.submenu a:hover {
+  color: #FF9F43;
+}
+.sidebar.side-three.new-header .sidebar-menu > ul > li ul li.submenu a:hover img {
+  filter: brightness(0) saturate(100%) invert(75%) sepia(10%) saturate(5676%) hue-rotate(326deg) brightness(105%) contrast(112%);
+}
+.sidebar.side-three.new-header .sidebar-menu > ul > li ul li.submenu ul {
+  box-shadow: none;
+}
+.sidebar.side-three.new-header .sidebar-menu > ul > li ul li.submenu ul {
+  position: relative;
+  padding: 0;
+}
+.sidebar.side-three.new-header .sidebar-menu > ul > li ul li.submenu ul li a {
+  padding: 8px 10px 8px 40px !important;
+  color: #fff;
+}
+.sidebar.side-three.new-header .sidebar-menu > ul > li ul li a {
+  padding: 8px 15px !important;
+}
+.sidebar.side-three.new-header .sidebar-menu > ul > li ul li a::after {
+  content: none !important;
+}
+@media (max-width: 1199.98px) {
+  .sidebar.side-three.new-header .sidebar-menu > ul > li {
+    margin-right: 0;
+  }
+}
+.sidebar.side-three.new-header .sidebar-menu > ul > li:last-child > a::before {
+  content: none;
+}
+
+@media (min-width: 992px) {
+  .hide-sidebar {
+    display: none;
+  }
+}
+@media (max-width: 991.98px) {
+  .header-three {
+    position: fixed;
+  }
+
+  .new-header {
+    display: none;
+  }
+
+  .page-wrapper-three {
+    padding-top: 60px;
+  }
+  .page-wrapper-three .content {
+    margin-top: 0;
+  }
+}
+.sidebar.sidebar-four {
+  border: 0;
+  box-shadow: 0px 4px 14px rgba(198, 198, 198, 0.25);
+}
+.sidebar.sidebar-four .sidebar-menu {
+  border-radius: 0 20px 20px 0;
+}
+.sidebar.sidebar-four .sidebar-menu .ui-aside {
+  float: left;
+  width: 100%;
+  max-width: 66px;
+  margin-left: 0px;
+  color: rgba(255, 255, 255, 0.5);
+  -webkit-transition: all 0.299s;
+  -ms-transition: all 0.299s;
+  transition: all 0.299s;
+  margin: 0;
+  padding: 0;
+  box-shadow: 0px 0 14px rgba(198, 198, 198, 0.25);
+  min-height: 100vh;
+}
+.sidebar.sidebar-four .sidebar-menu .ui-aside .nav-tabs {
+  padding: 0 19px;
+  border: 0;
+}
+.sidebar.sidebar-four .sidebar-menu .ui-aside .nav-tabs .nav-item .nav-link {
+  padding: 20px 5px;
+  border-bottom: 1px solid #D9D9D9;
+  border-width: 0 0 1px;
+}
+.sidebar.sidebar-four .sidebar-menu .ui-aside .nav-tabs .nav-item .nav-link:hover {
+  border-width: 0 0 1px;
+  border-bottom: 1px solid #D9D9D9;
+}
+.sidebar.sidebar-four .sidebar-menu .ui-aside .nav-tabs .nav-item .nav-link:active, .sidebar.sidebar-four .sidebar-menu .ui-aside .nav-tabs .nav-item .nav-link.active {
+  border-color: #fff #fff #D9D9D9;
+}
+.sidebar.sidebar-four .sidebar-menu .ui-aside .nav-tabs .nav-item .nav-link:active img, .sidebar.sidebar-four .sidebar-menu .ui-aside .nav-tabs .nav-item .nav-link.active img {
+  filter: brightness(0) saturate(100%) invert(75%) sepia(10%) saturate(5676%) hue-rotate(326deg) brightness(105%) contrast(112%);
+}
+.sidebar.sidebar-four .sidebar-menu .ui-aside .nav-tabs .nav-item .nav-link:active::after, .sidebar.sidebar-four .sidebar-menu .ui-aside .nav-tabs .nav-item .nav-link.active::after {
+  content: none;
+}
+.sidebar.sidebar-four .sidebar-menu .ui-aside .nav-tabs .nav-item .nav-link::before {
+  content: none;
+}
+.sidebar.sidebar-four .sidebar-menu .ui-aside .nav-tabs .nav-item:last-child .nav-link {
+  border-bottom: 0;
+}
+.sidebar.sidebar-four .tab-content-four {
+  padding-top: 20px;
+  margin-left: 10px;
+  width: 100%;
+}
+.sidebar.sidebar-four ul ul {
+  display: none;
+}
+.sidebar.sidebar-four .sidebar-menu {
+  padding: 0 20px 0 0;
+}
+.sidebar.sidebar-four .sidebar-menu ul li a {
+  padding: 10px 15px 10px 25px;
+  position: relative;
+  color: #637381;
+}
+.sidebar.sidebar-four .sidebar-menu ul li a svg {
+  width: 18px;
+  color: #637381;
+}
+.sidebar.sidebar-four .sidebar-menu ul li a img {
+  width: 18px;
+  color: #637381;
+}
+.sidebar.sidebar-four .sidebar-menu ul li a:hover {
+  color: #FF9F43;
+}
+.sidebar.sidebar-four .sidebar-menu ul li a:hover img {
+  filter: brightness(0) saturate(100%) invert(75%) sepia(10%) saturate(5676%) hue-rotate(326deg) brightness(105%) contrast(112%);
+}
+.sidebar.sidebar-four .sidebar-menu ul li a:hover span {
+  color: #FF9F43;
+}
+.sidebar.sidebar-four .sidebar-menu ul li a:hover svg {
+  color: #fff;
+}
+.sidebar.sidebar-four .sidebar-menu ul li a::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  background: #C8C8C8;
+  width: 5px;
+  height: 5px;
+}
+.sidebar.sidebar-four .sidebar-menu ul li a.active {
+  color: #FF9F43;
+}
+.sidebar.sidebar-four .sidebar-menu ul li a.active svg {
+  color: #fff;
+}
+.sidebar.sidebar-four .sidebar-menu ul li a.active img {
+  filter: brightness(0) saturate(100%) invert(75%) sepia(10%) saturate(5676%) hue-rotate(326deg) brightness(105%) contrast(112%);
+}
+.sidebar.sidebar-four .sidebar-menu ul li a.active span {
+  color: #fff;
+}
+.sidebar.sidebar-four .sidebar-menu ul li a span {
+  margin-left: 0;
+  font-size: 15px;
+  font-weight: 500;
+  color: #637381;
+}
+.sidebar.sidebar-four .sidebar-menu ul li a .menu-arrow {
+  display: inline-block;
+  font-family: "Font Awesome 5 Free";
+  text-rendering: auto;
+  line-height: 40px;
+  font-size: 18px;
+  line-height: 18px;
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -webkit-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.sidebar.sidebar-four .sidebar-menu ul li a .menu-arrow::before {
+  content: "\f105";
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+}
+.sidebar.sidebar-four .sidebar-menu ul li a.subdrop .menu-arrow {
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+}
+.sidebar.sidebar-four .sidebar-menu ul li ul li a {
+  padding: 10px 15px 10px 25px;
+  left: 14px;
+}
+
+.header-four .header-left {
+  border-right: 0 !important;
+}
+
+.page-wrapper-four {
+  margin-left: 250px;
+}
+
+@media (max-width: 992px) {
+  .page-wrapper-four {
+    margin-left: 0;
+  }
+}
 div#global-loader {
   background: #fff;
   position: fixed;
@@ -3387,7 +4196,7 @@ span.select2-container.select2-container--default.select2-container--open {
   border-right: 1px solid #E8EBED;
   width: 260px;
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .sidebar {
     margin-left: -575px;
     -webkit-transition: all 0.4s ease;
@@ -3576,7 +4385,7 @@ span.select2-container.select2-container--default.select2-container--open {
   transition: all 0.2s ease;
   display: none;
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .sidebar .sidebar-right {
     width: calc(100% - 70px);
   }
@@ -3585,7 +4394,7 @@ span.select2-container.select2-container--default.select2-container--open {
   width: 250px !important;
   overflow: visible !important;
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .sidebar .sidebar-right .slimScrollDiv {
     width: 100% !important;
   }
@@ -3593,7 +4402,7 @@ span.select2-container.select2-container--default.select2-container--open {
 .sidebar .sidebar-right .tab-content {
   padding: 20px 20px 40px;
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .sidebar .sidebar-right .tab-content {
     padding: 10px;
   }
@@ -3695,7 +4504,7 @@ span.select2-container.select2-container--default.select2-container--open {
   left: 6px;
 }
 
-@media (min-width: 991px) {
+@media (min-width: 991.98px) {
   .mini-sidebar .page-wrapper {
     margin-left: 80px;
   }
@@ -4111,7 +4920,7 @@ span.select2-container.select2-container--default.select2-container--open {
 .table-height {
   min-height: 300px;
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .table-height {
     min-height: auto;
     margin-bottom: 15px;
@@ -4169,7 +4978,7 @@ span.select2-container.select2-container--default.select2-container--open {
   margin-bottom: 10px;
   padding: 0 5px;
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .modal-barcode ul li {
     width: 50%;
   }
@@ -4185,7 +4994,7 @@ span.select2-container.select2-container--default.select2-container--open {
 .modal .modal-title {
   font-weight: 700;
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .modal .modal-title {
     font-size: 16px;
   }
@@ -4215,7 +5024,7 @@ span.select2-container.select2-container--default.select2-container--open {
   min-width: 130px;
   padding: 12px;
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .modal .modal-footer .btn {
     min-width: auto;
     padding: 7px 12px;
@@ -4243,6 +5052,173 @@ span.select2-container.select2-container--default.select2-container--open {
   -moz-box-shadow: inset 0 0px 0px 100px #fff;
   box-shadow: inset 0 0px 0px 100px #fff;
   color: #212B36;
+}
+
+.customizer-links {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  background: #FE9F43;
+  border-radius: 5px 0px 0px 5px;
+  z-index: 3;
+  width: 47px;
+  min-height: 170px;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.customizer-links ul {
+  width: 100%;
+}
+.customizer-links ul li {
+  margin: 10px 5px 0;
+  padding: 0 0 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.customizer-links ul li:last-child {
+  border-bottom: 0;
+}
+.customizer-links ul li a {
+  padding: 10px 10px;
+  text-align: center;
+  border-radius: 5px;
+}
+.customizer-links ul li a:hover {
+  background: #1B2850;
+}
+.customizer-links ul li a img {
+  height: 18px;
+}
+
+.sidebar-settings {
+  width: 450px;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  right: -450px;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: scroll;
+  -webkit-transition: ease all 0.8s;
+  -ms-transition: ease all 0.8s;
+  transition: ease all 0.8s;
+}
+.sidebar-settings.show-settings {
+  right: 0;
+  -webkit-transition: ease all 0.8s;
+  -ms-transition: ease all 0.8s;
+  transition: ease all 0.8s;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: scroll;
+  width: 100%;
+}
+
+.sidebar-content {
+  max-width: 450px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #fff;
+  height: 100vh;
+  overflow-x: hidden;
+}
+.sidebar-content .sidebar-header {
+  padding: 20px;
+  border: 1px solid #D9D9D9;
+}
+.sidebar-content .sidebar-header h5 {
+  font-size: 18px;
+  color: #000;
+  font-weight: 700;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+@media (max-width: 991.98px) {
+  .sidebar-content .sidebar-header h5 {
+    font-size: 18px;
+  }
+}
+.sidebar-content .sidebar-header a {
+  font-size: 24px;
+}
+.sidebar-content .sidebar-header a img {
+  width: 15px;
+}
+.sidebar-content .sidebar-body {
+  padding: 20px;
+}
+.sidebar-content .sidebar-body .theme-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #6B7A99;
+  margin-bottom: 10px;
+}
+
+.switch-wrapper {
+  border-bottom: 1px solid #D9D9D9;
+  margin: 0 0 20px;
+  padding: 0 0 20px;
+}
+.switch-wrapper #dark-mode-toggle .light-mode {
+  border-radius: 5px 0 0 5px;
+}
+.switch-wrapper #dark-mode-toggle .dark-mode {
+  border-radius: 0 5px 5px 0;
+}
+.switch-wrapper #dark-mode-toggle .light-mode, .switch-wrapper #dark-mode-toggle .dark-mode {
+  background: #D9D9D9;
+  font-size: 16px;
+  color: #000;
+  padding: 11px 18px;
+  cursor: pointer;
+}
+.switch-wrapper #dark-mode-toggle .light-mode img, .switch-wrapper #dark-mode-toggle .dark-mode img {
+  filter: brightness(0) saturate(100%);
+}
+.switch-wrapper #dark-mode-toggle .light-mode.active, .switch-wrapper #dark-mode-toggle .dark-mode.active {
+  background: #FE9F43;
+  color: #fff;
+}
+.switch-wrapper #dark-mode-toggle .light-mode.active img, .switch-wrapper #dark-mode-toggle .dark-mode.active img {
+  filter: brightness(0) invert(1);
+}
+
+.layout-wrap {
+  margin-bottom: 20px;
+}
+.layout-wrap .status-toggle .checktoggle {
+  background: #000;
+  width: 25px;
+  height: 15px;
+}
+.layout-wrap .status-toggle .checktoggle :after {
+  width: 12px;
+  height: 12px;
+  right: 4px;
+}
+.layout-wrap .layout-img img {
+  max-width: 120px;
+}
+.layout-wrap .status-text {
+  font-size: 16px;
+  color: #000;
+}
+
+.layout-link {
+  position: relative;
+  z-index: 9;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
 }
 
 /****** PAGES ******/
@@ -4700,7 +5676,7 @@ span.select2-container.select2-container--default.select2-container--open {
   color: #212B36;
   font-size: 18px;
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .page-header h3 {
     font-size: 14px;
   }
@@ -4710,7 +5686,7 @@ span.select2-container.select2-container--default.select2-container--open {
   color: #212B36;
   font-size: 18px;
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .page-header h4 {
     font-size: 14px;
   }
@@ -4720,7 +5696,7 @@ span.select2-container.select2-container--default.select2-container--open {
   color: #555;
   font-weight: 400;
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .page-header h6 {
     font-size: 12px;
   }
@@ -4744,7 +5720,7 @@ span.select2-container.select2-container--default.select2-container--open {
 .page-header .btn-added img {
   filter: brightness(0) invert(1);
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .page-header .btn-added {
     padding: 3px 8px;
   }
@@ -5059,7 +6035,7 @@ span.select2-container.select2-container--default.select2-container--open {
   display: none;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .graph-sets > ul {
     display: none;
   }
@@ -5160,7 +6136,7 @@ span.select2-container.select2-container--default.select2-container--open {
   flex-wrap: wrap;
   align-items: center;
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .login-wrapper .login-content {
     width: 100%;
   }
@@ -5173,7 +6149,7 @@ span.select2-container.select2-container--default.select2-container--open {
 .login-wrapper .login-content .login-userset {
   width: 100%;
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .login-wrapper .login-content .login-userset {
     margin-top: 30px;
   }
@@ -5285,7 +6261,7 @@ span.select2-container.select2-container--default.select2-container--open {
   top: 10px;
   left: 0;
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .login-wrapper .login-content .form-setlogin h4:after {
     height: 0px;
   }
@@ -5299,7 +6275,7 @@ span.select2-container.select2-container--default.select2-container--open {
   top: 10px;
   right: 0;
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .login-wrapper .login-content .form-setlogin h4:before {
     height: 0px;
   }
@@ -5382,7 +6358,7 @@ span.select2-container.select2-container--default.select2-container--open {
 .login-wrapper .login-img {
   width: 60%;
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .login-wrapper .login-img {
     display: none;
   }
@@ -5426,7 +6402,7 @@ span.select2-container.select2-container--default.select2-container--open {
   width: 25%;
   padding: 0 15px;
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .product-list ul li {
     width: 50%;
     padding: 0 5px;
@@ -5486,13 +6462,13 @@ span.select2-container.select2-container--default.select2-container--open {
 .input-checkset ul li {
   margin-right: 30px;
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .input-checkset ul li {
     margin-right: 10px;
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .productdetails .product-bar li {
     border: 1px solid #D8D8D8;
   }
@@ -5526,7 +6502,7 @@ span.select2-container.select2-container--default.select2-container--open {
   border: 1px solid #D8D8D8;
   border-top: 0;
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .productdetails > ul > li {
     border: 0;
   }
@@ -5539,7 +6515,7 @@ span.select2-container.select2-container--default.select2-container--open {
   border-right: 1px solid #D8D8D8;
   padding: 10px;
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .productdetails > ul > li h4 {
     width: 100%;
     border-right: 0;
@@ -5552,7 +6528,7 @@ span.select2-container.select2-container--default.select2-container--open {
   width: 70%;
   padding: 10px;
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .productdetails > ul > li h6 {
     width: 100%;
   }
@@ -5567,12 +6543,12 @@ span.select2-container.select2-container--default.select2-container--open {
 .productdetails > ul > li:first-child {
   border-top: 1px solid #D8D8D8;
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .productdetails > ul > li:first-child {
     border: 0;
   }
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .productdetails.product-respon {
     overflow: hidden;
   }
@@ -5592,7 +6568,7 @@ span.select2-container.select2-container--default.select2-container--open {
   width: auto !important;
   margin: 0 0 10px;
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .slider-product img {
     height: auto;
   }
@@ -5636,7 +6612,7 @@ span.select2-container.select2-container--default.select2-container--open {
 .requiredfield {
   margin-bottom: 15px;
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .requiredfield {
     margin-bottom: 10px;
   }
@@ -5754,7 +6730,7 @@ span.select2-container.select2-container--default.select2-container--open {
   padding-bottom: 25px;
   border-bottom: 1px solid #E9ECEF;
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .card-sales-split {
     padding-bottom: 10px;
   }
@@ -5880,7 +6856,7 @@ span.select2-container.select2-container--default.select2-container--open {
 .main-set {
   padding: 0 30px;
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .main-set {
     padding: 0 10px;
   }
@@ -6084,7 +7060,7 @@ span.select2-container.select2-container--default.select2-container--open {
   height: 34vh;
   overflow: auto;
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .product-table {
     height: auto;
   }
@@ -6102,7 +7078,7 @@ span.select2-container.select2-container--default.select2-container--open {
   overflow-y: auto;
   overflow-x: hidden;
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .product-detils {
     height: auto;
   }
@@ -6220,7 +7196,7 @@ span.select2-container.select2-container--default.select2-container--open {
   margin-right: 1px;
   margin-bottom: 10px;
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .btn-pos ul li {
     width: 48%;
   }
@@ -6241,7 +7217,7 @@ span.select2-container.select2-container--default.select2-container--open {
   border: 1px solid #E9ECEF;
   padding: 5px 12px;
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .btn-pos ul li a.btn {
     min-width: auto;
     padding: 6px 15px;
@@ -6343,7 +7319,7 @@ span.select2-container.select2-container--default.select2-container--open {
   width: 50%;
   margin-bottom: 10px;
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .header-menuset ul li {
     width: 100%;
   }
@@ -6582,7 +7558,7 @@ span.select2-container.select2-container--default.select2-container--open {
   transition: all 0.5s;
   border-radius: 5px 5px 0px 0px;
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .productset .productsetimg img {
     max-height: 150px;
   }
@@ -6665,7 +7641,7 @@ span.select2-container.select2-container--default.select2-container--open {
   background: linear-gradient(90deg, #EA5455 0%, #FF9F43 100%);
   border-radius: 0 10px 0 0;
 }
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .profile-set .profile-head {
     border-radius: 10px;
   }

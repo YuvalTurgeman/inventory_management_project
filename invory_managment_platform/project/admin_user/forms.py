@@ -1,17 +1,23 @@
 from django.forms import ModelForm
-from .models import User, Product, Transfers, Purchases, Expense
+from .models import User_Data, Product, Transfers, Purchases, Expense, Supplier
 from django import forms
 
 
 class RegisterForm(ModelForm):
     class Meta:
-        model = User
+        model = User_Data
         fields = '__all__'
 
 
 class ProductForm(ModelForm):
     class Meta:
         model = Product
+        fields = '__all__'
+
+
+class SupplierForm(ModelForm):
+    class Meta:
+        model = Supplier
         fields = '__all__'
 
 
