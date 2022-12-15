@@ -394,19 +394,32 @@ def userlists(request):
 
 
 def purchasereports(request):
-    return render(request, 'student/purchasereport.html')
+    data = {
+        "purchases": Purchases.objects.all(),
+    }
+    return render(request, 'student/purchasereport.html', data)
 
 
 def salesreports(request):
-    return render(request, 'student/salesreport.html')
+    data = {
+        "transfers": Transfers.objects.all(),
+    }
+    return render(request, 'student/salesreport.html', data)
 
 
 def inventoryreports(request):
-    return render(request, 'student/inventoryreport.html')
+    data = {
+        "products": Product.objects.all(),
+    }
+    return render(request, 'admin_u/inventoryreport.html', data)
 
 
 def purchaseorderreports(request):
-    return render(request, 'student/purchaseorderreport.html')
+    data = {
+        "expenses": Expense.objects.all(),
+    }
+    return render(request, 'admin_u/purchaseorderreport.html', data)
+
 
 
 def chart_apexs(request):

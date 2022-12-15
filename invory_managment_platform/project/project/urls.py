@@ -52,6 +52,7 @@ urlpatterns = [
     path("chart-apex/", views.chart_apex, name="chart-apex"),
     path("purchaseorderreport/", views.purchaseorderreport, name="purchaseorderreport"),
 
+    path("indexs/", views.indexs, name="indexs"),
     path("productlists/", views.productlists, name="productlists"),
     path("addproducts/", views.addproducts, name="addproducts"),
     path("saleslists/", views.saleslists, name="saleslists"),
