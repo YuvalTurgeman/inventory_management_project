@@ -8,7 +8,7 @@
 		<meta name="keywords" content="">
 		<meta name="author" content="">
 		<meta name="robots" content="">
-		<title>SCE invory management platform</title>
+		<title>SCE inventory management platform</title>
 
 		<!-- Favicon -->
 		<link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.png' %}">
@@ -152,8 +152,8 @@
 					<div class="content">
 						<div class="page-header">
 							<div class="page-title">
-								<h4>Sales Report</h4>
-								<h6>Manage your Sales Report</h6>
+								<h4>Transfers Report</h4>
+								<h6>Manage your transfers report</h6>
 							</div>
 						</div>
 
@@ -163,7 +163,7 @@
 								<div class="table-top">
 									<div class="search-set">
 										<div class="search-input">
-											<a class="btn btn-searchset"><img src="assets/img/icons/search-white.svg" alt="img"></a>
+											<a class="btn btn-searchset"><img src="{% static 'img/icons/search-white.svg' %}" alt="img"></a>
 										</div>
 									</div>
 								</div>
@@ -171,324 +171,27 @@
 									<table class="table datanew">
 										<thead>
 											<tr>
-												<th>
-													<label class="checkboxs">
-														<input type="checkbox" id="select-all">
-														<span class="checkmarks"></span>
-													</label>
-												</th>
 												<th>Product Name</th>
-												<th>SKU</th>
-												<th> Category</th>
+												<th>Category</th>
 												<th>Brand</th>
-												<th>Sold amount</th>
-												<th>Sold qty</th>
-												<th>Instock qty</th>
+												<th>To</th>
+												<th>QTY</th>
+												<th>Status</th>
 											</tr>
 										</thead>
 										<tbody>
-											<tr>
-												<td>
-													<label class="checkboxs">
-														<input type="checkbox">
-														<span class="checkmarks"></span>
-													</label>
-												</td>
-												<td class="productimgname">
-													<a class="product-img">
-														<img src="assets/img/product/product1.jpg" alt="product">
-													</a>
-													<a href="javascript:void(0);">Macbook pro</a>
-												</td>
-												<td>PT001</td>
-												<td>Computer</td>
-												<td>N/D</td>
-												<td>1500.00</td>
-												<td>1</td>
-												<td>1356</td>
-											</tr>
-											<tr>
-												<td>
-													<label class="checkboxs">
-														<input type="checkbox">
-														<span class="checkmarks"></span>
-													</label>
-												</td>
-												<td class="productimgname">
-													<a class="product-img">
-														<img src="assets/img/product/product2.jpg" alt="product">
-													</a>
-													<a href="javascript:void(0);">Orange</a>
-												</td>
-												<td>PT002</td>
-												<td>Fruits</td>
-												<td>N/D</td>
-												<td>10.00</td>
-												<td>1</td>
-												<td>131</td>
-											</tr>
-											<tr>
-												<td>
-													<label class="checkboxs">
-														<input type="checkbox">
-														<span class="checkmarks"></span>
-													</label>
-												</td>
-												<td class="productimgname">
-													<a class="product-img">
-														<img src="assets/img/product/product3.jpg" alt="product">
-													</a>
-													<a href="javascript:void(0);">Pineapple</a>
-												</td>
-												<td>PT003</td>
-												<td>Fruits</td>
-												<td>N/D</td>
-												<td>10.00</td>
-												<td>3</td>
-												<td>72</td>
-											</tr>
-											<tr>
-												<td>
-													<label class="checkboxs">
-														<input type="checkbox">
-														<span class="checkmarks"></span>
-													</label>
-												</td>
-												<td class="productimgname">
-													<a class="product-img">
-														<img src="assets/img/product/product4.jpg" alt="product">
-													</a>
-													<a href="javascript:void(0);">Strawberry</a>
-												</td>
-												<td>PT004</td>
-												<td>Fruits</td>
-												<td>N/D</td>
-												<td>10.00</td>
-												<td>1</td>
-												<td>100</td>
-											</tr>
-											<tr>
-												<td>
-													<label class="checkboxs">
-														<input type="checkbox">
-														<span class="checkmarks"></span>
-													</label>
-												</td>
-												<td class="productimgname">
-													<a class="product-img">
-														<img src="assets/img/product/product5.jpg" alt="product">
-													</a>
-													<a href="javascript:void(0);">Sunglasses</a>
-												</td>
-												<td>PT005</td>
-												<td>Accessories</td>
-												<td>N/D</td>
-												<td>10.00</td>
-												<td>1</td>
-												<td>100</td>
-											</tr>
-											<tr>
-												<td>
-													<label class="checkboxs">
-														<input type="checkbox">
-														<span class="checkmarks"></span>
-													</label>
-												</td>
-												<td class="productimgname">
-													<a class="product-img">
-														<img src="assets/img/product/product6.jpg" alt="product">
-													</a>
-													<a href="javascript:void(0);">Unpaired gray</a>
-												</td>
-												<td>PT006</td>
-												<td>Shoes</td>
-												<td>Adidas</td>
-												<td>100.00</td>
-												<td>3</td>
-												<td>50</td>
-											</tr>
-											<tr>
-												<td>
-													<label class="checkboxs">
-														<input type="checkbox">
-														<span class="checkmarks"></span>
-													</label>
-												</td>
-												<td class="productimgname">
-													<a class="product-img">
-														<img src="assets/img/product/product7.jpg" alt="product">
-													</a>
-													<a href="javascript:void(0);">Avocat</a>
-												</td>
-												<td>PT007</td>
-												<td>Fruits</td>
-												<td>N/D</td>
-												<td>5.00</td>
-												<td>5</td>
-												<td>29</td>
-											</tr>
-											<tr>
-												<td>
-													<label class="checkboxs">
-														<input type="checkbox">
-														<span class="checkmarks"></span>
-													</label>
-												</td>
-												<td class="productimgname">
-													<a class="product-img">
-														<img src="assets/img/product/product8.jpg" alt="product">
-													</a>
-													<a href="javascript:void(0);">Banana</a>
-												</td>
-												<td>PT008</td>
-												<td>Fruits</td>
-												<td>N/D</td>
-												<td>10.00</td>
-												<td>1</td>
-												<td>24</td>
-											</tr>
-											<tr>
-												<td>
-													<label class="checkboxs">
-														<input type="checkbox">
-														<span class="checkmarks"></span>
-													</label>
-												</td>
-												<td class="productimgname">
-													<a class="product-img">
-														<img src="assets/img/product/product9.jpg" alt="product">
-													</a>
-													<a href="javascript:void(0);">Earphones</a>
-												</td>
-												<td>PT009</td>
-												<td>Computers</td>
-												<td>N/D</td>
-												<td>15.00</td>
-												<td>2</td>
-												<td>11</td>
-											</tr>
-											<tr>
-												<td>
-													<label class="checkboxs">
-														<input type="checkbox">
-														<span class="checkmarks"></span>
-													</label>
-												</td>
-												<td class="productimgname">
-													<a class="product-img">
-														<img src="assets/img/product/product8.jpg" alt="product">
-													</a>
-													<a href="javascript:void(0);">Banana</a>
-												</td>
-												<td>PT010</td>
-												<td>Health Care	</td>
-												<td>N/D</td>
-												<td>5.00</td>
-												<td>5</td>
-												<td>16</td>
-											</tr>
-											<tr>
-												<td>
-													<label class="checkboxs">
-														<input type="checkbox">
-														<span class="checkmarks"></span>
-													</label>
-												</td>
-												<td class="productimgname">
-													<a class="product-img">
-														<img src="assets/img/product/product6.jpg" alt="product">
-													</a>
-													<a href="javascript:void(0);">Unpaired gray</a>
-												</td>
-												<td>PT006</td>
-												<td>Shoes</td>
-												<td>Adidas</td>
-												<td>100.00</td>
-												<td>1</td>
-												<td>50</td>
-											</tr>
-											<tr>
-												<td>
-													<label class="checkboxs">
-														<input type="checkbox">
-														<span class="checkmarks"></span>
-													</label>
-												</td>
-												<td class="productimgname">
-													<a class="product-img">
-														<img src="assets/img/product/product7.jpg" alt="product">
-													</a>
-													<a href="javascript:void(0);">Avocat</a>
-												</td>
-												<td>PT007</td>
-												<td>Fruits</td>
-												<td>N/D</td>
-												<td>5.00</td>
-												<td>2</td>
-												<td>29</td>
-											</tr>
-											<tr>
-												<td>
-													<label class="checkboxs">
-														<input type="checkbox">
-														<span class="checkmarks"></span>
-													</label>
-												</td>
-												<td class="productimgname">
-													<a class="product-img">
-														<img src="assets/img/product/product8.jpg" alt="product">
-													</a>
-													<a href="javascript:void(0);">Banana</a>
-												</td>
-												<td>PT008</td>
-												<td>Fruits</td>
-												<td>N/D</td>
-												<td>10.00</td>
-												<td>2</td>
-												<td>24</td>
-											</tr>
-											<tr>
-												<td>
-													<label class="checkboxs">
-														<input type="checkbox">
-														<span class="checkmarks"></span>
-													</label>
-												</td>
-												<td class="productimgname">
-													<a class="product-img">
-														<img src="assets/img/product/product9.jpg" alt="product">
-													</a>
-													<a href="javascript:void(0);">Earphones</a>
-												</td>
-												<td>PT009</td>
-												<td>Computers</td>
-												<td>N/D</td>
-												<td>15.00</td>
-												<td>2</td>
-												<td>11</td>
-											</tr>
-											<tr>
-												<td>
-													<label class="checkboxs">
-														<input type="checkbox">
-														<span class="checkmarks"></span>
-													</label>
-												</td>
-												<td class="productimgname">
-													<a class="product-img">
-														<img src="assets/img/product/product8.jpg" alt="product">
-													</a>
-													<a href="javascript:void(0);">Banana</a>
-												</td>
-												<td>PT010</td>
-												<td>Health Care	</td>
-												<td>N/D</td>
-												<td>5.00</td>
-												<td>4</td>
-												<td>16</td>
-											</tr>
+										{% for i in transfers %}
+										<tr>
+											<td>{{i.product_name}}</td>
+											<td>{{i.category}}</td>
+											<td>{{i.brand}}</td>
+											<td>{{i.to}}</td>
+											<td>{{i.qty}}</td>
+											<td>{{i.status}}</td>
+										</tr>
+									{% endfor %}
 										</tbody>
-										
+
 									</table>
 								</div>
 							</div>
@@ -496,9 +199,43 @@
 						<!-- /product list -->
 					</div>
 				</div>
+				<!-- /Main Wrapper -->
+				<div class="searchpart">
+					<div class="searchcontent">
+						<div class="searchhead">
+							<h3>Search </h3>
+							<a id="closesearch"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+						</div>
+						<div class="searchcontents">
+							<div class="searchparts">
+								<input type="text" placeholder="search here">
+								<a class="btn btn-searchs" >Search</a>
+							</div>
+							<div class="recentsearch">
+								<h2>Recent Search</h2>
+								<ul>
+									<li>
+										<h6><i class="fa fa-search me-2"></i> Settings</h6>
+									</li>
+									<li>
+										<h6><i class="fa fa-search me-2"></i> Report</h6>
+									</li>
+									<li>
+										<h6><i class="fa fa-search me-2"></i> Invoice</h6>
+									</li>
+									<li>
+										<h6><i class="fa fa-search me-2"></i> Sales</h6>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
 			</div>
-			<!-- /Main Wrapper -->
-			  
+
+		<!-- /Main Wrapper -->
+
 		<!-- jQuery -->
 		<script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
 
@@ -522,5 +259,5 @@
 		<!-- Custom JS -->
 		<script src="{% static 'js/script.js' %}"></script>
 
-	</body>
+    </body>
 </html>

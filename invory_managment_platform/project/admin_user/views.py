@@ -412,13 +412,13 @@ def deleteTransfers(request, pk):
     return render(request, 'student/saleslist.html', data)
 
 
+
 def purchaselists(request):
     data = {
         "purchases": Purchases.objects.all(),
     }
     return render(request, 'student/purchaselist.html',data)
-
-
+    
 def supplierlists(request):
     data = {
         "suppliers": Supplier.objects.all(),
@@ -448,14 +448,14 @@ def inventoryreports(request):
     data = {
         "products": Product.objects.all(),
     }
-    return render(request, 'admin_u/inventoryreport.html', data)
+    return render(request, 'student/inventoryreport.html', data)#changed admin_u to student
 
 
 def purchaseorderreports(request):
     data = {
         "expenses": Expense.objects.all(),
     }
-    return render(request, 'admin_u/purchaseorderreport.html', data)
+    return render(request, 'student/purchaseorderreport.html', data)
 
 
 
