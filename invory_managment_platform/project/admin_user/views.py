@@ -5,8 +5,9 @@ from .forms import RegisterForm, ProductForm, TransferForm, PurchasesForm, Expen
 from django.db.models import Q
 from .models import User_Data, ValidId, Product, Purchases, Finance, Transfers, Expense, Supplier
 from datetime import datetime
+import pickle
 
-
+emailg = []
 def register(request):
     form = RegisterForm()
     if request.method == 'POST':
@@ -54,6 +55,9 @@ def user_login(request):
     if request.method == 'POST':
         # First get the username and password supplied
         email = request.POST.get('email')
+        pickle_out = open("dict.pickle", "wb")
+        pickle.dump(email, pickle_out)
+        pickle_out.close()
         password = request.POST.get('password')
         mydata = User_Data.objects.filter(Q(email=email) & Q(password=password)).values()
         if mydata.filter(role='student'):
@@ -365,24 +369,61 @@ def productlists(request):
     return render(request, 'student/productlist.html', data)
 
 
-def addproducts(request):
-    return render(request, 'student/addproduct.html')
-
-
 def saleslists(request):
-    return render(request, 'student/saleslist.html')
+    pickle_in = open("dict.pickle", "rb")
+    email = pickle.load(pickle_in)
+    data = {
+            "transfers": Transfers.objects.all().filter(Q(to=email))
+        }
+    return render(request, 'student/saleslist.html', data)
+
+
+def addtransfers(request):
+    form = TransferForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+        data = {
+            "transfers": Transfers.objects.all(),
+        }
+        return render(request, 'student/saleslist.html', data)
+    context = {'form': form}
+    return render(request, 'student/addtransfer.html', context)
+
+
+def editTransfers(request, pk):
+    transfer = Transfers.objects.get(pk=pk)
+    form = TransferForm(request.POST or None, instance=transfer)
+    if form.is_valid():
+        form.save()
+        data = {
+            "transfer": Transfers.objects.filter(Q(to='Returned'))
+        }
+        return render(request, 'student/saleslist.html', data)
+    context = {'form': form, 'transfer': transfer}
+    return render(request, 'student/edittransfer.html', context)
+
+
+def deleteTransfers(request, pk):
+    transfer = Transfers.objects.get(pk=pk)
+    transfer.delete()
+    data = {
+        "transfers": Transfers.objects.all(),
+    }
+    return render(request, 'student/saleslist.html', data)
+
 
 
 def purchaselists(request):
-    return render(request, 'student/purchaselist.html')
-
-
-def quotationlists(request):
-    return render(request, 'admin_u/quotationlist.html')
-
-
+    data = {
+        "purchases": Purchases.objects.all(),
+    }
+    return render(request, 'student/purchaselist.html',data)
+    
 def supplierlists(request):
-    return render(request, 'student/supplierlist.html')
+    data = {
+        "suppliers": Supplier.objects.all(),
+    }
+    return render(request, 'student/supplierlist.html', data)
 
 
 def userlists(request):

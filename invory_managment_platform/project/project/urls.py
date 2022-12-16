@@ -54,10 +54,11 @@ urlpatterns = [
 
     path("indexs/", views.indexs, name="indexs"),
     path("productlists/", views.productlists, name="productlists"),
-    path("addproducts/", views.addproducts, name="addproducts"),
     path("saleslists/", views.saleslists, name="saleslists"),
+    path("addtransfers/", views.addtransfers, name="addtransfers"),
+    path("deleteTransfers/(?P<pk>\d+)/", views.deleteTransfers ,name="deleteTransfers"),
+    path("editTransfers/(?P<pk>\d+)/", views.editTransfers, name="editTransfers"),
     path("purchaselists/", views.purchaselists, name="purchaselists"),
-    path("quotationlists/", views.quotationlists, name="quotationlists"),
     path("supplierlists/", views.supplierlists, name="supplierlists"),
     path("userlists/", views.userlists, name="userlists"),
     path("inventoryreports/", views.inventoryreports, name="inventoryreports"),
