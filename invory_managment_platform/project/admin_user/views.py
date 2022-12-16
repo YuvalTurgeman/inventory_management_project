@@ -1,4 +1,4 @@
-import xlwt as xlwt
+#import xlwt as xlwt
 from django.http import HttpResponse, HttpRequest
 from django.shortcuts import render
 from .forms import RegisterForm, ProductForm, TransferForm, PurchasesForm, ExpenseForm, SupplierForm
@@ -381,10 +381,6 @@ def quotationlists(request):
     return render(request, 'admin_u/quotationlist.html')
 
 
-def addquotations(request):
-    return render(request, 'student/addquotation.html')
-
-
 def supplierlists(request):
     return render(request, 'student/supplierlist.html')
 
@@ -411,14 +407,14 @@ def inventoryreports(request):
     data = {
         "products": Product.objects.all(),
     }
-    return render(request, 'admin_u/inventoryreport.html', data)
+    return render(request, 'student/inventoryreport.html', data)#changed admin_u to student
 
 
 def purchaseorderreports(request):
     data = {
         "expenses": Expense.objects.all(),
     }
-    return render(request, 'admin_u/purchaseorderreport.html', data)
+    return render(request, 'student/purchaseorderreport.html', data)
 
 
 

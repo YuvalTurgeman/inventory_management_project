@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from admin_user import views
-#aaaaaa
+
 urlpatterns = [
     path('admin/', admin.site.urls, name=admin),
     path('', views.signin, name='signin'),
@@ -58,7 +58,6 @@ urlpatterns = [
     path("saleslists/", views.saleslists, name="saleslists"),
     path("purchaselists/", views.purchaselists, name="purchaselists"),
     path("quotationlists/", views.quotationlists, name="quotationlists"),
-    path("addquotations/", views.addquotations, name="addquotations"),
     path("supplierlists/", views.supplierlists, name="supplierlists"),
     path("userlists/", views.userlists, name="userlists"),
     path("inventoryreports/", views.inventoryreports, name="inventoryreports"),
