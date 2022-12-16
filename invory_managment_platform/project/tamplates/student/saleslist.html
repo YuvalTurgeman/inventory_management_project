@@ -1,183 +1,164 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-        <meta name="description" content="POS - Bootstrap Admin Template">
-		<meta name="keywords" content="admin, estimates, bootstrap, business, corporate, creative, invoice, html5, responsive, Projects">
-        <meta name="author" content="Dreamguys - Bootstrap Admin Template">
-        <meta name="robots" content="noindex, nofollow">
-        <title>SCE invory management platform</title>
-		
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+	<head>
+		{% load static %}
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="author" content="">
+		<meta name="robots" content="">
+		<title>SCE invory management platform</title>
+
 		<!-- Favicon -->
-        <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
-		
+		<link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.png' %}">
+
 		<!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-		
+		<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
 		<!-- animation CSS -->
-        <link rel="stylesheet" href="assets/css/animate.css">
-
-		<!-- Select2 CSS -->
-		<link rel="stylesheet" href="assets/plugins/select2/css/select2.min.css">
-
-		<!-- Datetimepicker CSS -->
-		<link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css">
+		<link rel="stylesheet" href="{% static 'css/animate.css' %}">
 
 		<!-- Datatable CSS -->
-		<link rel="stylesheet" href="assets/css/dataTables.bootstrap4.min.css">
-		
-        <!-- Fontawesome CSS -->
-		<link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
-		<link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
-		
+		<link rel="stylesheet" href="{% static 'css/dataTables.bootstrap4.min.css' %}">
+
+		<!-- Fontawesome CSS -->
+		<link rel="stylesheet" href="{% static 'plugins/fontawesome/css/fontawesome.min.css' %}">
+		<link rel="stylesheet" href="{% static 'plugins/fontawesome/css/all.min.css' %}">
+
 		<!-- Main CSS -->
-        <link rel="stylesheet" href="assets/css/style.css">
-		
-    </head>
-   
-		<body>
-			<div id="global-loader" >
-				<div class="whirly-loader"> </div>
-			</div>
-			<!-- Main Wrapper -->
-			<div class="main-wrapper">
-				
-				<!-- Header -->
-				<div class="header">
-				
-					<!-- Logo -->
-					 <div class="header-left active">
-						<a href="index.html" class="logo">
-							<img src="assets/img/logo.png"  alt="">
-						</a>
-						<a href="index.html" class="logo-small">
-							<img src="assets/img/logo-small.png"  alt="">
-						</a>
-						<a id="toggle_btn" href="javascript:void(0);">
-						</a>
-					</div>
-					<!-- /Logo -->
-					
-					<a id="mobile_btn" class="mobile_btn" href="#sidebar">
-						<span class="bar-icon">
-							<span></span>
-							<span></span>
-							<span></span>
-						</span>
+		<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+	</head>
+	<body>
+		<div id="global-loader" >
+			<div class="whirly-loader"> </div>
+		</div>
+		<!-- Main Wrapper -->
+		<div class="main-wrapper">
+
+			<!-- Header -->
+			<div class="header">
+
+				<!-- Logo -->
+				 <div class="header-left active">
+					<a href="{% url 'indexs' %}" class="logo">
+						<img src="{% static 'img/logo.png' %}" alt="">
 					</a>
-					
-					<!-- Header Menu -->
-					<ul class="nav user-menu">
-						<li class="nav-item dropdown has-arrow main-drop">
-							<a href="javascript:void(0);" class="dropdown-toggle nav-link userset" data-bs-toggle="dropdown">
-								<span class="user-img"><img src="assets/img/profiles/avator1.jpg" alt="">
-								<span class="status online"></span></span>
-							</a>
-							<div class="dropdown-menu menu-drop-user">
-								<div class="profilename">
-									<div class="profileset">
-										<span class="user-img"><img src="assets/img/profiles/avator1.jpg" alt="">
-										<span class="status online"></span></span>
-										<div class="profilesets">
-											<h6>Shay Lavi</h6>
-											<h5>Admin</h5>
-										</div>
-									</div>
-									<hr class="m-0">
-									<a class="dropdown-item" href="profile.html"> <i class="me-2"  data-feather="user"></i> My Profile</a>
-									<hr class="m-0">
-									<a class="dropdown-item logout pb-0" href="signin.html"><img src="assets/img/icons/log-out.svg" class="me-2" alt="img">Logout</a>
-								</div>
-							</div>
-						</li>
-					</ul>
-					<!-- /Header Menu -->
-					
-					<!-- Mobile Menu -->
-					<div class="dropdown mobile-user-menu">
-						<a href="javascript:void(0);" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
-						<div class="dropdown-menu dropdown-menu-right">
-							<a class="dropdown-item" href="profile.html">My Profile</a>
-							<a class="dropdown-item" href="signin.html">Logout</a>
-						</div>
-					</div>
-					<!-- /Mobile Menu -->
+					<a href="{% url 'indexs' %}" class="logo-small">
+						<img src="{% static 'img/logo-small.png' %}"  alt="">
+					</a>
+					<a id="toggle_btn" href="javascript:void(0);">
+					</a>
 				</div>
-				<!-- Header -->
-			 			<!-- Sidebar -->
-						 <div class="sidebar" id="sidebar">
-							<div class="sidebar-inner slimscroll">
-								<div id="sidebar-menu" class="sidebar-menu">
-									<ul>
-										<li class="active">
-											<a href="index.html" ><img src="assets/img/icons/dashboard.svg" alt="img"><span> Dashboard</span> </a>
-										</li>
-										<li class="submenu">
-											<a href="javascript:void(0);"><img src="assets/img/icons/product.svg" alt="img"><span> Product</span> <span class="menu-arrow"></span></a>
-											<ul>
-												<li><a href="productlist.html">Product List</a></li>
-												<li><a href="categorylist.html">Category List</a></li>
-											</ul>
-										</li>
-										<li class="submenu">
-											<a href="javascript:void(0);"><img src="assets/img/icons/transfer1.svg" alt="img"><span> Transfers</span> <span class="menu-arrow"></span></a>
-											<ul>
-												<li><a href="saleslist.html">Transfers List</a></li>
-											</ul>
-										</li>
-										<li class="submenu">
-											<a href="javascript:void(0);"><img src="assets/img/icons/purchase1.svg" alt="img"><span> Purchase</span> <span class="menu-arrow"></span></a>
-											<ul>
-												<li><a href="purchaselist.html">Purchase List</a></li>
-											</ul>
-										</li>
-										<li class="submenu">
-											<a href="javascript:void(0);"><img src="assets/img/icons/quotation1.svg" alt="img"><span> Quotation</span> <span class="menu-arrow"></span></a>
-											<ul>
-												<li><a href="quotationList.html">Quotation List</a></li>
-												<li><a href="addquotation.html">Add Quotation</a></li>
-											</ul>
-										</li>
-										<li class="submenu">
-											<a href="javascript:void(0);"><img src="assets/img/icons/users1.svg" alt="img"><span> People</span> <span class="menu-arrow"></span></a>
-											<ul>
-												<li><a href="supplierlist.html">Supplier List</a></li>
-												<li><a href="userlist.html">User List</a></li>
-											</ul>
-										</li>														
-										<li  class="submenu">
-											<a href="javascript:void(0);"><i data-feather="bar-chart-2"></i> <span> Charts  </span> <span class="menu-arrow"></span></a>
-											<ul>
-												<li><a href="chart-apex.html">Apex Charts</a></li>
-											</ul>
-										</li>
-										<li class="submenu">
-											<a href="javascript:void(0);"><img src="assets/img/icons/time.svg" alt="img"><span> Report</span> <span class="menu-arrow"></span></a>
-											<ul>
-												<li><a href="purchaseorderreport.html">Purchase order report</a></li>
-												<li><a href="inventoryreport.html">Inventory Report</a></li>
-												<li><a href="salesreport.html">Transfer Report</a></li>
-												<li><a href="purchasereport.html">Purchase Report</a></li>
-											</ul>
-										</li>
-									</ul>
+				<!-- /Logo -->
+
+				<a id="mobile_btn" class="mobile_btn" href="#sidebar">
+					<span class="bar-icon">
+						<span></span>
+						<span></span>
+						<span></span>
+					</span>
+				</a>
+
+				<!-- Header Menu -->
+				<ul class="nav user-menu">
+					<li class="nav-item dropdown has-arrow main-drop">
+						<a href="javascript:void(0);" class="dropdown-toggle nav-link userset" data-bs-toggle="dropdown">
+							<span class="user-img"><img src="{% static 'img/profiles/avator1.jpg' %}" alt="">
+							<span class="status online"></span></span>
+						</a>
+						<div class="dropdown-menu menu-drop-user">
+							<div class="profilename">
+								<div class="profileset">
+									<span class="user-img"><img src="{% static 'img/profiles/avator1.jpg' %}" alt="">
+									<span class="status online"></span></span>
+									<div class="profilesets">
+									</div>
 								</div>
+								<hr class="m-0">
+								<hr class="m-0">
+								<a class="dropdown-item logout pb-0" href="{% url 'signin'%}"><img src="{% static 'img/icons/log-out.svg' %}" class="me-2" alt="img">Logout</a>
 							</div>
 						</div>
-						<!-- /Sidebar -->
+					</li>
+				</ul>
+				<!-- /Header Menu -->
+
+				<!-- Mobile Menu -->
+				<div class="dropdown mobile-user-menu">
+					<a href="javascript:void(0);" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+					<div class="dropdown-menu dropdown-menu-right">
+						<a class="dropdown-item" href="signin.html">Logout</a>
+					</div>
+				</div>
+				<!-- /Mobile Menu -->
+			</div>
+			<!-- Header -->
+
+			<!-- Sidebar -->
+			<div class="sidebar" id="sidebar">
+				<div class="sidebar-inner slimscroll">
+					<div id="sidebar-menu" class="sidebar-menu">
+						<ul>
+							<li class="active">
+								<a href="{% url 'index' %}" ><img src="{% static 'img/icons/dashboard.svg' %}" alt="img"><span> Dashboard</span> </a>
+							</li>
+							<li class="submenu">
+								<a href="javascript:void(0);"><img src="{% static 'img/icons/product.svg' %}" alt="img"><span> Product</span> <span class="menu-arrow"></span></a>
+								<ul>
+									<li><a href="{% url 'productlists' %}">Product List</a></li>
+								</ul>
+							</li>
+							<li class="submenu">
+								<a href="javascript:void(0);"><img src="{% static 'img/icons/transfer1.svg' %}" alt="img"><span> Transfers</span> <span class="menu-arrow"></span></a>
+								<ul>
+									<li><a href="{% url 'saleslists' %}">Transfers List</a></li>
+								</ul>
+							</li>
+							<li class="submenu">
+								<a href="javascript:void(0);"><img src="{% static 'img/icons/purchase1.svg' %}" alt="img"><span> Purchase</span> <span class="menu-arrow"></span></a>
+								<ul>
+									<li><a href="{% url 'purchaselists' %}">Purchase List</a></li>
+								</ul>
+							</li>
+							<li class="submenu">
+								<a href="javascript:void(0);"><img src="{% static 'img/icons/users1.svg' %}" alt="img"><span> People</span> <span class="menu-arrow"></span></a>
+								<ul>
+									<li><a href="{% url 'supplierlists' %}">Supplier List</a></li>
+								</ul>
+							</li>
+							<li  class="submenu">
+								<a href="javascript:void(0);"><i data-feather="bar-chart-2"></i> <span> Charts  </span> <span class="menu-arrow"></span></a>
+								<ul>
+									<li><a href="{% url 'chart-apexs' %}">Apex Charts</a></li>
+								</ul>
+							</li>
+							<li class="submenu">
+								<a href="javascript:void(0);"><img src="{% static 'img/icons/time.svg' %}" alt="img"><span> Report</span> <span class="menu-arrow"></span></a>
+								<ul>
+									<li><a href="{% url 'purchaseorderreports' %}">Expense report</a></li>
+									<li><a href="{% url 'inventoryreports' %}">Inventory Report</a></li>
+									<li><a href="{% url 'salesreports' %}">Transfer Report</a></li>
+									<li><a href="{% url 'purchasereports' %}">Purchase Report</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- /Sidebar -->
 			<div class="page-wrapper">
 				<div class="content">
 					<div class="page-header">
 						<div class="page-title">
-							<h4>Transfer List</h4>
-							<h6>Transfer your stocks to one store another store.</h6>
+							<h4>Transfers List</h4>
+							<h6>Manage your transfers</h6>
 						</div>
 						<div class="page-btn">
-							<a href="addtransfer.html" class="btn btn-added"><img src="assets/img/icons/plus.svg" alt="img" class="me-2">Add Transfer</a>
+							<a href="{% url 'addtransfers' %}" class="btn btn-added"><img src="{% static 'img/icons/plus.svg' %}" alt="img" class="me-1">Add New Transfer</a>
 						</div>
 					</div>
-					
 
 					<!-- /product list -->
 					<div class="card">
@@ -185,310 +166,45 @@
 							<div class="table-top">
 								<div class="search-set">
 									<div class="search-input">
-										<a class="btn btn-searchset">
-											<img src="assets/img/icons/search-white.svg" alt="img">
-										</a>
+										<a class="btn btn-searchset"><img src="{% static 'img/icons/search-white.svg' %}" alt="img"></a>
 									</div>
 								</div>
 							</div>
 							<div class="table-responsive">
-								<table class="table  datanew">
+								<table class="table datatable ">
 									<thead>
 										<tr>
-											<th>
-												<label class="checkboxs">
-													<input type="checkbox" id="select-all">
-													<span class="checkmarks"></span>
-												</label>
-											</th>
-											<th>Date</th>
-											<th>Reference</th>
-											<th>From</th>
-											<th>Paid</th>
-											<th>items</th>
-											<th>Grand total</th>
+											<th>Product Name</th>
+											<th>Category</th>
+											<th>Brand</th>
+											<th>Qyt</th>
+											<th>To</th>
 											<th>Status</th>
+											<th>Start Of Loan</th>
+											<th>End Of Loan</th>
 											<th>Action</th>
 										</tr>
 									</thead>
-									<tbody>
+									{% for i in transfers %}
 										<tr>
+											<td>{{i.product_name}}</td>
+											<td>{{i.category}}</td>
+											<td>{{i.brand}}</td>
+											<td>{{i.qyt}}</td>
+											<td>{{i.to}}</td>
+											<td>{{i.status}}</td>
+											<td>{{i.start_of_loan}}</td>
+											<td>{{i.end_of_loan}}</td>
 											<td>
-												<label class="checkboxs">
-													<input type="checkbox">
-													<span class="checkmarks"></span>
-												</label>
-											</td>
-											<td>19 Nov 2022</td>
-											<td>TR0101</td>
-											<td>Store1</td>
-											<td>Store2</td>
-											<td>10.00</td>
-											<td>1500.00</td>
-											<td><span class="badges bg-lightgreen">Completed</span></td>
-											<td>
-												<a class="me-3" href="edittransfer.html">
-													<img src="assets/img/icons/edit.svg" alt="img">
+												<a class="me-3" href="{% url 'editTransfers' pk=i.pk %}">
+													<img src="{% static 'img/icons/edit.svg' %}" alt="img">
 												</a>
-												<a class="me-3 confirm-text" href="javascript:void(0);">
-													<img src="assets/img/icons/delete.svg" alt="img">
+												<a class="confirm-text" href="{% url 'deleteTransfers' pk=i.pk %}">
+													<img src="{% static 'img/icons/delete.svg' %}" alt="img">
 												</a>
 											</td>
 										</tr>
-										<tr>
-											<td>
-												<label class="checkboxs">
-													<input type="checkbox">
-													<span class="checkmarks"></span>
-												</label>
-											</td>
-											<td>19 Nov 2022</td>
-											<td>TR0102</td>
-											<td>Store1</td>
-											<td>Store2</td>
-											<td>10.00</td>
-											<td>45000.00</td>
-											<td><span class="badges bg-lightgreen">Completed</span></td>
-											<td>
-												<a class="me-3" href="edittransfer.html">
-													<img src="assets/img/icons/edit.svg" alt="img">
-												</a>
-												<a class="me-3 confirm-text" href="javascript:void(0);">
-													<img src="assets/img/icons/delete.svg" alt="img">
-												</a>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<label class="checkboxs">
-													<input type="checkbox">
-													<span class="checkmarks"></span>
-												</label>
-											</td>
-											<td>19 Nov 2022</td>
-											<td>TR0103</td>
-											<td>Store1</td>
-											<td>Store2</td>
-											<td>10.00</td>
-											<td>2400.00</td>
-											<td><span class="badges bg-lightgreen">Completed</span></td>
-											<td>
-												<a class="me-3" href="edittransfer.html">
-													<img src="assets/img/icons/edit.svg" alt="img">
-												</a>
-												<a class="me-3 confirm-text" href="javascript:void(0);">
-													<img src="assets/img/icons/delete.svg" alt="img">
-												</a>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<label class="checkboxs">
-													<input type="checkbox">
-													<span class="checkmarks"></span>
-												</label>
-											</td>
-											<td>19 Nov 2022</td>
-											<td>TR0104</td>
-											<td>Store1</td>
-											<td>Store2</td>
-											<td>10.00</td>
-											<td>2400.00</td>
-											<td><span class="badges bg-lightgreen">Completed</span></td>
-											<td>
-												<a class="me-3" href="edittransfer.html">
-													<img src="assets/img/icons/edit.svg" alt="img">
-												</a>
-												<a class="me-3 confirm-text" href="javascript:void(0);">
-													<img src="assets/img/icons/delete.svg" alt="img">
-												</a>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<label class="checkboxs">
-													<input type="checkbox">
-													<span class="checkmarks"></span>
-												</label>
-											</td>
-											<td>19 Nov 2022</td>
-											<td>TR0105</td>
-											<td>Store1</td>
-											<td>Store2</td>
-											<td>10.00</td>
-											<td>2400.00</td>
-											<td><span class="badges bg-lightgreen">Completed</span></td>
-											<td>
-												<a class="me-3" href="edittransfer.html">
-													<img src="assets/img/icons/edit.svg" alt="img">
-												</a>
-												<a class="me-3 confirm-text" href="javascript:void(0);">
-													<img src="assets/img/icons/delete.svg" alt="img">
-												</a>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<label class="checkboxs">
-													<input type="checkbox">
-													<span class="checkmarks"></span>
-												</label>
-											</td>
-											<td>19 Nov 2022</td>
-											<td>TR0106</td>
-											<td>Store1</td>
-											<td>Store2</td>
-											<td>10.00</td>
-											<td>8456.00</td>
-											<td><span class="badges bg-lightgreen">Completed</span></td>
-											<td>
-												<a class="me-3" href="edittransfer.html">
-													<img src="assets/img/icons/edit.svg" alt="img">
-												</a>
-												<a class="me-3 confirm-text" href="javascript:void(0);">
-													<img src="assets/img/icons/delete.svg" alt="img">
-												</a>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<label class="checkboxs">
-													<input type="checkbox">
-													<span class="checkmarks"></span>
-												</label>
-											</td>
-											<td>19 Nov 2022</td>
-											<td>TR0107</td>
-											<td>Store1</td>
-											<td>Store2</td>
-											<td>10.00</td>
-											<td>150.00</td>
-											<td><span class="badges bg-lightgreen">Completed</span></td>
-											<td>
-												<a class="me-3" href="edittransfer.html">
-													<img src="assets/img/icons/edit.svg" alt="img">
-												</a>
-												<a class="me-3 confirm-text" href="javascript:void(0);">
-													<img src="assets/img/icons/delete.svg" alt="img">
-												</a>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<label class="checkboxs">
-													<input type="checkbox">
-													<span class="checkmarks"></span>
-												</label>
-											</td>
-											<td>19 Nov 2022</td>
-											<td>TR0108</td>
-											<td>Store1</td>
-											<td>Store2</td>
-											<td>10.00</td>
-											<td>365.00</td>
-											<td><span class="badges bg-lightred">Pending</span></td>
-											<td>
-												<a class="me-3" href="edittransfer.html">
-													<img src="assets/img/icons/edit.svg" alt="img">
-												</a>
-												<a class="me-3 confirm-text" href="javascript:void(0);">
-													<img src="assets/img/icons/delete.svg" alt="img">
-												</a>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<label class="checkboxs">
-													<input type="checkbox">
-													<span class="checkmarks"></span>
-												</label>
-											</td>
-											<td>19 Nov 2022</td>
-											<td>TR0109</td>
-											<td>Store1</td>
-											<td>Store2</td>
-											<td>10.00</td>
-											<td>365.00</td>
-											<td><span class="badges bg-lightred">Pending</span></td>
-											<td>
-												<a class="me-3" href="edittransfer.html">
-													<img src="assets/img/icons/edit.svg" alt="img">
-												</a>
-												<a class="me-3 confirm-text" href="javascript:void(0);">
-													<img src="assets/img/icons/delete.svg" alt="img">
-												</a>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<label class="checkboxs">
-													<input type="checkbox">
-													<span class="checkmarks"></span>
-												</label>
-											</td>
-											<td>19 Nov 2022</td>
-											<td>TR01010</td>
-											<td>Store1</td>
-											<td>Store2</td>
-											<td>10.00</td>
-											<td>365.00</td>
-											<td><span class="badges bg-lightred">Pending</span></td>
-											<td>
-												<a class="me-3" href="edittransfer.html">
-													<img src="assets/img/icons/edit.svg" alt="img">
-												</a>
-												<a class="me-3 confirm-text" href="javascript:void(0);">
-													<img src="assets/img/icons/delete.svg" alt="img">
-												</a>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<label class="checkboxs">
-													<input type="checkbox">
-													<span class="checkmarks"></span>
-												</label>
-											</td>
-											<td>19 Nov 2022</td>
-											<td>TR0111</td>
-											<td>Store1</td>
-											<td>Store2</td>
-											<td>10.00</td>
-											<td>365.00</td>
-											<td><span class="badges bg-lightred">Pending</span></td>
-											<td>
-												<a class="me-3" href="edittransfer.html">
-													<img src="assets/img/icons/edit.svg" alt="img">
-												</a>
-												<a class="me-3 confirm-text" href="javascript:void(0);">
-													<img src="assets/img/icons/delete.svg" alt="img">
-												</a>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<label class="checkboxs">
-													<input type="checkbox">
-													<span class="checkmarks"></span>
-												</label>
-											</td>
-											<td>19 Nov 2022</td>
-											<td>TR0112</td>
-											<td>Store1</td>
-											<td>Store2</td>
-											<td>10.00</td>
-											<td>365.00</td>
-											<td><span class="badges bg-lightred">Pending</span></td>
-											<td>
-												<a class="me-3" href="edittransfer.html">
-													<img src="assets/img/icons/edit.svg" alt="img">
-												</a>
-												<a class="me-3 confirm-text" href="javascript:void(0);">
-													<img src="assets/img/icons/delete.svg" alt="img">
-												</a>
-											</td>
-										</tr>
-									</tbody>
+									{% endfor %}
 								</table>
 							</div>
 						</div>
@@ -498,36 +214,29 @@
 			</div>
         </div>
 		<!-- /Main Wrapper -->
-		 
-		<!-- jQuery -->
-        <script src="assets/js/jquery-3.6.0.min.js"></script>
 
-        <!-- Feather Icon JS -->
-		<script src="assets/js/feather.min.js"></script>
+		<!-- jQuery -->
+		<script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+
+		<!-- Feather Icon JS -->
+		<script src="{% static 'js/feather.min.js' %}"></script>
 
 		<!-- Slimscroll JS -->
-		<script src="assets/js/jquery.slimscroll.min.js"></script>
+		<script src="{% static 'js/jquery.slimscroll.min.js' %}"></script>
 
 		<!-- Datatable JS -->
-		<script src="assets/js/jquery.dataTables.min.js"></script>
-		<script src="assets/js/dataTables.bootstrap4.min.js"></script>
-		
+		<script src="{% static 'js/jquery.dataTables.min.js' %}"></script>
+		<script src="{% static 'js/dataTables.bootstrap4.min.js' %}"></script>
+
 		<!-- Bootstrap Core JS -->
-        <script src="assets/js/bootstrap.bundle.min.js"></script>
+		<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
 
-		<!-- Datetimepicker JS -->
-			<script src="assets/js/moment.min.js"></script>
-			<script src="assets/js/bootstrap-datetimepicker.min.js"></script>
-
-		<!-- Select2 JS -->
-		<script src="assets/plugins/select2/js/select2.min.js"></script>
-
-		<!-- Sweetalert 2 -->
-		<script src="assets/plugins/sweetalert/sweetalert2.all.min.js"></script>
-		<script src="assets/plugins/sweetalert/sweetalerts.min.js"></script>
+		<!-- Chart JS -->
+		<script src="{% static 'plugins/apexchart/apexcharts.min.js' %}"></script>
+		<script src="{% static 'plugins/apexchart/chart-data.js' %}"></script>
 
 		<!-- Custom JS -->
-		<script src="assets/js/script.js"></script>
-		
-    </body>
+		<script src="{% static 'js/script.js' %}"></script>
+
+	</body>
 </html>
