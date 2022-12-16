@@ -1,5 +1,5 @@
 from django.test import TestCase, RequestFactory
-from .models import User, Product,Transfers, Expense
+from .models import User_Data, Product,Transfers, Expense, Supplier
 from django.urls import reverse
 from . import views
 from django.utils import timezone
@@ -8,7 +8,7 @@ from django.http import HttpResponse, HttpRequest
 
 class Test_register(TestCase):
     def test_register_create_user(self):
-        self.user = User(full_name='shay lavi', id_number='319067613', role='student', email='ahkcht98@gmail.com',
+        self.user = User_Data(full_name='shay lavi', id_number='319067613', role='student', email='ahkcht98@gmail.com',
                          password='s5d66342')
         self.user.save()
 
@@ -29,7 +29,7 @@ class Test_register(TestCase):
 class Test_login(TestCase):
 
     def test_login_create_user(self):
-        self.user = User(full_name='shay lavi', id_number='319067613', role='student', email='ahkcht98@gmail.com',
+        self.user = User_Data(full_name='shay lavi', id_number='319067613', role='student', email='ahkcht98@gmail.com',
                          password='s5d66342')
         self.user.save()
 
@@ -127,7 +127,6 @@ class test_adduser_admin(TestCase):
  
 class test_editTransfer_admin(TestCase):
     def setUp(self):
-        CHOICES = [('Returned', 'Returned'), ('Loaned', 'Loaned')]
         self.user = Transfers(product_name='shay', category='meow', brand='bobol', to='moiishe',
                     status= 'big', start_of_loan = timezone.now(), end_of_loan  = timezone.now(),
                     qyt = "choke")
@@ -146,15 +145,30 @@ class test_editTransfer_admin(TestCase):
         self.assertEqual(response.status_code, 200)
 
 
-"""
+
 class test_editsupplier_admin(TestCase):
-"""
+    def setUp(self):
+        self.user = Supplier(supplier_name='pablo escobar', code='15935786', phone="420420420", email='soher@gov.il',
+                             country='columbia')
+        self.user.save()
+    def test_editsupplier_page_open(self):
+        p = self.user.pk
+        url = reverse(views.editSupplier, args=[self.user.pk])
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'admin_u/editsupplier.html')
+    def test_editsupplier_view_deployed_to_page(self):
+        p = self.user.pk
+        factory = RequestFactory()
+        request = factory.get('admin_u/editSupplier')
+        response = views.editSupplier(request, p)
+        self.assertEqual(response.status_code, 200)
+
 class test_editexpense_admin(TestCase):
     def setUp(self):
-        self.user = Expense(description='text text', reference='blabla', date=timezone.now(), price='69')
+        self.user = Expense(description='TEXTTXET', reference='recipe', date=timezone.now(), price='20')
         self.user.save()
     def test_editexpense_page_open(self):
-        p = self.user.pk
         url = reverse(views.editexpense, args=[self.user.pk])
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
@@ -163,18 +177,19 @@ class test_editexpense_admin(TestCase):
         p = self.user.pk
         factory = RequestFactory()
         request = factory.get('admin_u/editexpense')
-        response = views.editexpense(request,p)
+        response = views.editexpense(request, p)
         self.assertEqual(response.status_code, 200)
-"""
+
+
 class test_editproduct_admin(TestCase):
     def setUp(self):
-        self.user = Product(product_name='shay', category='meow', brand='bobol', price='1997',
-                              unit='big', qty= ' 159', created_by= ' jon', adding_date = timezone.now())
+        self.user = Product(product_name='pen', category='ball', brand='c4', price='10',
+                              unit='small', qty= ' 1', created_by= ' jon', adding_date = timezone.now())
         self.user.save()
 
     def test_editproduct_page_open(self):
         p = self.user.pk
-        url = reverse(views.edit, args=[self.user.pk])
+        url = reverse(views.editItem, args=[self.user.pk])
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'admin_u/editproduct.html')
@@ -185,30 +200,28 @@ class test_editproduct_admin(TestCase):
         request = factory.get('admin_u/editItem')
         response = views.editItem(request, p)
         self.assertEqual(response.status_code, 200)
-"""
-'''
+
 class test_edituser_admin(TestCase):
     def setUp(self):
-        self.user = User(full_name='joni c', id_number='852369741', role='student', email='jonjon@yahoo.com',
+        self.user = User_Data(full_name='joni c', id_number='852369741', role='student', email='jonjon@yahoo.com',
                             password='158357852')
         self.user.save()
 
     def test_edituser_page_open(self):
         p = self.user.pk
-        url = reverse(views.edit, args=[self.user.pk])
+        url = reverse(views.editUser, args=[self.user.pk])
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'admin_u/editproduct.html')
+        self.assertTemplateUsed(response, 'admin_u/edituser.html')
 
     def test_edituser_view_deployed_to_page(self):
         p = self.user.pk
         factory = RequestFactory()
-        request = factory.get('admin_u/editItem')
-        response = views.editItem(request, p)
+        request = factory.get('admin_u/editUser')
+        response = views.editUser(request, p)
         self.assertEqual(response.status_code, 200)
-    
-'''
 
+# -------------end pk tests admin-----------------
 class test_saleslist_admin(TestCase):
     def test_saleslist_page_open(self):
         url = reverse(views.saleslist)
@@ -220,7 +233,6 @@ class test_saleslist_admin(TestCase):
         request = factory.get('admin_u/saleslist')
         response = views.saleslist(request)
         self.assertEqual(response.status_code, 200)
-
 
 class test_addpurchase_admin(TestCase):
     def test_addpurchase_page_open(self):
@@ -235,7 +247,6 @@ class test_addpurchase_admin(TestCase):
         response = views.addpurchase(request)
         self.assertEqual(response.status_code, 200)
 
-"""
 class test_addsupplier_admin(TestCase):
     def test_addsupplier_page_open(self):
         url = reverse(views.addsupplier)
@@ -248,7 +259,7 @@ class test_addsupplier_admin(TestCase):
         request = factory.get('admin_u/addsupplier')
         response = views.addsupplier(request)
         self.assertEqual(response.status_code, 200)
-"""
+
 class test_chart_apex_admin(TestCase):
     def test_chart_apex_page_open(self):
         url = reverse(views.chart_apex)
