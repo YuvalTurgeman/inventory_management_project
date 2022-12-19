@@ -1,4 +1,4 @@
-#import xlwt as xlwt
+from typing import Any
 from django.http import HttpResponse, HttpRequest
 from django.shortcuts import render
 from .forms import RegisterForm, ProductForm, TransferForm, PurchasesForm, ExpenseForm, SupplierForm
@@ -6,6 +6,7 @@ from django.db.models import Q
 from .models import User_Data, ValidId, Product, Purchases, Finance, Transfers, Expense, Supplier
 from datetime import datetime
 import pickle
+from django.contrib import messages
 
 emailg = []
 def register(request):
@@ -163,11 +164,20 @@ def deletePurchase(request, pk):
 
 def addpurchase(request):
     form = PurchasesForm(request.POST or None)
+    form.fields['unit'].initial = 'dollar'
+    field = form.fields['unit']
+    field.widget = field.hidden_widget()
     if form.is_valid():
         form.save()
         data = {
             "purchases": Purchases.objects.all(),
         }
+        price = int(form.cleaned_data['price'])
+        qyt = int(form.cleaned_data['qty'])
+        finance = Finance.objects.get(id=1)
+        finance.budget = int(finance.budget) - (price*qyt)
+        finance.spending = int(finance.spending) + (price*qyt)
+        finance.save()
         return render(request, 'admin_u/purchaselist.html', data)
     context = {'form': form}
     return render(request, 'admin_u/addpurchase.html', context)
@@ -379,20 +389,34 @@ def saleslists(request):
 
 
 def addtransfers(request):
+    pickle_in = open("dict.pickle", "rb")
+    email = pickle.load(pickle_in)
     form = TransferForm(request.POST or None)
+    form.fields['status'].initial = 'Pending'
+    form.fields['to'].initial = email
+    field = form.fields['status']
+    field.widget = field.hidden_widget()
+    field = form.fields['to']
+    field.widget = field.hidden_widget()
+
     if form.is_valid():
-        form.save()
-        data = {
-            "transfers": Transfers.objects.all(),
-        }
-        return render(request, 'student/saleslist.html', data)
+          form.save()
+          data = {
+             "transfers": Transfers.objects.all(),
+          }
+          return render(request, 'student/saleslist.html', data)
     context = {'form': form}
     return render(request, 'student/addtransfer.html', context)
+
 
 
 def editTransfers(request, pk):
     transfer = Transfers.objects.get(pk=pk)
     form = TransferForm(request.POST or None, instance=transfer)
+    field = form.fields['status']
+    field.widget = field.hidden_widget()
+    field = form.fields['to']
+    field.widget = field.hidden_widget()
     if form.is_valid():
         form.save()
         data = {
@@ -424,10 +448,6 @@ def supplierlists(request):
         "suppliers": Supplier.objects.all(),
     }
     return render(request, 'student/supplierlist.html', data)
-
-
-def userlists(request):
-    return render(request, 'student/userlist.html')
 
 
 def purchasereports(request):
@@ -499,20 +519,40 @@ def expenselistt(request):
     return render(request, 'teacher/expenselist.html')
 
 
-def quotationlistt(request):
-    return render(request, 'teacher/quotationlist.html')
-
-
-def addquotationt(request):
-    return render(request, 'teacher/addquotation.html')
-
-
 def supplierlistt(request):
-    return render(request, 'teacher/supplierlist.html')
+    data = {
+        "suppliers": Supplier.objects.all(),
+    }
+    return render(request, 'teacher/supplierlist.html',data)
 
 
 def userlistt(request):
-    return render(request, 'teacher/userlist.html')
+    data = {
+        "users": User_Data.objects.filter(Q(role='student')),
+    }
+    return render(request, 'teacher/userlist.html',data)
+
+
+def editUsert(request, pk):
+    user = User_Data.objects.get(pk=pk)
+    form = RegisterForm(request.POST or None, instance=user)
+    if form.is_valid():
+        form.save()
+        data = {
+            "users": User_Data.objects.all(),
+        }
+        return render(request, 'teacher/userlist.html', data)
+    context = {'form': form, 'user': user}
+    return render(request, 'teacher/edituser.html', context)
+
+
+def deleteUsert(request, pk):
+    user = User_Data.objects.get(pk=pk)
+    user.delete()
+    data = {
+        "users": User_Data.objects.all(),
+    }
+    return render(request, 'teacher/userlist.html', data)
 
 
 def purchasereportt(request):
