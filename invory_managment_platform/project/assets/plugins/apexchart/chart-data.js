@@ -1,5 +1,8 @@
+
 'use strict';
 
+
+// Close the database connection
 $(document).ready(function() {
 
 	function generateData(baseval, count, yrange) {
@@ -109,7 +112,7 @@ $(document).ready(function() {
     	var pieChart = new ApexCharts(pieCtx, pieConfig);
     	pieChart.render();
 	}
-	
+
 	// Simple Line
     if($('#s-line').length > 0 ){
     var sline = {
@@ -131,9 +134,8 @@ $(document).ready(function() {
         curve: 'straight'
       },
       series: [{
-        name: "Desktops",
-        data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
-      }],
+        name: "transfers",
+        data: [dataline.key[0],dataline.key[1],dataline.key[2],dataline.key[3],dataline.key[4],dataline.key[5],dataline.key[6]dataline.key[7],dataline.key[8],dataline.key[9],dataline.key[10],dataline.key[11]],
       title: {
         text: 'Product Trends by Month',
         align: 'left'
@@ -542,5 +544,4 @@ if($('#sales_charts').length > 0) {
 	  chart.render();
 	}
 
-  
 });

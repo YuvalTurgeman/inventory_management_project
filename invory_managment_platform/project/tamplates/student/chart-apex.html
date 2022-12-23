@@ -163,85 +163,162 @@
 									<h5 class="card-title">Transfer this year</h5>
 								</div>
 								<div class="card-body">
-									<div id="s-line" class="chart-set">
+								<div>
+									  <canvas id="myChart"></canvas>
 									</div>
-								</div>
-							</div>
-						</div>
-						<!-- /Chart -->
+									<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-						<!-- Chart -->
-						<div class="col-md-6">
-							<div class="card">
-								<div class="card-header">
-									<h5 class="card-title">Area Chart</h5>
+									<script>
+									  const ctx = document.getElementById('myChart');
+
+									  new Chart(ctx, {
+										type: 'line',
+										data: {
+										  labels: ['jan', 'feb', 'mar', 'apr','may', 'jun', 'jul','aug','sep', 'oct', 'nov','dec',],
+										  datasets: [{
+											label: '# of Transfer',
+											data: [{% for i in slinedata %} '{{ i }}', {% endfor %}],
+											borderWidth: 1,
+											backgroundColor: [
+											  'rgb(54, 162, 235)',
+											],
+										  }]
+										},
+										options: {
+										  scales: {
+											y: {
+											  beginAtZero: true
+											}
+										  }
+										}
+									  });
+									</script>
 								</div>
-								<div class="card-body"></div>
 							</div>
 						</div>
-						<!-- /Chart -->
 						<!-- Chart -->
 						<div class="col-md-6">
 							<div class="card">
 								<div class="card-header">
-									<h5 class="card-title">Bar Chart</h5>
+									<h5 class="card-title">Purchases this year</h5>
 								</div>
 								<div class="card-body">
-									<div id="s-bar" class="chart-set"></div>
+									<div>
+									  <canvas id="chart3"></canvas>
+									</div>
+
+									<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+									<script>
+									  const rtx = document.getElementById('chart3');
+
+									  new Chart(rtx, {
+										type: 'bar',
+										data: {
+										  labels: ['jan', 'feb', 'mar', 'apr','may', 'jun', 'jul','aug','sep', 'oct', 'nov','dec',],
+										  datasets: [{
+											label: '# of Purchases',
+											data: [{% for i in barpurchasedata %} '{{ i }}', {% endfor %}],
+											borderWidth: 1,
+											    backgroundColor: [
+											  'rgb(255, 75, 0)',
+											],
+										  }]
+										},
+										options: {
+										  scales: {
+											y: {
+											  beginAtZero: true
+											}
+										  }
+										}
+									  });
+									</script>
 								</div>
 							</div>
 						</div>
-						<!-- /Chart -->
-
-						<!-- Chart -->
 						<div class="col-md-6">
 							<div class="card">
 								<div class="card-header">
-									<h5 class="card-title">Donut Chart</h5>
+									<h5 class="card-title">Spending/Budget</h5>
 								</div>
 								<div class="card-body">
-									<div id="donut-chart" class="chart-set"></div>
+									<div>
+									  <canvas id="chart1"></canvas>
+									</div>
+
+									<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+									<script>
+									  const ttx = document.getElementById('chart1');
+
+									  new Chart(ttx, {
+										type: 'bar',
+										data: {
+										  labels: ['Purchase', 'Budget', 'Expenses',],
+										  datasets: [{
+											label: '# of Votes',
+											data: [{% for i in financedata %} '{{ i }}', {% endfor %}],
+											borderWidth: 1,
+											    backgroundColor: [
+											  'rgb(251, 255, 54)',
+											],
+										  }]
+										},
+										options: {
+										  scales: {
+											y: {
+											  beginAtZero: true
+											}
+										  }
+										}
+									  });
+									</script>
 								</div>
 							</div>
 						</div>
-						<!-- /Chart -->
+						<div class="col-md-6">
+							<div class="card">
+								<div class="card-header">
+									<h5 class="card-title">Types of users in the system</h5>
+								</div>
+								<div class="card-body">
+									<div>
+									  <canvas id="chart2"></canvas>
+									</div>
 
-					</div>
-				</div>
-            </div>
-        </div>
-        <!-- /Main Wrapper -->
-        <div class="searchpart">
-            <div class="searchcontent">
-                <div class="searchhead">
-                    <h3>Search </h3>
-                    <a id="closesearch"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
-                </div>
-                <div class="searchcontents">
-                    <div class="searchparts">
-                        <input type="text" placeholder="search here">
-                        <a class="btn btn-searchs" >Search</a>
-                    </div>
-                    <div class="recentsearch">
-                        <h2>Recent Search</h2>
-                        <ul>
-                            <li>
-                                <h6><i class="fa fa-search me-2"></i> Settings</h6>
-                            </li>
-                            <li>
-                                <h6><i class="fa fa-search me-2"></i> Report</h6>
-                            </li>
-                            <li>
-                                <h6><i class="fa fa-search me-2"></i> Invoice</h6>
-                            </li>
-                            <li>
-                                <h6><i class="fa fa-search me-2"></i> Sales</h6>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+									<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+									<script>
+									  const atx = document.getElementById('chart2');
+
+									  new Chart(atx, {
+										type: 'doughnut',
+										data: {
+										  labels: ['Admins', 'Teachers', 'Students'],
+										  datasets: [{
+											label: '# of Users',
+											data: [{% for i in usersdata %} '{{ i }}', {% endfor %}],
+											borderWidth: 1,
+											    backgroundColor: [
+											  'rgb(123, 255, 0)',
+											  'rgb(123, 28, 41)',
+											  'rgb(123, 28, 209)'
+											],
+										  }]
+										},
+										options: {
+										  scales: {
+											y: {
+											  beginAtZero: true
+											}
+										  }
+										}
+									  });
+									</script>
+								</div>
+							</div>
+						</div>
 		<!-- /Main Wrapper -->
 
 		<!-- jQuery -->

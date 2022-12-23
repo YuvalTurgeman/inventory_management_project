@@ -82,6 +82,12 @@ DATABASES = {
     }
 }
 
+#  'ENGINE': 'django.db.backends.mysql',
+# 'NAME': 'CLOUD',
+# 'USER': 'admin',
+# 'PASSWORD': 's5d66342',
+# 'HOST': 'database-project.czgpra4lnpcj.ap-northeast-1.rds.amazonaws.com',
+# 'PORT': '3306',
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
@@ -118,7 +124,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
-STATIC_URL = '/assets/'
+STATIC_URL = 'invory_managment_platform/project/assets/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'assets')]
 
 # Default primary key field type
