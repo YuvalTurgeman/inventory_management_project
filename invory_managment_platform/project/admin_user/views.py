@@ -1,13 +1,16 @@
-#import xlwt as xlwt
+from typing import Any
 from django.http import HttpResponse, HttpRequest
 from django.shortcuts import render
 from .forms import RegisterForm, ProductForm, TransferForm, PurchasesForm, ExpenseForm, SupplierForm
-from django.db.models import Q
+from django.db.models import Q,Sum
 from .models import User_Data, ValidId, Product, Purchases, Finance, Transfers, Expense, Supplier
 from datetime import datetime
 import pickle
+import requests
 
 emailg = []
+
+
 def register(request):
     form = RegisterForm()
     if request.method == 'POST':
@@ -37,6 +40,8 @@ def signin(request):
 
 
 def index(request):
+    # html = open('admin_u/index.html');
+
     date = datetime.now()
     data = {
         'users_num': len(User_Data.objects.all()),
@@ -48,6 +53,7 @@ def index(request):
         "products": Product.objects.filter(Q(adding_date=date)).values(),
         'transfersp': Transfers.objects.filter(Q(start_of_loan=date) | Q(end_of_loan=date)).values(),
     }
+
     return render(request, 'admin_u/index.html', data)
 
 
@@ -163,11 +169,20 @@ def deletePurchase(request, pk):
 
 def addpurchase(request):
     form = PurchasesForm(request.POST or None)
+    form.fields['unit'].initial = 'dollar'
+    field = form.fields['unit']
+    field.widget = field.hidden_widget()
     if form.is_valid():
         form.save()
         data = {
             "purchases": Purchases.objects.all(),
         }
+        price = int(form.cleaned_data['price'])
+        qyt = int(form.cleaned_data['qty'])
+        finance = Finance.objects.get(id=1)
+        finance.budget = int(finance.budget) - (price * qyt)
+        finance.spending = int(finance.spending) + (price * qyt)
+        finance.save()
         return render(request, 'admin_u/purchaselist.html', data)
     context = {'form': form}
     return render(request, 'admin_u/addpurchase.html', context)
@@ -325,24 +340,52 @@ def purchaseorderreport(request):
 
 
 def chart_apex(request):
-    ranges = ['2022-01-01','2022-01-31','2022-02-01','2022-02-28','2022-03-01','2022-03-31','2022-04-01','2022-04-30',
-              '2022-05-01','2022-05-31','2022-06-01','2022-06-30','2022-07-01','2022-07-01','2022-08-01','2022-08-31',
-              '2022-09-01','2022-09-30','2022-10-01','2022-10-31','2022-11-01','2022-11-30','2022-12-01','2022-12-31',]
-    slinedata = {
-        'jan': Transfers.objects.filter(start_of_loan__range=[ranges[0],ranges[1]]).count(),
-        'feb': Transfers.objects.filter(start_of_loan__range=[ranges[2],ranges[3]]).count(),
-        'mar': Transfers.objects.filter(start_of_loan__range=[ranges[4],ranges[5]]).count(),
-        'apr': Transfers.objects.filter(start_of_loan__range=[ranges[6],ranges[7]]).count(),
-        'may': Transfers.objects.filter(start_of_loan__range=[ranges[8],ranges[9]]).count(),
-        'jun': Transfers.objects.filter(start_of_loan__range=[ranges[10],ranges[11]]).count(),
-        'july': Transfers.objects.filter(start_of_loan__range=[ranges[12],ranges[13]]).count(),
-        'aug': Transfers.objects.filter(start_of_loan__range=[ranges[14],ranges[15]]).count(),
-        'sep': Transfers.objects.filter(start_of_loan__range=[ranges[16],ranges[17]]).count(),
-        'oct': Transfers.objects.filter(start_of_loan__range=[ranges[18],ranges[19]]).count(),
-        'nov': Transfers.objects.filter(start_of_loan__range=[ranges[20],ranges[21]]).count(),
-        'dec': Transfers.objects.filter(start_of_loan__range=[ranges[22],ranges[23]]).count(),
-    }
-    return render(request, 'admin_u/chart-apex.html', slinedata)
+    ranges = ['2022-01-01', '2022-01-31', '2022-02-01', '2022-02-28', '2022-03-01', '2022-03-31', '2022-04-01',
+              '2022-04-30',
+              '2022-05-01', '2022-05-31', '2022-06-01', '2022-06-30', '2022-07-01', '2022-07-01', '2022-08-01',
+              '2022-08-31',
+              '2022-09-01', '2022-09-30', '2022-10-01', '2022-10-31', '2022-11-01', '2022-11-30', '2022-12-01',
+              '2022-12-31', ]
+    slinedata = [
+        Transfers.objects.filter(start_of_loan__range=[ranges[0], ranges[1]]).count(),
+        Transfers.objects.filter(start_of_loan__range=[ranges[2], ranges[3]]).count(),
+        Transfers.objects.filter(start_of_loan__range=[ranges[4], ranges[5]]).count(),
+        Transfers.objects.filter(start_of_loan__range=[ranges[6], ranges[7]]).count(),
+        Transfers.objects.filter(start_of_loan__range=[ranges[8], ranges[9]]).count(),
+        Transfers.objects.filter(start_of_loan__range=[ranges[10], ranges[11]]).count(),
+        Transfers.objects.filter(start_of_loan__range=[ranges[12], ranges[13]]).count(),
+        Transfers.objects.filter(start_of_loan__range=[ranges[14], ranges[15]]).count(),
+        Transfers.objects.filter(start_of_loan__range=[ranges[16], ranges[17]]).count(),
+        Transfers.objects.filter(start_of_loan__range=[ranges[18], ranges[19]]).count(),
+        Transfers.objects.filter(start_of_loan__range=[ranges[20], ranges[21]]).count(),
+        Transfers.objects.filter(start_of_loan__range=[ranges[22], ranges[23]]).count(),
+    ]
+    barpurchasedata = [
+        Product.objects.filter(adding_date__range=[ranges[18], ranges[19]]).count(),
+        Product.objects.filter(adding_date__range=[ranges[2], ranges[3]]).count(),
+        Product.objects.filter(adding_date__range=[ranges[4], ranges[5]]).count(),
+        Product.objects.filter(adding_date__range=[ranges[6], ranges[7]]).count(),
+        Product.objects.filter(adding_date__range=[ranges[8], ranges[9]]).count(),
+        Product.objects.filter(adding_date__range=[ranges[10], ranges[11]]).count(),
+        Product.objects.filter(adding_date__range=[ranges[12], ranges[13]]).count(),
+        Product.objects.filter(adding_date__range=[ranges[14], ranges[15]]).count(),
+        Product.objects.filter(adding_date__range=[ranges[16], ranges[17]]).count(),
+        Product.objects.filter(adding_date__range=[ranges[18], ranges[19]]).count(),
+        Product.objects.filter(adding_date__range=[ranges[20], ranges[21]]).count(),
+        Product.objects.filter(adding_date__range=[ranges[22], ranges[23]]).count(),
+    ]
+    usersdata = [User_Data.objects.filter(role='student').count(), User_Data.objects.filter(role='teacher').count(), User_Data.objects.filter(role='admin').count()]
+    field_name = 'budget'
+    obj = Finance.objects.first()
+    field_object = Finance._meta.get_field(field_name)
+    field_value = getattr(obj, field_object.attname)
+    field_name1 = 'spending'
+    obj1 = Finance.objects.first()
+    field_object1 = Finance._meta.get_field(field_name1)
+    field_value1 = getattr(obj1, field_object1.attname)
+    financedata = [field_value1,field_value,str(Expense.objects.aggregate(Sum('price'))['price__sum'])]
+    context = {'slinedata': slinedata, 'financedata': financedata, 'usersdata': usersdata, 'barpurchasedata':barpurchasedata}
+    return render(request, 'admin_u/chart-apex.html', context)
 
 
 # student views
@@ -373,13 +416,22 @@ def saleslists(request):
     pickle_in = open("dict.pickle", "rb")
     email = pickle.load(pickle_in)
     data = {
-            "transfers": Transfers.objects.all().filter(Q(to=email))
-        }
+        "transfers": Transfers.objects.all().filter(Q(to=email))
+    }
     return render(request, 'student/saleslist.html', data)
 
 
 def addtransfers(request):
+    pickle_in = open("dict.pickle", "rb")
+    email = pickle.load(pickle_in)
     form = TransferForm(request.POST or None)
+    form.fields['status'].initial = 'Pending'
+    form.fields['to'].initial = email
+    field = form.fields['status']
+    field.widget = field.hidden_widget()
+    field = form.fields['to']
+    field.widget = field.hidden_widget()
+
     if form.is_valid():
         form.save()
         data = {
@@ -393,6 +445,10 @@ def addtransfers(request):
 def editTransfers(request, pk):
     transfer = Transfers.objects.get(pk=pk)
     form = TransferForm(request.POST or None, instance=transfer)
+    field = form.fields['status']
+    field.widget = field.hidden_widget()
+    field = form.fields['to']
+    field.widget = field.hidden_widget()
     if form.is_valid():
         form.save()
         data = {
@@ -412,22 +468,18 @@ def deleteTransfers(request, pk):
     return render(request, 'student/saleslist.html', data)
 
 
-
 def purchaselists(request):
     data = {
         "purchases": Purchases.objects.all(),
     }
-    return render(request, 'student/purchaselist.html',data)
-    
+    return render(request, 'student/purchaselist.html', data)
+
+
 def supplierlists(request):
     data = {
         "suppliers": Supplier.objects.all(),
     }
     return render(request, 'student/supplierlist.html', data)
-
-
-def userlists(request):
-    return render(request, 'student/userlist.html')
 
 
 def purchasereports(request):
@@ -448,7 +500,7 @@ def inventoryreports(request):
     data = {
         "products": Product.objects.all(),
     }
-    return render(request, 'student/inventoryreport.html', data)#changed admin_u to student
+    return render(request, 'student/inventoryreport.html', data)  # changed admin_u to student
 
 
 def purchaseorderreports(request):
@@ -458,9 +510,53 @@ def purchaseorderreports(request):
     return render(request, 'student/purchaseorderreport.html', data)
 
 
-
 def chart_apexs(request):
-    return render(request, 'student/chart-apex.html')
+    ranges = ['2022-01-01', '2022-01-31', '2022-02-01', '2022-02-28', '2022-03-01', '2022-03-31', '2022-04-01',
+              '2022-04-30',
+              '2022-05-01', '2022-05-31', '2022-06-01', '2022-06-30', '2022-07-01', '2022-07-01', '2022-08-01',
+              '2022-08-31',
+              '2022-09-01', '2022-09-30', '2022-10-01', '2022-10-31', '2022-11-01', '2022-11-30', '2022-12-01',
+              '2022-12-31', ]
+    slinedata = [
+        Transfers.objects.filter(start_of_loan__range=[ranges[0], ranges[1]]).count(),
+        Transfers.objects.filter(start_of_loan__range=[ranges[2], ranges[3]]).count(),
+        Transfers.objects.filter(start_of_loan__range=[ranges[4], ranges[5]]).count(),
+        Transfers.objects.filter(start_of_loan__range=[ranges[6], ranges[7]]).count(),
+        Transfers.objects.filter(start_of_loan__range=[ranges[8], ranges[9]]).count(),
+        Transfers.objects.filter(start_of_loan__range=[ranges[10], ranges[11]]).count(),
+        Transfers.objects.filter(start_of_loan__range=[ranges[12], ranges[13]]).count(),
+        Transfers.objects.filter(start_of_loan__range=[ranges[14], ranges[15]]).count(),
+        Transfers.objects.filter(start_of_loan__range=[ranges[16], ranges[17]]).count(),
+        Transfers.objects.filter(start_of_loan__range=[ranges[18], ranges[19]]).count(),
+        Transfers.objects.filter(start_of_loan__range=[ranges[20], ranges[21]]).count(),
+        Transfers.objects.filter(start_of_loan__range=[ranges[22], ranges[23]]).count(),
+    ]
+    barpurchasedata = [
+        Product.objects.filter(adding_date__range=[ranges[18], ranges[19]]).count(),
+        Product.objects.filter(adding_date__range=[ranges[2], ranges[3]]).count(),
+        Product.objects.filter(adding_date__range=[ranges[4], ranges[5]]).count(),
+        Product.objects.filter(adding_date__range=[ranges[6], ranges[7]]).count(),
+        Product.objects.filter(adding_date__range=[ranges[8], ranges[9]]).count(),
+        Product.objects.filter(adding_date__range=[ranges[10], ranges[11]]).count(),
+        Product.objects.filter(adding_date__range=[ranges[12], ranges[13]]).count(),
+        Product.objects.filter(adding_date__range=[ranges[14], ranges[15]]).count(),
+        Product.objects.filter(adding_date__range=[ranges[16], ranges[17]]).count(),
+        Product.objects.filter(adding_date__range=[ranges[18], ranges[19]]).count(),
+        Product.objects.filter(adding_date__range=[ranges[20], ranges[21]]).count(),
+        Product.objects.filter(adding_date__range=[ranges[22], ranges[23]]).count(),
+    ]
+    usersdata = [User_Data.objects.filter(role='student').count(), User_Data.objects.filter(role='teacher').count(), User_Data.objects.filter(role='admin').count()]
+    field_name = 'budget'
+    obj = Finance.objects.first()
+    field_object = Finance._meta.get_field(field_name)
+    field_value = getattr(obj, field_object.attname)
+    field_name1 = 'spending'
+    obj1 = Finance.objects.first()
+    field_object1 = Finance._meta.get_field(field_name1)
+    field_value1 = getattr(obj1, field_object1.attname)
+    financedata = [field_value1,field_value,str(Expense.objects.aggregate(Sum('price'))['price__sum'])]
+    context = {'slinedata': slinedata, 'financedata': financedata, 'usersdata': usersdata, 'barpurchasedata':barpurchasedata}
+    return render(request, 'student/chart-apex.html', context)
 
 
 # teacher views
@@ -499,20 +595,40 @@ def expenselistt(request):
     return render(request, 'teacher/expenselist.html')
 
 
-def quotationlistt(request):
-    return render(request, 'teacher/quotationlist.html')
-
-
-def addquotationt(request):
-    return render(request, 'teacher/addquotation.html')
-
-
 def supplierlistt(request):
-    return render(request, 'teacher/supplierlist.html')
+    data = {
+        "suppliers": Supplier.objects.all(),
+    }
+    return render(request, 'teacher/supplierlist.html', data)
 
 
 def userlistt(request):
-    return render(request, 'teacher/userlist.html')
+    data = {
+        "users": User_Data.objects.filter(Q(role='student')),
+    }
+    return render(request, 'teacher/userlist.html', data)
+
+
+def editUsert(request, pk):
+    user = User_Data.objects.get(pk=pk)
+    form = RegisterForm(request.POST or None, instance=user)
+    if form.is_valid():
+        form.save()
+        data = {
+            "users": User_Data.objects.all(),
+        }
+        return render(request, 'teacher/userlist.html', data)
+    context = {'form': form, 'user': user}
+    return render(request, 'teacher/edituser.html', context)
+
+
+def deleteUsert(request, pk):
+    user = User_Data.objects.get(pk=pk)
+    user.delete()
+    data = {
+        "users": User_Data.objects.all(),
+    }
+    return render(request, 'teacher/userlist.html', data)
 
 
 def purchasereportt(request):
@@ -532,7 +648,54 @@ def purchaseorderreportt(request):
 
 
 def chart_apext(request):
-    return render(request, 'teacher/chart-apex.html')
+    ranges = ['2022-01-01', '2022-01-31', '2022-02-01', '2022-02-28', '2022-03-01', '2022-03-31', '2022-04-01',
+              '2022-04-30',
+              '2022-05-01', '2022-05-31', '2022-06-01', '2022-06-30', '2022-07-01', '2022-07-01', '2022-08-01',
+              '2022-08-31',
+              '2022-09-01', '2022-09-30', '2022-10-01', '2022-10-31', '2022-11-01', '2022-11-30', '2022-12-01',
+              '2022-12-31', ]
+    slinedata = [
+        Transfers.objects.filter(start_of_loan__range=[ranges[0], ranges[1]]).count(),
+        Transfers.objects.filter(start_of_loan__range=[ranges[2], ranges[3]]).count(),
+        Transfers.objects.filter(start_of_loan__range=[ranges[4], ranges[5]]).count(),
+        Transfers.objects.filter(start_of_loan__range=[ranges[6], ranges[7]]).count(),
+        Transfers.objects.filter(start_of_loan__range=[ranges[8], ranges[9]]).count(),
+        Transfers.objects.filter(start_of_loan__range=[ranges[10], ranges[11]]).count(),
+        Transfers.objects.filter(start_of_loan__range=[ranges[12], ranges[13]]).count(),
+        Transfers.objects.filter(start_of_loan__range=[ranges[14], ranges[15]]).count(),
+        Transfers.objects.filter(start_of_loan__range=[ranges[16], ranges[17]]).count(),
+        Transfers.objects.filter(start_of_loan__range=[ranges[18], ranges[19]]).count(),
+        Transfers.objects.filter(start_of_loan__range=[ranges[20], ranges[21]]).count(),
+        Transfers.objects.filter(start_of_loan__range=[ranges[22], ranges[23]]).count(),
+    ]
+    barpurchasedata = [
+        Product.objects.filter(adding_date__range=[ranges[18], ranges[19]]).count(),
+        Product.objects.filter(adding_date__range=[ranges[2], ranges[3]]).count(),
+        Product.objects.filter(adding_date__range=[ranges[4], ranges[5]]).count(),
+        Product.objects.filter(adding_date__range=[ranges[6], ranges[7]]).count(),
+        Product.objects.filter(adding_date__range=[ranges[8], ranges[9]]).count(),
+        Product.objects.filter(adding_date__range=[ranges[10], ranges[11]]).count(),
+        Product.objects.filter(adding_date__range=[ranges[12], ranges[13]]).count(),
+        Product.objects.filter(adding_date__range=[ranges[14], ranges[15]]).count(),
+        Product.objects.filter(adding_date__range=[ranges[16], ranges[17]]).count(),
+        Product.objects.filter(adding_date__range=[ranges[18], ranges[19]]).count(),
+        Product.objects.filter(adding_date__range=[ranges[20], ranges[21]]).count(),
+        Product.objects.filter(adding_date__range=[ranges[22], ranges[23]]).count(),
+    ]
+    usersdata = [User_Data.objects.filter(role='student').count(), User_Data.objects.filter(role='teacher').count(),
+                 User_Data.objects.filter(role='admin').count()]
+    field_name = 'budget'
+    obj = Finance.objects.first()
+    field_object = Finance._meta.get_field(field_name)
+    field_value = getattr(obj, field_object.attname)
+    field_name1 = 'spending'
+    obj1 = Finance.objects.first()
+    field_object1 = Finance._meta.get_field(field_name1)
+    field_value1 = getattr(obj1, field_object1.attname)
+    financedata = [field_value1, field_value, str(Expense.objects.aggregate(Sum('price'))['price__sum'])]
+    context = {'slinedata': slinedata, 'financedata': financedata, 'usersdata': usersdata,
+               'barpurchasedata': barpurchasedata}
+    return render(request, 'teacher/chart-apex.html', context)
 
 
 def addusert(request):
