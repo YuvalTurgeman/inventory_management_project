@@ -584,7 +584,37 @@ def productlistt(request):
 
 
 def saleslistt(request):
-    return render(request, 'teacher/saleslist.html')
+    p = 'perishible'
+    data = {
+        "transfers": Transfers.objects.all().filter(Q(category=p))
+    }
+    return render(request, 'teacher/saleslist.html',data)
+
+
+def editTransfert(request, pk):
+    transfer = Transfers.objects.get(pk=pk)
+    form = TransferForm(request.POST or None, instance=transfer)
+    field = form.fields['status']
+    field.widget = field.hidden_widget()
+    field = form.fields['to']
+    field.widget = field.hidden_widget()
+    if form.is_valid():
+        form.save()
+        data = {
+            "transfer": Transfers.objects.filter(Q(to='Returned'))
+        }
+        return render(request, 'teacher/saleslist.html', data)
+    context = {'form': form, 'transfer': transfer}
+    return render(request, 'teacher/edittransfer.html', context)
+
+
+def deleteTransfert(request, pk):
+    transfer = Transfers.objects.get(pk=pk)
+    transfer.delete()
+    data = {
+        "transfers": Transfers.objects.all(),
+    }
+    return render(request, 'teacher/saleslist.html', data)
 
 
 def purchaselistt(request):
@@ -699,4 +729,14 @@ def chart_apext(request):
 
 
 def addusert(request):
-    return render(request, 'teacher/adduser.html')
+    form = RegisterForm(request.POST or None)
+    field = form.fields['role']
+    field.widget = field.hidden_widget()
+    if form.is_valid():
+        form.save()
+        data = {
+            "users": User_Data.objects.all(),
+        }
+        return render(request, 'teacher/userlist.html', data)
+    context = {'form': form}
+    return render(request, 'teacher/adduser.html',context)
