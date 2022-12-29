@@ -53,7 +53,7 @@ class Test_login(TestCase):
         self.assertEqual(response.status_code, 200)
 
 
-# ------------------- ADMIN TEST --------------------------
+# ------------------- ADMIN TESTS --------------------------
 class Test_index_admin(TestCase):
     def test_index_page_open(self):
         url = reverse(views.index)
@@ -123,13 +123,13 @@ class test_adduser_admin(TestCase):
         self.assertEqual(response.status_code, 200)
 
 
-# +++++++++++++++++++++ pk testim +++++++++++++++++++++++ #
+# +++++++++++++++++++++ PK TESTS +++++++++++++++++++++++ #
  
 class test_editTransfer_admin(TestCase):
     def setUp(self):
-        self.user = Transfers(product_name='shay', category='meow', brand='bobol', to='moiishe',
-                    status= 'big', start_of_loan = timezone.now(), end_of_loan  = timezone.now(),
-                    qyt = "choke")
+        self.user = Transfers(product_name='prod_name', category='category', brand='brand', to='to',
+                    status= 'status', start_of_loan = timezone.now(), end_of_loan  = timezone.now(),
+                    qyt = "qyt")
         self.user.save()
     def test_editTransfer_page_open(self):
         p = self.user.pk
@@ -221,7 +221,8 @@ class test_edituser_admin(TestCase):
         response = views.editUser(request, p)
         self.assertEqual(response.status_code, 200)
 
-# -------------end pk tests admin-----------------
+# -------------END PK TESTS ADMIN-----------------
+
 class test_saleslist_admin(TestCase):
     def test_saleslist_page_open(self):
         url = reverse(views.saleslist)
@@ -379,8 +380,191 @@ class test_supplierlist_admin(TestCase):
 
 # edit
 
-# ------------------- STUDENT TEST --------------------------
-class Test_index_student(TestCase):
+# ------------------- TEACHER TESTS --------------------------
+
+class test_chart_apext_teacher(TestCase):
+    def test_chart_apext_page_open(self):
+        url = reverse(views.chart_apex)
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'teacher/chart-apex.html')
+
+    def test_chart_apex_view_deployed_to_page(self):
+        factory = RequestFactory()
+        request = factory.get('teacher/chart_apext')
+        response = views.chart_apex(request)
+        self.assertEqual(response.status_code, 200)
+
+class test_expenselistt_teacher(TestCase):
+    def test_expenselistt_page_open(self):
+        url = reverse(views.expenselist)
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'teacher/expenselist.html')
+
+    def test_expenselistt_view_deployed_to_page(self):
+        factory = RequestFactory()
+        request = factory.get('teacher/expenselistt')
+        response = views.expenselist(request)
+        self.assertEqual(response.status_code, 200)
+
+class Test_indext_teacher(TestCase):
+    def test_indext_page_open(self):
+        url = reverse(views.index)
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'teacher/index.html')
+
+    def test_indext_view_deployed_to_page(self):
+        factory = RequestFactory()
+        request = factory.get('teacher/indext')
+        response = views.index(request)
+        self.assertEqual(response.status_code, 200)
+
+class test_inventoryreportt_teacher(TestCase):
+    def test_inventoryreportt_page_open(self):
+        url = reverse(views.inventoryreport)
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'teacher/inventoryreport.html')
+
+    def test_inventoryreportt_view_deployed_to_page(self):
+        factory = RequestFactory()
+        request = factory.get('teacher/inventoryreportt')
+        response = views.inventoryreport(request)
+        self.assertEqual(response.status_code, 200)
+
+class test_productlistt_teacher(TestCase):
+    def test_productlistt_page_open(self):
+        url = reverse(views.productlist)
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'teacher/productlist.html')
+
+    def test_productlistt_view_deployed_to_page(self):
+        factory = RequestFactory()
+        request = factory.get('teacher/productlistt')
+        response = views.index(request)
+        self.assertEqual(response.status_code, 200)
+
+class test_purchaselistt_teacher(TestCase):
+    def test_purchaselistt_page_open(self):
+        url = reverse(views.purchaselist)
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'teacher/purchaselist.html')
+
+    def test_purchaselistt_view_deployed_to_page(self):
+        factory = RequestFactory()
+        request = factory.get('teacher/purchaselistt')
+        response = views.purchaselist(request)
+        self.assertEqual(response.status_code, 200)
+
+class test_purchaseorderreportt_teacher(TestCase):
+    def test_purchaseorderreportt_page_open(self):
+        url = reverse(views.purchaseorderreport)
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'teacher/purchaseorderreport.html')
+
+    def test_purchaseorderreportt_view_deployed_to_page(self):
+        factory = RequestFactory()
+        request = factory.get('teacher/purchaseorderreportt')
+        response = views.purchaseorderreport(request)
+        self.assertEqual(response.status_code, 200)
+
+class test_purchasereportt_teacher(TestCase):
+    def test_purchasereportt_page_open(self):
+        url = reverse(views.purchasereport)
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'teacher/purchasereport.html')
+
+    def test_purchasereportt_view_deployed_to_page(self):
+        factory = RequestFactory()
+        request = factory.get('teacher/purchasereportt')
+        response = views.purchasereport(request)
+        self.assertEqual(response.status_code, 200)
+
+class test_saleslistt_teacher(TestCase):
+    def test_saleslistt_page_open(self):
+        url = reverse(views.saleslist)
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'teacher/saleslist.html')
+    def test_saleslist_view_deployed_to_page(self):
+        factory = RequestFactory()
+        request = factory.get('teacher/saleslistt')
+        response = views.saleslist(request)
+        self.assertEqual(response.status_code, 200)
+
+class test_salesreportt_teacher(TestCase):
+    def test_salesreportt_page_open(self):
+        url = reverse(views.salesreport)
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'teacher/salesreport.html')
+
+    def test_salesreportt_view_deployed_to_page(self):
+        factory = RequestFactory()
+        request = factory.get('teacher/salesreportt')
+        response = views.salesreport(request)
+        self.assertEqual(response.status_code, 200)
+
+class test_supplierlistt_teacher(TestCase):
+    def test_supplierlist_page_open(self):
+        url = reverse(views.supplierlist)
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'teacher/supplierlist.html')
+
+    def test_supplierlist_view_deployed_to_page(self):
+        factory = RequestFactory()
+        request = factory.get('teacher/supplierlistt')
+        response = views.supplierlist(request)
+        self.assertEqual(response.status_code, 200)
+
+class test_userlistt_teacher(TestCase):
+
+    def test_userlistt_page_open(self):
+        url = reverse(views.userlist)
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'teacher/userlist.html')
+
+    def test_userlistt_view_deployed_to_page(self):
+        factory = RequestFactory()
+        request = factory.get('teacher/userlistt')
+        response = views.userlist(request)
+        self.assertEqual(response.status_code, 200)
+
+# +++++++++++++++++++++ PK TESTS +++++++++++++++++++++++ #
+
+class test_editTransfers_student(TestCase):
+    def setUp(self):
+        self.user = Transfers(product_name='product', category='category', brand='brand', to='to',
+                              status='status', start_of_loan=timezone.now(), end_of_loan=timezone.now(),
+                              qyt="1")#maybe change to qty, check on thursday if it matters when tunning this test or not
+        self.user.save()
+
+    def test_editTransfers_page_open(self):
+        p = self.user.pk
+        url = reverse('editTransfert', args=[self.user.pk])
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'teacher/edittransfer.html')
+
+    def test_editTransfers_view_deployed_to_page(self):
+        p = self.user.pk
+        factory = RequestFactory()
+        request = factory.get('teacher/editTransfert')
+        response = views.editTransfer(request, p)
+        self.assertEqual(response.status_code, 200)
+
+# -------------END PK TESTS TEACHER-----------------
+
+# ------------------- STUDENT TESTS --------------------------
+class Test_indexs_student(TestCase):
 
     def test_indexs_page_open(self):
         url = reverse(views.indexs)
@@ -407,4 +591,119 @@ class Test_chart_apexs_student(TestCase):
         response = views.chart_apexs(request)
         self.assertEqual(response.status_code, 200)
 
-# ------------------- TEACHER TEST --------------------------
+class test_supplierlists_student(TestCase):
+    def test_supplierlists_page_open(self):
+        url = reverse(views.supplierlist)
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'student/supplierlist.html')
+
+    def test_supplierlists_view_deployed_to_page(self):
+        factory = RequestFactory()
+        request = factory.get('student/supplierlists')
+        response = views.supplierlist(request)
+        self.assertEqual(response.status_code, 200)
+
+class test_salesreports_student(TestCase):
+    def test_salesreports_page_open(self):
+        url = reverse(views.salesreport)
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'student/salesreport.html')
+
+    def test_salesreports_view_deployed_to_page(self):
+        factory = RequestFactory()
+        request = factory.get('student/salesreports')
+        response = views.salesreport(request)
+        self.assertEqual(response.status_code, 200)
+
+class test_saleslists_student(TestCase):
+    def test_saleslists_page_open(self):
+        url = reverse(views.saleslist)
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'student/saleslist.html')
+    def test_saleslists_view_deployed_to_page(self):
+        factory = RequestFactory()
+        request = factory.get('studnet/saleslists')
+        response = views.saleslist(request)
+        self.assertEqual(response.status_code, 200)
+
+
+class test_purchaseorderreports_student(TestCase):
+    def test_purchaseorderreports_page_open(self):
+        url = reverse(views.purchaseorderreport)
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'student/purchaseorderreport.html')
+
+    def test_purchaseorderreports_view_deployed_to_page(self):
+        factory = RequestFactory()
+        request = factory.get('student/purchaseorderreports')
+        response = views.purchaseorderreport(request)
+        self.assertEqual(response.status_code, 200)
+
+class test_purchasereports_student(TestCase):
+    def test_purchasereports_page_open(self):
+        url = reverse(views.purchasereport)
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'student/purchasereport.html')
+
+    def test_purchasereports_view_deployed_to_page(self):
+        factory = RequestFactory()
+        request = factory.get('student/purchasereports')
+        response = views.purchasereport(request)
+        self.assertEqual(response.status_code, 200)
+
+class test_productlists_studnet(TestCase):
+    def test_productlists_page_open(self):
+        url = reverse(views.productlist)
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'student/productlist.html')
+
+    def test_productlists_view_deployed_to_page(self):
+        factory = RequestFactory()
+        request = factory.get('student/productlists')
+        response = views.index(request)
+        self.assertEqual(response.status_code, 200)
+
+class test_inventoryreports_student(TestCase):
+    def test_inventoryreports_page_open(self):
+        url = reverse(views.inventoryreport)
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'admin_u/inventoryreport.html')
+
+    def test_inventoryreports_view_deployed_to_page(self):
+        factory = RequestFactory()
+        request = factory.get('student/inventoryreports')
+        response = views.inventoryreport(request)
+        self.assertEqual(response.status_code, 200)
+
+
+# +++++++++++++++++++++ PK TESTS +++++++++++++++++++++++ #
+
+class test_editTransfers_student(TestCase):
+    def setUp(self):
+        self.user = Transfers(product_name='product', category='category', brand='brand', to='to',
+                              status='status', start_of_loan=timezone.now(), end_of_loan=timezone.now(),
+                              qyt="1")#maybe change to qty, check on thursday if it matters when tunning this test or not
+        self.user.save()
+
+    def test_editTransfers_page_open(self):
+        p = self.user.pk
+        url = reverse('editTransfers', args=[self.user.pk])
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'student/edittransfer.html')
+
+    def test_editTransfers_view_deployed_to_page(self):
+        p = self.user.pk
+        factory = RequestFactory()
+        request = factory.get('student/editTransfers')
+        response = views.editTransfer(request, p)
+        self.assertEqual(response.status_code, 200)
+
+# -------------END PK TESTS STUDENT-----------------
