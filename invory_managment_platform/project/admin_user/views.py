@@ -6,7 +6,7 @@ from django.db.models import Q,Sum
 from .models import User_Data, ValidId, Product, Purchases, Finance, Transfers, Expense, Supplier
 from datetime import datetime
 import pickle
-import requests
+
 
 emailg = []
 
