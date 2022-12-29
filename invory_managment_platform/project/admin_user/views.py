@@ -618,11 +618,17 @@ def deleteTransfert(request, pk):
 
 
 def purchaselistt(request):
-    return render(request, 'teacher/purchaselist.html')
+    data = {
+        "purchases": Purchases.objects.all(),
+    }
+    return render(request, 'teacher/purchaselist.html',data)
 
 
 def expenselistt(request):
-    return render(request, 'teacher/expenselist.html')
+    data = {
+        "expenses": Expense.objects.all(),
+    }
+    return render(request, 'teacher/expenselist.html'.data)
 
 
 def supplierlistt(request):
@@ -662,19 +668,31 @@ def deleteUsert(request, pk):
 
 
 def purchasereportt(request):
-    return render(request, 'teacher/purchasereport.html')
+    data = {
+        "purchases": Purchases.objects.all(),
+    }
+    return render(request, 'teacher/purchasereport.html',data)
 
 
 def salesreportt(request):
-    return render(request, 'teacher/salesreport.html')
+    data = {
+        "transfers": Transfers.objects.all(),
+    }
+    return render(request, 'teacher/salesreport.html',data)
 
 
 def inventoryreportt(request):
-    return render(request, 'teacher/inventoryreport.html')
+    data = {
+        "products": Product.objects.all(),
+    }
+    return render(request, 'teacher/inventoryreport.html',data)
 
 
 def purchaseorderreportt(request):
-    return render(request, 'teacher/purchaseorderreport.html')
+    data = {
+        "expenses": Expense.objects.all(),
+    }
+    return render(request, 'teacher/purchaseorderreport.html',data)
 
 
 def chart_apext(request):
