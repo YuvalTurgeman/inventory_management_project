@@ -72,6 +72,7 @@ urlpatterns = [
     path("saleslistt/", views.saleslistt, name="saleslistt"),
     path("purchaselistt/", views.purchaselistt, name="purchaselistt"),
     path("expenselistt/", views.expenselistt, name="expenselistt"),
+    path("addtransfert/", views.addtransfert, name="addtransfert"),
     path("deleteTransfert/(?P<pk>\d+)/", views.deleteTransfert ,name="deleteTransfert"),
     path("editTransfert/(?P<pk>\d+)/", views.editTransfert, name="editTransfert"),
     path("supplierlistt/", views.supplierlistt, name="supplierlistt"),

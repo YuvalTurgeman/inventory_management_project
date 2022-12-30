@@ -1,13 +1,13 @@
-<!DOCTYPE html>
+TYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 	<head>
 		{% load static %}
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-		<meta name="description" content="">
-		<meta name="keywords" content="">
-		<meta name="author" content="">
-		<meta name="robots" content="">
+		<meta name="description" content="POS - Bootstrap Admin Template">
+		<meta name="keywords" content="admin, estimates, bootstrap, business, corporate, creative, management, minimal, modern,  html5, responsive">
+		<meta name="author" content="Dreamguys - Bootstrap Admin Template">
+		<meta name="robots" content="noindex, nofollow">
 		<title>SCE inventory management platform</title>
 
 		<!-- Favicon -->
@@ -42,14 +42,23 @@
 
 				<!-- Logo -->
 				 <div class="header-left active">
-					<a href="{% url 'index' %}" class="logo">
+					<a href="{% url 'indext' %}" class="logo">
 						<img src="{% static 'img/logo.png' %}" alt="">
 					</a>
-					<a href="{% url 'index' %}" class="logo-small">
+					<a href="{% url 'indext' %}" class="logo-small">
 						<img src="{% static 'img/logo-small.png' %}"  alt="">
+					</a>
+					<a id="toggle_btn" href="javascript:void(0);">
 					</a>
 				</div>
 				<!-- /Logo -->
+
+				<a id="mobile_btn" class="mobile_btn" href="#sidebar">
+					<span class="bar-icon">
+						<span></span>
+						<span></span>
+						<span></span>
+					</span>
 				</a>
 
 				<!-- Header Menu -->
@@ -67,72 +76,78 @@
 									<div class="profilesets">
 									</div>
 								</div>
-								<a class="dropdown-item logout pb-0" href="{% url 'signin'%}"><img src="{% static 'img/icons/log-out.svg' %}" class="me-2" alt="img">Logout
-								<script type="text/javascript">  function preventBack() {window.history.forward();}  setTimeout("preventBack()", 0);  window.onunload = function () {null};</script></a>
+								<hr class="m-0">
+								<hr class="m-0">
+								<a class="dropdown-item logout pb-0" href="{% url 'signin'%}"><img src="{% static 'img/icons/log-out.svg' %}" class="me-2" alt="img">Logout</a>
 							</div>
 						</div>
 					</li>
 				</ul>
 				<!-- /Header Menu -->
+
+				<!-- Mobile Menu -->
+				<div class="dropdown mobile-user-menu">
+					<a href="javascript:void(0);" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+					<div class="dropdown-menu dropdown-menu-right">
+						<a class="dropdown-item" href="signin.html">Logout</a>
+					</div>
+				</div>
+				<!-- /Mobile Menu -->
 			</div>
 			<!-- Header -->
+
 			<!-- Sidebar -->
 			<div class="sidebar" id="sidebar">
 				<div class="sidebar-inner slimscroll">
 					<div id="sidebar-menu" class="sidebar-menu">
 						<ul>
 							<li class="active">
-								<a href="{% url 'index' %}" ><img src="{% static 'img/icons/dashboard.svg' %}" alt="img"><span> Dashboard</span> </a>
+								<a href="{% url 'indext' %}" ><img src="{% static 'img/icons/dashboard.svg' %}" alt="img"><span> Dashboard</span> </a>
 							</li>
 							<li class="submenu">
 								<a href="javascript:void(0);"><img src="{% static 'img/icons/product.svg' %}" alt="img"><span> Product</span> <span class="menu-arrow"></span></a>
 								<ul>
-									<li><a href="{% url 'productlist' %}">Product List</a></li>
-									<li><a href="{% url 'addproduct' %}">Add Product</a></li>
+									<li><a href="{% url 'productlistt' %}">Product List</a></li>
 								</ul>
 							</li>
 							<li class="submenu">
 								<a href="javascript:void(0);"><img src="{% static 'img/icons/transfer1.svg' %}" alt="img"><span> Transfers</span> <span class="menu-arrow"></span></a>
 								<ul>
-									<li><a href="{% url 'saleslist' %}">Transfers List</a></li>
+									<li><a href="{% url 'saleslistt' %}">Transfers List</a></li>
 								</ul>
 							</li>
 							<li class="submenu">
 								<a href="javascript:void(0);"><img src="{% static 'img/icons/purchase1.svg' %}" alt="img"><span> Purchase</span> <span class="menu-arrow"></span></a>
 								<ul>
-									<li><a href="{% url 'purchaselist' %}">Purchase List</a></li>
-									<li><a href="{% url 'addpurchase' %}">Add Purchase</a></li>
+									<li><a href="{% url 'purchaselistt' %}">Purchase List</a></li>
 								</ul>
 							</li>
 							<li class="submenu">
 								<a href="javascript:void(0);"><img src="{% static 'img/icons/expense1.svg' %}" alt="img"><span> Expense</span> <span class="menu-arrow"></span></a>
 								<ul>
-									<li><a href="{% url 'expenselist' %}">Expense List</a></li>
-									<li><a href="{% url 'createexpense' %}">Add Expense</a></li>
+									<li><a href="{% url 'expenselistt' %}">Expense List</a></li>
 								</ul>
 							</li>
 							<li class="submenu">
 								<a href="javascript:void(0);"><img src="{% static 'img/icons/users1.svg' %}" alt="img"><span> People</span> <span class="menu-arrow"></span></a>
 								<ul>
-									<li><a href="{% url 'supplierlist' %}">Supplier List</a></li>
-									<li><a href="{% url 'addsupplier' %}">Add Supplier </a></li>
-									<li><a href="{% url 'userlist' %}">User List</a></li>
-									<li><a href="{% url 'adduser' %}">Add User</a></li>
+									<li><a href="{% url 'supplierlistt' %}">Supplier List</a></li>
+									<li><a href="{% url 'userlistt' %}">User List</a></li>
 								</ul>
 							</li>
 							<li  class="submenu">
 								<a href="javascript:void(0);"><i data-feather="bar-chart-2"></i> <span> Charts  </span> <span class="menu-arrow"></span></a>
 								<ul>
-									<li><a href="{% url 'chart-apex' %}">Apex Charts</a></li>
+									<li><a href="{% url 'chart-apext' %}">Apex Charts</a></li>
 								</ul>
 							</li>
 							<li class="submenu">
 								<a href="javascript:void(0);"><img src="{% static 'img/icons/time.svg' %}" alt="img"><span> Report</span> <span class="menu-arrow"></span></a>
 								<ul>
-									<li><a href="{% url 'purchaseorderreport' %}">Expense report</a></li>
+									<li><a href="{% url 'purchaseorderreportt' %}">Purchase order report</a></li>
 									<li><a href="{% url 'inventoryreport' %}">Inventory Report</a></li>
-									<li><a href="{% url 'salesreport' %}">Transfer Report</a></li>
-									<li><a href="{% url 'purchasereport' %}">Purchase Report</a></li>
+									<li><a href="{% url 'salesreportt' %}">Transfer Report</a></li>
+									<li><a href="{% url 'purchasereportt' %}">Purchase Report</a></li>
 								</ul>
 							</li>
 						</ul>
@@ -156,7 +171,7 @@
                                         {{form}}
 									<p><div class="col-lg-12">
 										<button type="submit" class="btn btn-submit me-2">Update</button>
-										<a href="{% url 'saleslist' %}" class="btn btn-cancel" >Cancel</a>
+										<a href="{% url 'saleslistt' %}" class="btn btn-cancel" >Cancel</a>
 									</div></p>
                                 </form>
 							</div>

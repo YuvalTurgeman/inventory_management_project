@@ -584,7 +584,7 @@ def productlistt(request):
 
 
 def saleslistt(request):
-    p = 'perishible'
+    p = 'perishable'
     data = {
         "transfers": Transfers.objects.all().filter(Q(category=p))
     }
@@ -608,6 +608,27 @@ def editTransfert(request, pk):
     return render(request, 'teacher/edittransfer.html', context)
 
 
+def addtransfert(request):
+    pickle_in = open("dict.pickle", "rb")
+    email = pickle.load(pickle_in)
+    form = TransferForm(request.POST or None)
+    form.fields['status'].initial = 'Pending'
+    form.fields['to'].initial = email
+    field = form.fields['status']
+    field.widget = field.hidden_widget()
+    field = form.fields['to']
+    field.widget = field.hidden_widget()
+
+    if form.is_valid():
+        form.save()
+        data = {
+            "transfers": Transfers.objects.all(),
+        }
+        return render(request, 'teacher/saleslist.html', data)
+    context = {'form': form}
+    return render(request, 'teacher/addtransfer.html', context)
+
+
 def deleteTransfert(request, pk):
     transfer = Transfers.objects.get(pk=pk)
     transfer.delete()
@@ -628,7 +649,7 @@ def expenselistt(request):
     data = {
         "expenses": Expense.objects.all(),
     }
-    return render(request, 'teacher/expenselist.html'.data)
+    return render(request, 'teacher/expenselist.html',data)
 
 
 def supplierlistt(request):
