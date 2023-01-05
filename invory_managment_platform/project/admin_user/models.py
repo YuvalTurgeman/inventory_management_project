@@ -3,11 +3,11 @@ from django.utils import timezone
 
 
 class User_Data(models.Model):
-    full_name = models.CharField(max_length=30)
-    id_number = models.CharField(max_length=9)
-    role = models.CharField(max_length=15,default='student')
-    email = models.EmailField(max_length=40)
-    password = models.CharField(max_length=20)
+    full_name = models.CharField(max_length=30, blank=False)
+    id_number = models.CharField(max_length=9, blank=False)
+    role = models.CharField(max_length=15,default='student', blank=False)
+    email = models.EmailField(max_length=40, blank=False)
+    password = models.CharField(max_length=20, blank=False)
 
     class Meta:
         ordering = ("full_name", "id_number", "role", "email", "password")
