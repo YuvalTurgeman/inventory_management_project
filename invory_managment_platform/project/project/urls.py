@@ -80,9 +80,9 @@ urlpatterns = [
     path("deleteUsert/(?P<pk>\d+)/", views.deleteUsert, name="deleteUsert"),
     path("editUsert/(?P<pk>\d+)/", views.editUsert, name="editUsert"),
     path("inventoryreportt/", views.inventoryreportt, name="inventoryreportt"),
-    path("salesreportt/", views.salesreport, name="salesreportt"),
-    path("purchasereportt/", views.purchasereport, name="purchasereportt"),
+    path("salesreportt/", views.salesreportt, name="salesreportt"),
+    path("purchasereportt/", views.purchasereportt, name="purchasereportt"),
     path("chart-apext/", views.chart_apext, name="chart-apext"),
-    path("purchaseorderreport/", views.purchaseorderreportt, name="purchaseorderreportt"),
+    path("purchaseorderreportt/", views.purchaseorderreportt, name="purchaseorderreportt"),
 
 ]
