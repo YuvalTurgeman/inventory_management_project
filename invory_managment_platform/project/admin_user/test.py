@@ -5,7 +5,7 @@ from . import views
 from django.utils import timezone
 from django.http import HttpResponse, HttpRequest
 
-'''
+
 class Test_register(TestCase):
     def test_register_create_user(self):
         self.user = User_Data(full_name='shay lavi', id_number='319067613', role='student', email='ahkcht98@gmail.com',
@@ -379,7 +379,7 @@ class test_supplierlist_admin(TestCase):
         self.assertEqual(response.status_code, 200)
 
 # edit
-'''
+
 # ------------------- TEACHER TESTS --------------------------
 
 class Test_indext_teacher(TestCase):
@@ -391,11 +391,11 @@ class Test_indext_teacher(TestCase):
 
     def test_indext_view_deployed_to_page(self):
         factory = RequestFactory()
-        request = factory.get('teacher/indext')
+        request = factory.get('teacher/index')
         response = views.indext(request)
         self.assertEqual(response.status_code, 200)
 
-'''
+
 class test_chart_apext_teacher(TestCase):
 
     def test_chart_apext_page_open(self):
@@ -406,10 +406,10 @@ class test_chart_apext_teacher(TestCase):
 
     def test_chart_apext_view_deployed_to_page(self):
         factory = RequestFactory()
-        request = factory.get('teacher/chart_apext')
+        request = factory.get('teacher/chart_apex')
         response = views.chart_apext(request)
         self.assertEqual(response.status_code, 200)
-'''
+
 
 
 class test_expenselistt_teacher(TestCase):
@@ -422,7 +422,7 @@ class test_expenselistt_teacher(TestCase):
 
     def test_expenselistt_view_deployed_to_page(self):
         factory = RequestFactory()
-        request = factory.get('teacher/expenselistt')
+        request = factory.get('teacher/expenselist')
         response = views.expenselistt(request)
         self.assertEqual(response.status_code, 200)
 
@@ -436,7 +436,7 @@ class test_inventoryreportt_teacher(TestCase):
 
     def test_inventoryreportt_view_deployed_to_page(self):
         factory = RequestFactory()
-        request = factory.get('teacher/inventoryreportt')
+        request = factory.get('teacher/inventoryreport')
         response = views.inventoryreportt(request)
         self.assertEqual(response.status_code, 200)
 
@@ -450,7 +450,7 @@ class test_productlistt_teacher(TestCase):
 
     def test_productlistt_view_deployed_to_page(self):
         factory = RequestFactory()
-        request = factory.get('teacher/productlistt')
+        request = factory.get('teacher/productlist')
         response = views.productlistt(request)
         self.assertEqual(response.status_code, 200)
 
@@ -464,37 +464,37 @@ class test_purchaselistt_teacher(TestCase):
 
     def test_purchaselistt_view_deployed_to_page(self):
         factory = RequestFactory()
-        request = factory.get('teacher/purchaselistt')
+        request = factory.get('teacher/purchaselist')
         response = views.purchaselist(request)
         self.assertEqual(response.status_code, 200)
 
 
 class test_purchaseorderreportt_teacher(TestCase):
-    '''
+
     def test_purchaseorderreportt_page_open(self):
         url = reverse(views.purchaseorderreportt)
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'teacher/purchaseorderreport.html')
-    '''
+
     def test_purchaseorderreportt_view_deployed_to_page(self):
         factory = RequestFactory()
-        request = factory.get('teacher/purchaseorderreportt')
+        request = factory.get('teacher/purchaseorderreport')
         response = views.purchaseorderreportt(request)
         self.assertEqual(response.status_code, 200)
 
 
 class test_purchasereportt_teacher(TestCase):
-    '''
+
     def test_purchasereportt_page_open(self):
         url = reverse(views.purchasereportt)
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'teacher/purchasereport.html')
-    '''
+
     def test_purchasereportt_view_deployed_to_page(self):
         factory = RequestFactory()
-        request = factory.get('teacher/purchasereportt')
+        request = factory.get('teacher/purchasereport')
         response = views.purchasereportt(request)
         self.assertEqual(response.status_code, 200)
 
@@ -509,23 +509,23 @@ class test_saleslistt_teacher(TestCase):
 
     def test_saleslistt_view_deployed_to_page(self):
         factory = RequestFactory()
-        request = factory.get('teacher/saleslistt')
+        request = factory.get('teacher/saleslist')
         response = views.saleslistt(request)
         self.assertEqual(response.status_code, 200)
 
 
 class test_salesreportt_teacher(TestCase):
-    '''
+
     def test_salesreportt_page_open(self):
         url = reverse(views.salesreportt)
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'teacher/salesreport.html')
-    '''
+
 
     def test_salesreportt_view_deployed_to_page(self):
         factory = RequestFactory()
-        request = factory.get('teacher/salesreportt')
+        request = factory.get('teacher/salesreport')
         response = views.salesreportt(request)
         self.assertEqual(response.status_code, 200)
 
@@ -539,23 +539,23 @@ class test_supplierlistt_teacher(TestCase):
 
     def test_supplierlist_view_deployed_to_page(self):
         factory = RequestFactory()
-        request = factory.get('teacher/supplierlistt')
+        request = factory.get('teacher/supplierlist')
         response = views.supplierlistt(request)
         self.assertEqual(response.status_code, 200)
 
-'''
+
 class test_userlistt_teacher(TestCase):
 
     def test_userlistt_page_open(self):
-        url = reverse(views.userlist)
+        url = reverse(views.userlistt)
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'teacher/userlist.html')
 
     def test_userlistt_view_deployed_to_page(self):
         factory = RequestFactory()
-        request = factory.get('teacher/userlistt')
-        response = views.userlist(request)
+        request = factory.get('teacher/userlist')
+        response = views.userlistt(request)
         self.assertEqual(response.status_code, 200)
 
 # +++++++++++++++++++++ PK TESTS +++++++++++++++++++++++ #
@@ -609,7 +609,7 @@ class Test_chart_apexs_student(TestCase):
 
     def test_chart_apexs_deployed_to_page(self):
         factory = RequestFactory()
-        request = factory.get('student/chart-apexs')
+        request = factory.get('student/chart-apex.html')
         response = views.chart_apexs(request)
         self.assertEqual(response.status_code, 200)
 
@@ -729,4 +729,3 @@ class test_editTransfers_student(TestCase):
         self.assertEqual(response.status_code, 200)
 
 # -------------END PK TESTS STUDENT-----------------
-'''

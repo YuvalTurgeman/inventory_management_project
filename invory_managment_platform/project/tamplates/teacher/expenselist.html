@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 	<head>
 		{% load static %}
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-		<meta name="description" content="POS - Bootstrap Admin Template">
-		<meta name="keywords" content="admin, estimates, bootstrap, business, corporate, creative, management, minimal, modern,  html5, responsive">
-		<meta name="author" content="Dreamguys - Bootstrap Admin Template">
-		<meta name="robots" content="noindex, nofollow">
+		<meta name="viewport" content="">
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="author" content="">
+		<meta name="robots" content="">
 		<title>SCE inventory management platform</title>
 
 		<!-- Favicon -->
@@ -79,6 +79,7 @@
 								<hr class="m-0">
 								<hr class="m-0">
 								<a class="dropdown-item logout pb-0" href="{% url 'signin'%}"><img src="{% static 'img/icons/log-out.svg' %}" class="me-2" alt="img">Logout</a>
+								<script type="text/javascript">  function preventBack() {window.history.forward();}  setTimeout("preventBack()", 0);  window.onunload = function () {null};</script></a>
 							</div>
 						</div>
 					</li>
@@ -183,7 +184,6 @@
 											<th>Reference</th>
 											<th>Date</th>
 											<th>Price</th>
-											<th>Action</th>
 										</tr>
 									</thead>
 									{% for i in expenses %}
@@ -192,14 +192,6 @@
 											<td>{{i.reference}}</td>
 											<td>{{i.date}}</td>
 											<td>{{i.price}}</td>
-											<td>
-												<a class="me-3" href="{% url 'editexpense' pk=i.pk %}">
-													<img src="{% static 'img/icons/edit.svg' %}" alt="img">
-												</a>
-												<a class="confirm-text" href="{% url 'deleteExpense' pk=i.pk %}">
-													<img src="{% static 'img/icons/delete.svg' %}" alt="img">
-												</a>
-											</td>
 										</tr>
 									{% endfor %}
 								</table>
