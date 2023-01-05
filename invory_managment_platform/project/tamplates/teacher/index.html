@@ -144,7 +144,7 @@
 							<li class="submenu">
 								<a href="javascript:void(0);"><img src="{% static 'img/icons/time.svg' %}" alt="img"><span> Report</span> <span class="menu-arrow"></span></a>
 								<ul>
-									<li><a href="{% url 'purchaseorderreportt' %}">Expense report</a></li>
+									<li><a href="{% url 'purchaseorderreportt' %}">Purchase order report</a></li>
 									<li><a href="{% url 'inventoryreportt' %}">Inventory Report</a></li>
 									<li><a href="{% url 'salesreportt' %}">Transfer Report</a></li>
 									<li><a href="{% url 'purchasereportt' %}">Purchase Report</a></li>
@@ -227,20 +227,10 @@
 						</div>
 					</div>
 					<!-- Button trigger modal -->
-						<div class="col-lg-15 col-sm-12 col-12 d-flex">
+							<div class="col-lg-15 col-sm-12 col-12 d-flex">
 							<div class="card flex-fill">
 								<div class="card-header pb-0 d-flex justify-content-between align-items-center">
-									<h4 class="card-title mb-0">Recently Added Products</h4>
-									<div class="dropdown">
-										<a href="javascript:void(0);" data-bs-toggle="dropdown" aria-expanded="false" class="dropset">
-											<i class="fa fa-ellipsis-v"></i>
-										</a>
-										<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton" >
-											<li>
-												<a href="{% url 'productlistt' %}" class="dropdown-item">Product List</a>
-											</li>
-										</ul>
-									</div>
+									<h4 class="card-title mb-0">Recently Transfers</h4>
 								</div>
 								<div class="card-body">
 									<div class="table-responsive dataview">
@@ -248,22 +238,26 @@
 											<thead>
 												<tr>
 													<th>Product Name</th>
+													<th>Category</th>
 													<th>Brand</th>
-													<th>Price</th>
-													<th>Unit</th>
-													<th>Qty</th>
-													<th>User</th>
+													<th>To</th>
+													<th>Status</th>
+													<th>Start of loan</th>
+													<th>End of loan</th>
+													<th>Qyt</th>
 												</tr>
 											</thead>
 											<tbody>
-											{% for h in returneditems %}
+											{% for h in transfersp %}
 												<tr>
 													<td>{{h.product_name}}</td>
+													<td>{{h.category}}</td>
 													<td>{{h.brand}}</td>
-													<td>{{h.price}}</td>
-													<td>{{h.unit}}</td>
-													<td>{{h.qty}}</td>
-													<td>{{h.user}}</td>
+													<td>{{h.to}}</td>
+													<td>{{h.status}}</td>
+													<td>{{h.start_of_loan}}</td>
+													<td>{{h.end_of_loan}}</td>
+													<td>{{h.qyt}}</td>
 												</tr>
 											{% endfor %}
 											</tbody>
@@ -286,6 +280,7 @@
 											<th>Price</th>
 											<th>Unit</th>
 											<th>Qty</th>
+											<th>Adding Date</th>
 											<th>Created By</th>
 										</tr>
 									</thead>
@@ -297,6 +292,7 @@
 											<td>{{i.price}}</td>
 											<td>{{i.unit}}</td>
 											<td>{{i.qty}}</td>
+											<td>{{i.adding_date}}</td>
 											<td>{{i.created_by}}</td>
 										</tr>
 									{% endfor %}
@@ -304,9 +300,6 @@
 							</div>
 						</div>
 					</div>
-				</div>
-			</div>
-		</div>
 		<!-- /Main Wrapper -->
 
 		<!-- jQuery -->
