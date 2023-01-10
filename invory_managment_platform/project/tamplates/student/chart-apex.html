@@ -200,7 +200,7 @@
 						<div class="col-md-6">
 							<div class="card">
 								<div class="card-header">
-									<h5 class="card-title">Purchases this year</h5>
+									<h5 class="card-title">Added products this year</h5>
 								</div>
 								<div class="card-body">
 									<div>
@@ -217,7 +217,7 @@
 										data: {
 										  labels: ['jan', 'feb', 'mar', 'apr','may', 'jun', 'jul','aug','sep', 'oct', 'nov','dec',],
 										  datasets: [{
-											label: '# of Purchases',
+											label: '# of Products',
 											data: [{% for i in barpurchasedata %} '{{ i }}', {% endfor %}],
 											borderWidth: 1,
 											    backgroundColor: [
