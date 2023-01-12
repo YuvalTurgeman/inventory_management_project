@@ -144,8 +144,6 @@ class test_editTransfer_admin(TestCase):
         response = views.editTransfer(request,p)
         self.assertEqual(response.status_code, 200)
 
-
-
 class test_editsupplier_admin(TestCase):
     def setUp(self):
         self.user = Supplier(supplier_name='pablo escobar', code='15935786', phone="420420420", email='soher@gov.il',
@@ -260,20 +258,7 @@ class test_addsupplier_admin(TestCase):
         request = factory.get('admin_u/addsupplier')
         response = views.addsupplier(request)
         self.assertEqual(response.status_code, 200)
-'''
-class test_chart_apex_admin(TestCase):
-    def test_chart_apex_page_open(self):
-        url = reverse(views.chart_apex)
-        response = self.client.get(url)
-        self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'admin_u/chart-apex.html')
 
-    def test_chart_apex_view_deployed_to_page(self):
-        factory = RequestFactory()
-        request = factory.get('admin_u/chart_apex')
-        response = views.chart_apex(request)
-        self.assertEqual(response.status_code, 200)
-'''
 class test_createexpense_admin(TestCase):
     def test_createexpense_page_open(self):
         url = reverse(views.createexpense)
@@ -394,23 +379,6 @@ class Test_indext_teacher(TestCase):
         request = factory.get('teacher/index')
         response = views.indext(request)
         self.assertEqual(response.status_code, 200)
-
-'''
-class test_chart_apext_teacher(TestCase):
-
-    def test_chart_apext_page_open(self):
-        url = reverse(views.chart_apext)
-        response = self.client.get(url)
-        self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'teacher/chart-apex.html')
-
-    def test_chart_apext_view_deployed_to_page(self):
-        factory = RequestFactory()
-        request = factory.get('teacher/chart_apex')
-        response = views.chart_apext(request)
-        self.assertEqual(response.status_code, 200)
-'''
-
 
 class test_expenselistt_teacher(TestCase):
 
@@ -599,20 +567,7 @@ class Test_indexs_student(TestCase):
         request = factory.get('student/index')
         response = views.indexs(request)
         self.assertEqual(response.status_code, 200)
-'''
-class Test_chart_apexs_student(TestCase):
-    def test_chart_apexs_page_open(self):
-        url = reverse(views.chart_apexs)
-        response = self.client.get(url)
-        self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'student/chart-apex.html')
 
-    def test_chart_apexs_deployed_to_page(self):
-        factory = RequestFactory()
-        request = factory.get('student/chart-apex')
-        response = views.chart_apexs(request)
-        self.assertEqual(response.status_code, 200)
-'''
 class test_supplierlists_student(TestCase):
     def test_supplierlists_page_open(self):
         url = reverse(views.supplierlists)
