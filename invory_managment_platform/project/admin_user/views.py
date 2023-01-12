@@ -341,12 +341,12 @@ def purchaseorderreport(request):
 
 
 def chart_apex(request):
-    ranges = ['2022-01-01', '2022-01-31', '2022-02-01', '2022-02-28', '2022-03-01', '2022-03-31', '2022-04-01',
-              '2022-04-30',
-              '2022-05-01', '2022-05-31', '2022-06-01', '2022-06-30', '2022-07-01', '2022-07-01', '2022-08-01',
-              '2022-08-31',
-              '2022-09-01', '2022-09-30', '2022-10-01', '2022-10-31', '2022-11-01', '2022-11-30', '2022-12-01',
-              '2022-12-31', ]
+    ranges = ['2023-01-01', '2023-01-31', '2023-02-01', '2023-02-28', '2023-03-01', '2023-03-31', '2023-04-01',
+              '2023-04-30',
+              '2023-05-01', '2023-05-31', '2023-06-01', '2023-06-30', '2023-07-01', '2023-07-01', '2023-08-01',
+              '2023-08-31',
+              '2023-09-01', '2023-09-30', '2023-10-01', '2023-10-31', '2023-11-01', '2023-11-30', '2023-12-01',
+              '2023-12-31', ]
     slinedata = [
         Transfers.objects.filter(start_of_loan__range=[ranges[0], ranges[1]]).count(),
         Transfers.objects.filter(start_of_loan__range=[ranges[2], ranges[3]]).count(),
@@ -362,7 +362,7 @@ def chart_apex(request):
         Transfers.objects.filter(start_of_loan__range=[ranges[22], ranges[23]]).count(),
     ]
     barpurchasedata = [
-        Product.objects.filter(adding_date__range=[ranges[18], ranges[19]]).count(),
+        Product.objects.filter(adding_date__range=[ranges[0], ranges[1]]).count(),
         Product.objects.filter(adding_date__range=[ranges[2], ranges[3]]).count(),
         Product.objects.filter(adding_date__range=[ranges[4], ranges[5]]).count(),
         Product.objects.filter(adding_date__range=[ranges[6], ranges[7]]).count(),
@@ -512,12 +512,12 @@ def purchaseorderreports(request):
 
 
 def chart_apexs(request):
-    ranges = ['2022-01-01', '2022-01-31', '2022-02-01', '2022-02-28', '2022-03-01', '2022-03-31', '2022-04-01',
-              '2022-04-30',
-              '2022-05-01', '2022-05-31', '2022-06-01', '2022-06-30', '2022-07-01', '2022-07-01', '2022-08-01',
-              '2022-08-31',
-              '2022-09-01', '2022-09-30', '2022-10-01', '2022-10-31', '2022-11-01', '2022-11-30', '2022-12-01',
-              '2022-12-31', ]
+    ranges = ['2023-01-01', '2023-01-31', '2023-02-01', '2023-02-28', '2023-03-01', '2023-03-31', '2023-04-01',
+              '2023-04-30',
+              '2023-05-01', '2023-05-31', '2023-06-01', '2023-06-30', '2023-07-01', '2023-07-01', '2023-08-01',
+              '2023-08-31',
+              '2023-09-01', '2023-09-30', '2023-10-01', '2023-10-31', '2023-11-01', '2023-11-30', '2023-12-01',
+              '2023-12-31', ]
     slinedata = [
         Transfers.objects.filter(start_of_loan__range=[ranges[0], ranges[1]]).count(),
         Transfers.objects.filter(start_of_loan__range=[ranges[2], ranges[3]]).count(),
@@ -718,12 +718,12 @@ def purchaseorderreportt(request):
 
 
 def chart_apext(request):
-    ranges = ['2022-01-01', '2022-01-31', '2022-02-01', '2022-02-28', '2022-03-01', '2022-03-31', '2022-04-01',
-              '2022-04-30',
-              '2022-05-01', '2022-05-31', '2022-06-01', '2022-06-30', '2022-07-01', '2022-07-01', '2022-08-01',
-              '2022-08-31',
-              '2022-09-01', '2022-09-30', '2022-10-01', '2022-10-31', '2022-11-01', '2022-11-30', '2022-12-01',
-              '2022-12-31', ]
+    ranges = ['2023-01-01', '2023-01-31', '2023-02-01', '2023-02-28', '2023-03-01', '2023-03-31', '2023-04-01',
+              '2023-04-30',
+              '2023-05-01', '2023-05-31', '2023-06-01', '2023-06-30', '2023-07-01', '2023-07-01', '2023-08-01',
+              '2023-08-31',
+              '2023-09-01', '2023-09-30', '2023-10-01', '2023-10-31', '2023-11-01', '2023-11-30', '2023-12-01',
+              '2023-12-31', ]
     slinedata = [
         Transfers.objects.filter(start_of_loan__range=[ranges[0], ranges[1]]).count(),
         Transfers.objects.filter(start_of_loan__range=[ranges[2], ranges[3]]).count(),
@@ -739,7 +739,7 @@ def chart_apext(request):
         Transfers.objects.filter(start_of_loan__range=[ranges[22], ranges[23]]).count(),
     ]
     barpurchasedata = [
-        Product.objects.filter(adding_date__range=[ranges[18], ranges[19]]).count(),
+        Product.objects.filter(adding_date__range=[ranges[0], ranges[1]]).count(),
         Product.objects.filter(adding_date__range=[ranges[2], ranges[3]]).count(),
         Product.objects.filter(adding_date__range=[ranges[4], ranges[5]]).count(),
         Product.objects.filter(adding_date__range=[ranges[6], ranges[7]]).count(),
